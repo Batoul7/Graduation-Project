@@ -554,35 +554,21 @@ video {
   display: none;
 }
 
-.bg-myprimary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 209 26 / var(--tw-bg-opacity, 1));
+.font-kumbhSans {
+  font-family: var(--kumbh-font);
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+:root {
+  --inter-font:  "Inter", sans-serif;
+  --kumbh-font: "Kumbh Sans", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: var(--inter-font);
 }

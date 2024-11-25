@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --inter-font:  "Inter", sans-serif;
+    --kumbh-font: "Kumbh Sans", sans-serif;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: var(--inter-font);
+  }
