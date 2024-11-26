@@ -10,32 +10,40 @@ import ResourcesPage from './pages/ResourcesPage'
 import ContactPage from './pages/ContactPage'
 import { Provider } from 'react-redux'
 import store from './redux/store'
+import App from './App'
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>
+    element: <App/>,
+    children: [
+      {
+        path: "/",
+        element: <HomePage/>,
+      },
+      {
+        path: "/news",
+        element: <NewsPage/>
+      },
+      {
+        path: "/blog",
+        element: <BlogOpenPage/>
+      },
+      {
+        path: "/podcasts",
+        element: <PodcastsPage/>
+      },
+      {
+        path: "/resources",
+        element: <ResourcesPage/>
+      },
+      {
+        path: "/contact",
+        element: <ContactPage/>
+      },
+    ]
   },
-  {
-    path: "/news",
-    element: <NewsPage/>
-  },
-  {
-    path: "/blog",
-    element: <BlogOpenPage/>
-  },
-  {
-    path: "/podcasts",
-    element: <PodcastsPage/>
-  },
-  {
-    path: "/resources",
-    element: <ResourcesPage/>
-  },
-  {
-    path: "/contact",
-    element: <ContactPage/>
-  },
+  
 ])
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
