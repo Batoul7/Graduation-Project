@@ -1,11 +1,10 @@
-// import Testimonials from "../components/Testimonials/Testimonials";
+// import { useSelector } from "react-redux";
+// import { RootState } from "../redux/store";
+
 
 
 export default function HomePage() {
 
-  // const testimonials = useSelector(
-  //   (state: RootState) => state.testimonials.testimonials
-  // );
   // const books = useSelector((state: RootState) => state.books.books);
 
   return (
