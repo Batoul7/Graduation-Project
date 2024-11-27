@@ -1,5 +1,4 @@
-// import { useSelector } from "react-redux";
-// import { RootState } from "../redux/store/index";
+// import Testimonials from "../components/Testimonials/Testimonials";
 
 
 export default function HomePage() {
@@ -12,6 +11,7 @@ export default function HomePage() {
   return (
     <div>
       home
+      {/* <Testimonials/> */}
     </div>
   );
 };
