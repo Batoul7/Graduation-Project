@@ -1,13 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-
 import faqReducer from "../slice/faqSlice";
-import testimonialsReducer from "../slice/index";
-
-
 import testimonialsReducer from '../slice/testimonialsSlice'
 import podcastsReducer from '../slice/podcastsSlice'
 import { booksReducer } from "../slice/booksSlice";
-import { BlogsReducer } from "../slice/blogSlice";
+import { BlogsReducer } from "../slice/BlogSlice";
 
 
 const store = configureStore({
