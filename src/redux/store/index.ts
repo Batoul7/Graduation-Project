@@ -7,6 +7,7 @@ import testimonialsReducer from "../slice/index";
 import testimonialsReducer from '../slice/testimonialsSlice'
 import podcastsReducer from '../slice/podcastsSlice'
 import { booksReducer } from "../slice/booksSlice";
+import { BlogsReducer } from "../slice/blogSlice";
 
 
 const store = configureStore({
@@ -15,6 +16,7 @@ const store = configureStore({
     faq: faqReducer,
     books: booksReducer,
     podcasts: podcastsReducer,
+    newsBlog: BlogsReducer,
   },
 });
 
