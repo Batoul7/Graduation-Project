@@ -1,7 +1,7 @@
 // import { useSelector} from 'react-redux';
 // import { RootState } from "../redux/store";
 
-import HeroCommon from "../components/HeroCommon";
+import HeroCommon from "../components/HeroCommon/HeroCommon";
 
 
 export default function NewsPage() {

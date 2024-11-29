@@ -1,5 +1,5 @@
 
-import HeroCommon from "../components/HeroCommon";
+import HeroCommon from "../components/HeroCommon/HeroCommon";
 
 
 export default function ResourcesPage() {

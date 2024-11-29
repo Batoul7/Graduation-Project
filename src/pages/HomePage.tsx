@@ -3,7 +3,7 @@
 import MainTitle from "../components/MainTitle/MainTitle";
 import Testimonials from "../components/Testimonials/Testimonials";
 
-import HeroHome from "../components/HeroHome";
+import HeroHome from "../components/HeroHome/HeroHome";
 
 import imgpeople from './../assets/images/HomePage/SubContainer-1.png'
 import imgArrowHero from './../assets/images/Arrows/goArrow.png'
@@ -16,7 +16,7 @@ interface HeroCard {
   mult:string;
   parcard:string;
 }
-
+  // const books = useSelector((state: RootState) => state.books.books);
 
 export default function HomePage() {
 
@@ -49,13 +49,7 @@ export default function HomePage() {
     <div>
       {/* <Testimonials/> */}
 
-      <HeroHome HeroCard={HeroCard} par1={"Your Journey to Tomorrow Begins Here"} title={"Explore the Frontiers of Artificial Intelligence"} par2={"Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI."} img1={imgpeople} altimg1={"people image"} subtitle={"Explore 1000+ resources"} par3={"Over 1,000 articles on emerging tech trends and breakthroughs."} contentBtn={"Explore Resources"} imgArrowbtn={imgArrowHero} altimagebtn={"image arrow btn"} imgEyes={imgEyesBtn} />
-
-
-  // const books = useSelector((state: RootState) => state.books.books);
-
-  return (
-    <div>
+    <HeroHome HeroCard={HeroCard} par1={"Your Journey to Tomorrow Begins Here"} title={"Explore the Frontiers of Artificial Intelligence"} par2={"Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI."} img1={imgpeople} altimg1={"people image"} subtitle={"Explore 1000+ resources"} par3={"Over 1,000 articles on emerging tech trends and breakthroughs."} contentBtn={"Explore Resources"} imgArrowbtn={imgArrowHero} altimagebtn={"image arrow btn"} imgEyes={imgEyesBtn} />
      <MainTitle title="FutureTech Features" subtitle="Unlock the Power of"/>
       <Testimonials/>
 

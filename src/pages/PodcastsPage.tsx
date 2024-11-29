@@ -1,7 +1,7 @@
 // import { useSelector } from "react-redux";
 // import { selectFirstPodcast, selectLatestPodcast, selectSecondPodcast } from "../redux/slice/podcastsSlice";
 // import { Key } from "react";
-import HeroCommon from "../components/HeroCommon";
+import HeroCommon from "../components/HeroCommon/HeroCommon";
 
 
 export default function PodcastsPage() {
