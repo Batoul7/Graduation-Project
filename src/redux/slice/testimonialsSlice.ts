@@ -1,8 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { testimonialsData } from "../../Data/TestimonialsData";
 
-
-// TESTIMONIALS
 const initialState = {
   testimonials: testimonialsData
 };
