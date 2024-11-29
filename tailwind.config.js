@@ -29,13 +29,7 @@ export default {
                "mysecondary-gray-97" : "#F7F7F8",
                "mysecondary-gray-99" : "##FCFCFD",
             },
-            padding : {
-                "mainpadding" : "8.44%"
-            },
             spacing : {
-                "7.5" : "30px",
-
-                "3.5" : "14px",
                 '0.5' : '2px' ,
                 '2.5' : '10px' ,
                 '4.5' : '18px' ,
@@ -45,25 +39,15 @@ export default {
                 '41' : '170px' ,
                 '85.8' : '350px' ,
                 '38.9' : '189px' ,
-
-                'mainpaddinglarge':'162px',
-                'mainpaddingmedium':'80px',
-                'mainpaddingsmall':'16px',
-
             },
-            borderRadius: {
-                "rad-10" : "10px",
-
+            padding: {
+              'mainpaddinglarge':'162px',
+              'mainpaddingmedium':'80px',
+              'mainpaddingsmall':'16px',
             },
             borderRadius: {
                 "rad-10" : "10px",
                 "rad-4" : "4px"
-
-            },
-            
-            fontFamily: {
-                "inter": "var(--inter-font)",
-                "kumbhSans": "var(--kumbh-font)",
             },
             gap: {
                 '2.5': '10px',
@@ -79,20 +63,12 @@ export default {
                 '53' : '218px' ,
                 '43' : '174px' ,
                 '3.5/5':'79%'
-
-        
-          
-        
-              },
-              maxWidth: {
-                '90.5' : '800px' ,
               },
               fontSize: {
                 "6.5xl" : "70px" ,
                 "4.5xl" : "40px" ,
                 "1.5xl" : '22px',
                 "5.5xl" : '55px'
-        
               },
               lineHeight: {
                 '12': '84px',
@@ -105,8 +81,10 @@ export default {
                 '10.5' : '45px',
                 '7.5' : '30px',
               },
-
-
+              fontFamily: {
+                "inter": "var(--inter-font)",
+                "kumbhSans": "var(--kumbh-font)",
+            },
         },
     },
     plugins: [],
