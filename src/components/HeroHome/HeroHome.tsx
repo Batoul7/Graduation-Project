@@ -1,6 +1,6 @@
-import ButtonCommon from "./ButtonCommon";
-import CardNumberCounter from "./CardNumberCounter";
-import HeroTitleH1 from "./HeroTitleH1";
+import ButtonCommon from "../ButtonCommon/ButtonCommon";
+import CardNumberCounter from "../CardNumberCounter/CardNumberCounter";
+import HeroTitleH1 from "../HeroTitleH1/HeroTitleH1";
 
 
 

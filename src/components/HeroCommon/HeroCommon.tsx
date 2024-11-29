@@ -1,4 +1,4 @@
-import HeroTitleH1 from "./HeroTitleH1";
+import HeroTitleH1 from "../HeroTitleH1/HeroTitleH1";
 
 
 interface HeroCommonProps {
