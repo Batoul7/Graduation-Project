@@ -34,16 +34,79 @@ export default {
             },
             spacing : {
                 "7.5" : "30px",
+
+                "3.5" : "14px",
+                '0.5' : '2px' ,
+                '2.5' : '10px' ,
+                '4.5' : '18px' ,
+                '13' : '50px' ,
+                '37' : '150px' ,
+                '25' : '100px' ,
+                '41' : '170px' ,
+                '85.8' : '350px' ,
+                '38.9' : '189px' ,
+
+                'mainpaddinglarge':'162px',
+                'mainpaddingmedium':'80px',
+                'mainpaddingsmall':'16px',
+
+            },
+            borderRadius: {
+                "rad-10" : "10px",
+
             },
             borderRadius: {
                 "rad-10" : "10px",
                 "rad-4" : "4px"
+
             },
             
             fontFamily: {
                 "inter": "var(--inter-font)",
                 "kumbhSans": "var(--kumbh-font)",
-            }
+            },
+            gap: {
+                '2.5': '10px',
+              },
+              screens: {
+                'lghero': {'min': '1540px', 'max': '1905px'}, 
+              },
+              width :{
+                '2.5/4' : '59.09%' ,
+                '4.5/12' : '40.91%' ,
+                '73' : '297.67px' ,
+                '82' : '347px' ,
+                '53' : '218px' ,
+                '43' : '174px' ,
+                '3.5/5':'79%'
+
+        
+          
+        
+              },
+              maxWidth: {
+                '90.5' : '800px' ,
+              },
+              fontSize: {
+                "6.5xl" : "70px" ,
+                "4.5xl" : "40px" ,
+                "1.5xl" : '22px',
+                "5.5xl" : '55px'
+        
+              },
+              lineHeight: {
+                '12': '84px',
+                '11': '60px',
+                '11.5': '66px',
+                '6.5' : '27px',
+                '6.7' : '21.6px',
+                '6.8' : '26.4px',
+                '5.5' : '24px',
+                '10.5' : '45px',
+                '7.5' : '30px',
+              },
+
+
         },
     },
     plugins: [],
