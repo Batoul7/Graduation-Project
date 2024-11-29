@@ -29,8 +29,12 @@ export default {
                "mysecondary-gray-97" : "#F7F7F8",
                "mysecondary-gray-99" : "##FCFCFD",
             },
+            padding : {
+                "mainpadding" : "8.44%"
+            },
             spacing : {
                 "7.5" : "30px",
+
                 "3.5" : "14px",
                 '0.5' : '2px' ,
                 '2.5' : '10px' ,
@@ -49,7 +53,14 @@ export default {
             },
             borderRadius: {
                 "rad-10" : "10px",
+
             },
+            borderRadius: {
+                "rad-10" : "10px",
+                "rad-4" : "4px"
+
+            },
+            
             fontFamily: {
                 "inter": "var(--inter-font)",
                 "kumbhSans": "var(--kumbh-font)",

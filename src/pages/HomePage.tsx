@@ -1,7 +1,7 @@
 // import { useSelector } from "react-redux";
 // import { RootState } from "../redux/store";
-
-// import Testimonials from "../components/Testimonials/Testimonials";
+import MainTitle from "../components/MainTitle/MainTitle";
+import Testimonials from "../components/Testimonials/Testimonials";
 
 import HeroHome from "../components/HeroHome";
 
@@ -50,6 +50,14 @@ export default function HomePage() {
       {/* <Testimonials/> */}
 
       <HeroHome HeroCard={HeroCard} par1={"Your Journey to Tomorrow Begins Here"} title={"Explore the Frontiers of Artificial Intelligence"} par2={"Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI."} img1={imgpeople} altimg1={"people image"} subtitle={"Explore 1000+ resources"} par3={"Over 1,000 articles on emerging tech trends and breakthroughs."} contentBtn={"Explore Resources"} imgArrowbtn={imgArrowHero} altimagebtn={"image arrow btn"} imgEyes={imgEyesBtn} />
+
+
+  // const books = useSelector((state: RootState) => state.books.books);
+
+  return (
+    <div>
+     <MainTitle title="FutureTech Features" subtitle="Unlock the Power of"/>
+      <Testimonials/>
 
     </div>
   );
