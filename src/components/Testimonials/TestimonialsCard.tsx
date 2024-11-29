@@ -10,7 +10,7 @@ interface TestimonialProps {
 
 const TestimonialsCard: React.FC<TestimonialProps> = ({ name, location, image, rating, text }) => {
   return (
-    <div className=" text-white px-[50px] py-20 flex flex-col items-center text-center gap-10">
+    <div className=" text-white py-10 lg:py-20 flex flex-col items-center text-center gap-10 min-h-[160px]">
       <div className="flex gap-3">
         <img src={image} alt={name}/>
         <div>
@@ -18,7 +18,7 @@ const TestimonialsCard: React.FC<TestimonialProps> = ({ name, location, image, r
           <p className="text-mysecondary-dark-40 text-lg">{location}</p>
         </div>
       </div>
-      <div className="rounded-xl border border-neutral-800 bg-myprimary-dark-10 pb-[30px] px-[30px]">
+      <div className=" rounded-xl border border-neutral-800 bg-myprimary-dark-10 pb-6 px-7.5">
         <div className="w-fit mx-auto mt-[-22px] bg-myprimary-dark-08 
         flex gap-[7px] items-center justify-between py-[10px] px-4 rounded-[100px] border border-neutral-800">
           {Array.from({ length: 5 }).map((_, index) => (
@@ -29,7 +29,7 @@ const TestimonialsCard: React.FC<TestimonialProps> = ({ name, location, image, r
             )
           ))}
         </div>
-        <p className="text-lg mt-[27px]">{text}</p>
+        <p className="text-base font-normal pt-4">{text}</p>
       </div>
      
     </div>
