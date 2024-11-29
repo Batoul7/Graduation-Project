@@ -63,4 +63,4 @@ const blogSlice = createSlice({
 })
 
 export const BlogsReducer = blogSlice.reducer
-export const { addBlog, removeBlog, filterByCategory, filterByAuthor } = blogSlice.actions
+export const { addBlog, removeBlog, filterByCategory, filterByAuthor, last4blogs } = blogSlice.actions
