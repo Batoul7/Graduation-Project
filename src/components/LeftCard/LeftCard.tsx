@@ -1,5 +1,6 @@
 import React from "react";
-import img1 from './../../assets/images/Arrows/goArrow.png'
+import img1 from './../../assets/images/Arrows/goArrow.png';
+
 interface LeftCardProps {
     title: string;
     description: string;
@@ -8,7 +9,7 @@ interface LeftCardProps {
     buttonLabel?: string;
     stars?: string[];
     host?: string;
-    pageType: "podcast" | "contact" | "default";
+    pageType: "podcast" | "contact" | "default" | "book"; 
 }
 
 const LeftCard: React.FC<LeftCardProps> = ({
@@ -18,7 +19,7 @@ const LeftCard: React.FC<LeftCardProps> = ({
     buttonText,
     buttonLabel,
     stars = [],
-    host ,
+    host,
     pageType,
 }) => {
     return (
@@ -45,7 +46,7 @@ const LeftCard: React.FC<LeftCardProps> = ({
             </div>
 
             {pageType === "podcast" ? (
-                <div className="bg-myprimary-dark-10 px-7.5 py-[32.5px]  rounded-[13px] flex items-center justify-between mt-[30px]">
+                <div className="bg-myprimary-dark-10 px-7.5 py-[32.5px] rounded-[13px] flex items-center justify-between mt-[30px]">
                     <div>
                         <p className="text-lg font-normal text-myprimary-gray-60 mb-1">Host</p>
                         <p className="text-lg font-medium">{host}</p>
@@ -57,9 +58,24 @@ const LeftCard: React.FC<LeftCardProps> = ({
                         </button>
                     </div>
                 </div>
+            ) : pageType === "book" ? (
+                <div className="mt-[30px]">
+                    {description && (
+                        <p className="text-lg font-normal text-myprimary-gray-60 mb-[50px]">
+                            {description}
+                        </p>
+                    )}
+                    {buttonText && (
+                        <button className="w-full bg-myprimary-dark-10 px-6 py-[18px] text-lg font-normal text-myprimary-gray-60 rounded-md flex items-center justify-center gap-2.5 ">
+                            {buttonText}
+                            <img src={img1} alt="icon" className="w-6 h-6" />   
+                        </button>
+                    )}
+                </div>
             ) : (
                 <p className="text-lg font-normal text-myprimary-gray-60">{description}</p>
             )}
+
             {pageType === "contact" && buttonText && (
                 <div className="mt-[50px]">
                     <button className="flex items-center gap-2.5 bg-myprimary-dark-10 px-6 py-[18px] text-lg font-normal text-myprimary-gray-60 rounded-md">
@@ -73,3 +89,4 @@ const LeftCard: React.FC<LeftCardProps> = ({
 };
 
 export default LeftCard;
+
