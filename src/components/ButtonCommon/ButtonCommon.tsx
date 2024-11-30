@@ -1,17 +1,17 @@
 
 interface BtnProps {
-  navbtn:string ;
-  herobtnAndCommon:string;
-  contentBtn:string;
-  imgArrowbtn:string;
-  altimagebtn:string;
-  mainsmall:string;
-  filterBtn:string;
-  hiddenArrow:string;
-  EbookHome:string;
-  imgEyes:string;
-  hiddenEyes:string;
-  footerBtn:string;
+  navbtn?:string ;
+  herobtnAndCommon?:string;
+  contentBtn?:string;
+  imgArrowbtn?:string;
+  altimagebtn?:string;
+  mainsmall?:string;
+  filterBtn?:string;
+  hiddenArrow?:string;
+  EbookHome?:string;
+  imgEyes?:string;
+  hiddenEyes?:string;
+  footerBtn?:string;
 }
 
 
