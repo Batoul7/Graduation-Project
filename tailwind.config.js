@@ -28,6 +28,7 @@ export default {
                "mysecondary-gray-95" : "#F1F1F3",
                "mysecondary-gray-97" : "#F7F7F8",
                "mysecondary-gray-99" : "##FCFCFD",
+               "myborder-dark-color":"#262626"
             },
             spacing : {
                 "7.5" : "30px",
