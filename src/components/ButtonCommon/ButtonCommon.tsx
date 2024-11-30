@@ -7,35 +7,75 @@ interface BtnProps {
   altimagebtn?:string;
   mainsmall?:string;
   filterBtn?:string;
+  filterBtnActive?:string;
   hiddenArrow?:string;
   EbookHome?:string;
   imgEyes?:string;
-  hiddenEyes?:string;
+  hiddenEyes?:string ;
   footerBtn?:string;
+
+  ResourseDepthReportsActive?:string;
+  ResourseDepthReports?:string;
+
+  ResourseCardBook?:string;
+  ResourseCardBookActive?:string;
+
+  EyesRadius?:string;
+  ContactRadius?:string;
 }
 
 
-export default function ButtonCommon({navbtn ,EbookHome, herobtnAndCommon , contentBtn , imgArrowbtn  , altimagebtn , mainsmall ,filterBtn ,hiddenArrow , imgEyes , hiddenEyes , footerBtn } : BtnProps) {
+export default function ButtonCommon({navbtn , EyesRadius , ContactRadius ,EbookHome, herobtnAndCommon , contentBtn , imgArrowbtn  , altimagebtn , mainsmall , filterBtn ,filterBtnActive ,hiddenArrow , imgEyes , hiddenEyes , footerBtn , ResourseDepthReportsActive ,ResourseDepthReports , ResourseCardBook ,ResourseCardBookActive } : BtnProps) {
   return (
-      <button className={` whitespace-nowrap text-myprimary-gray-60 font-normal rounded-xl border border-solid border-neutral-800  text-sm 2xl:text-lg font-inter leading-5 2xl:leading-6.5 
+      <button className=
+      
+      {` whitespace-nowrap text-myprimary-gray-60 font-normal rounded-xl border border-solid border-neutral-800  text-sm 2xl:text-lg font-inter leading-5 2xl:leading-[27px]
 
        ${navbtn ? 'px-[14px] py-[10px] 2xl:px-5 2xl:py-3.5 bg-myprimary-yellow-55 rounded-rad-10 text-myprimary-dark-08 border-0 font-medium   ' : ''}
 
-        ${herobtnAndCommon ? ' sm:px-5 sm:py-3.5 2xl:py-4.5 2xl:px-6 bg-transparent  flex gap-2.5 justify-center items-center w-max ' : ''}
+        ${herobtnAndCommon ? ' sm:px-5 sm:py-3.5 2xl:py-4.5 2xl:px-6   bg-myprimary-dark-08  flex gap-2.5 justify-center items-center w-max ' : ''}
 
        ${mainsmall ? ' max-w-[310px] xl:max-w-[180px] 2xl:max-w-[231px]' : ''}
 
-        ${filterBtn ? 'bg-myprimary-dark-10 w-[151.83px] xl:[201.67px] 2xl:w-[294.33px] text-white ' : ''}
+       ${EyesRadius ? 'rounded-[10px]' : ''}
 
-        ${footerBtn ? ' py-2 px-3.5 2xl:py-2.5 2xl:px-4' : ''}
 
-        ${EbookHome ? 'w-full' : '' }
+
+
+        ${filterBtnActive ? 'bg-myprimary-dark-10 rounded-lg w-[151.83px] xl:w-[201.67px] 2xl:w-[294.33px] text-white h-[57px] xl:h-[69px] 2xl:h-[87px]  ' : ''}
+
+        ${filterBtn ? 'bg-myborder-dark-color rounded-lg w-[151.83px] xl:w-[201.67px] 2xl:w-[294.33px] h-[57px] xl:h-[69px] 2xl:h-[87px]  ' : ''}
+
+
+
+        ${footerBtn ? ' py-2 px-3.5 2xl:py-2.5 2xl:px-4 rounded-lg  bg-myprimary-dark-08  flex gap-2.5 justify-center items-center w-max ' : ''}
+
+        ${EbookHome ? 'h-[63px] w-full max-w-[358px] xl:w-full xl:max-w-[413px] 2xl:w-full 2xl:max-w-[519px]  bg-myprimary-dark-08  flex gap-2.5 justify-center items-center  ' : '' }
+
+        ${ResourseDepthReportsActive ? 'bg-myborder-dark-color rounded-[10px] text-white h-[49px] 2xl:h-[63px] w-[106px] xl:w-[128px] 2xl:w-[197px] ' : '' }
+
+        ${ResourseDepthReports ? 'bg-myprimary-dark-10 rounded-lg text-myprimary-gray-60 h-[49px] 2xl:h-[63px] w-[106px] xl:w-[128px] 2xl:w-[197px] ' : '' }
+
+
+        ${ResourseCardBookActive ? 'bg-myprimary-dark-10 rounded-lg text-myprimary-gray-60 h-[49px] 2xl:h-[63px] w-[174px] xl:w-[188.33px] 2xl:w-[225.33px] ' : '' }
+
+        ${ResourseCardBook ? 'bg-myprimary-dark-08 rounded-xl text-myprimary-gray-60 h-[49px] 2xl:h-[63px] w-[174px] xl:w-[188.33px] 2xl:w-[225.33px] ' : '' }
+
+
+        ${ContactRadius ? 'rounded-lg bg-myprimary-dark-10 ' : '' }
+
+
+
+
 
         `}>
 
 
       {contentBtn}
+
       <img src={imgArrowbtn} alt={altimagebtn} className={`${hiddenArrow ? 'hidden' : ''} text-base`} ></img>
+
+
       <img src={imgEyes} alt={altimagebtn} className={`${hiddenEyes ? 'hidden' : ''} text-xl`} ></img>
       </button>
   )
