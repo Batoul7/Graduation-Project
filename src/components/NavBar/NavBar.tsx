@@ -19,8 +19,11 @@ const [nav,setNav]=useState(false)
         <div className='w-125 h-35 md:w-143 md:h-10 lg:w-178 h-50 lg:my-0 md:my-0 sm:my-5 '>
             <img className='w-full ' src={logo} alt="logo" />
         </div>
-        <LinkNav ClassUl='md:flex lg:gap-10 md:gap-4 gap-10 hidden '/>
-<ButtonCommon navbtn={'navbtn'} contentBtn='Contact Us' hiddenArrow='hiddenArrow' hiddenEyes='hiddenEyes' herobtnAndCommon=''imgArrowbtn=''altimagebtn=''mainsmall=''filterBtn=''EbookHome=''imgEyes=''footerBtn=''/>
+        <LinkNav ClassUl='md:flex lg:gap-4 md:gap-3 gap-4 hidden '/>
+        <div className='lg:block md:block hidden'>
+        <ButtonCommon navbtn={'navbtn'} contentBtn='Contact Us' hiddenArrow='hiddenArrow' hiddenEyes='hiddenEyes' herobtnAndCommon=''imgArrowbtn=''altimagebtn=''mainsmall=''filterBtn=''EbookHome=''imgEyes=''footerBtn=''/>
+        </div>
+
       <div className=' block md:hidden'>
         <div className={nav?'flex justify-end':'flex justify-end items-center h-full' }onClick={()=>{setNav(!nav)}}>
             <img src={OSiconNav} alt="navresponsiv" />

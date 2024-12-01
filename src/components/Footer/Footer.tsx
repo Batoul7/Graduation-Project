@@ -1,7 +1,7 @@
 import { FooterData,icons } from "../../Data/FooterData"
 const Footer = () => {
 return (<div className='lg:px-162  md:px-20 px-4 bg-myprimary-dark-08'>
-  <div className="flex justify-between pb-67 pt-20 border-b border-neutral-800 md:flex-nowrap flex-wrap ">
+  <div className="flex justify-between pb-67 pt-20 border-b border-neutral-800 lg:flex-nowrap flex-wrap ">
       {FooterData.map((e,index) => {
        return (
           <div key={index}  >
