@@ -16,22 +16,21 @@ const [nav,setNav]=useState(false)
         </div>
         
      <div className={` ${nav?'h-full':'h-max'} lg:px-162 lg:py-6 md:px-20 md:py-5 px-4 flex justify-between md:items-center lg:items-center text-myprimary-gray-50 bg-neutral-800 `}>
-        <div className='w-125 h-35 md:w-143 md:h-10 lg:w-178 h-50 lg:my-0 md:my-0 sm:my-5 '>
-            <img className='w-full ' src={logo} alt="logo" />
+        <div className=' h-max  md:h-10  h-50 lg:my-0 md:my-0 sm:my-5 '>
+            <img className='' src={logo} alt="logo" />
         </div>
-        <LinkNav ClassUl='md:flex lg:gap-4 md:gap-3 gap-4 hidden '/>
+        <LinkNav ClassUl='md:flex lg:gap-4 md:gap-1.5 gap-4 hidden '/>
         <div className='lg:block md:block hidden'>
         <ButtonCommon navbtn={'navbtn'} contentBtn='Contact Us' hiddenArrow='hiddenArrow' hiddenEyes='hiddenEyes' herobtnAndCommon=''imgArrowbtn=''altimagebtn=''mainsmall=''filterBtn=''EbookHome=''imgEyes=''footerBtn=''/>
         </div>
 
-      <div className=' block md:hidden'>
+      <div className=' block w-screen md:hidden'>
         <div className={nav?'flex justify-end':'flex justify-end items-center h-full' }onClick={()=>{setNav(!nav)}}>
             <img src={OSiconNav} alt="navresponsiv" />
         </div>
-        <div className={nav?'flex flex-col gap-10 ':'hidden'}>
-            <LinkNav  ClassUl=' flex flex-col gap-10'/>
-       
-         <ButtonCommon navbtn={'navbtn'} contentBtn='Contact Us' hiddenArrow='hiddenArrow' hiddenEyes='hiddenEyes' herobtnAndCommon=''imgArrowbtn=''altimagebtn=''mainsmall=''filterBtn=''EbookHome=''imgEyes=''footerBtn=''/>
+        <div className={nav?'flex flex-col gap-10 justify-center items-center w-full translate-x-4':'hidden'}>
+            <LinkNav  ClassUl=' flex flex-col  gap-10   '/>
+           <ButtonCommon navbtn={'navbtn'} contentBtn='Contact Us' hiddenArrow='hiddenArrow' hiddenEyes='hiddenEyes' herobtnAndCommon=''imgArrowbtn=''altimagebtn=''mainsmall=''filterBtn=''EbookHome=''imgEyes=''footerBtn=''/>
     </div>
       </div>
      </div>
