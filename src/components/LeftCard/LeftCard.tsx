@@ -23,7 +23,7 @@ const LeftCard: React.FC<LeftCardProps> = ({
     pageType,
 }) => {
     return (
-        <div className="bg-myprimary-dark-08 text-white w-[519px] p-8 rounded-lg">
+        <div className="bg-myprimary-dark-08 text-white w-[519px] rounded-lg">
             <div className="mb-8">
                 <img src={icon} alt="Icon" className="w-16 h-16" />
             </div>
