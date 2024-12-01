@@ -1,19 +1,39 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { Podcast, podcastData } from "../../Data/PodcastsData";
+import { createSlice } from '@reduxjs/toolkit';
+import { podcastsData } from '../../Data/PodcastsData';
 
-// PODCASTS
-const podcastsInitialState = {
-    podcasts: podcastData
-  };
-  
-  const podcastsSlice = createSlice({
-    name: 'podcasts',
-    initialState: podcastsInitialState,
-    reducers: {},
-  });
-  
-  export const selectFirstPodcast = (state: { podcasts: { podcasts: Podcast[] } }): Podcast[] => state.podcasts.podcasts.slice(0, 1);
-  export const selectSecondPodcast = (state: { podcasts: { podcasts: Podcast[] } }): Podcast[] => state.podcasts.podcasts.slice(1, 2);
-  export const selectLatestPodcast = (state: { podcasts: { podcasts: Podcast[] } }): Podcast[] => state.podcasts.podcasts.slice(-6);
-  
-  export default podcastsSlice.reducer;
+interface Podcast {
+  id: number;
+  title: string;
+  description: string;
+  host: string;
+  totalEpisodes: number;
+  average:string;
+  releaseFrequency: string;
+  rating: number;
+  image: string;
+}
+interface LatestPodcast {
+  id: number;
+  img:string;
+  alt:string;
+  title: string;
+  description: string;
+}
+
+interface PodcastState {
+  podcasts: Podcast[];
+  latestPodcasts: LatestPodcast[];
+}
+
+const initialState: PodcastState = {
+  podcasts: podcastsData.podcasts, 
+  latestPodcasts: podcastsData.latestPodcasts, 
+};
+
+const podcastsSlice = createSlice({
+  name: 'podcasts',
+  initialState,
+  reducers: {},
+});
+
+export default podcastsSlice.reducer;
