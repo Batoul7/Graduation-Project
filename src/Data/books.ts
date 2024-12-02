@@ -16,7 +16,7 @@ export interface Book {
     {
       id: 1,
       type: "Ebook",
-      title: "Ebooks",
+      title: "Variety of Topics",
       topicsCoverage: "Topics include AI in education (25%), renewable energy (20%), healthcare (15%), space exploration (25%), and biotechnology (15%).",
       total: "Over 100 ebooks",
       downloadFormat: "PDF format for access",
@@ -27,7 +27,7 @@ export interface Book {
     {
       id: 2,
       type: "Whitepaper",
-      title: "Whitepapers",
+      title: "Topics Coverage",
       topicsCoverage: "Whitepapers cover quantum computing (20%), AI ethics (15%), space mining prospects (10%), AI in healthcare (15%), and renewable energy strategies (30%).",
       total: "Over 50 whitepapers",
       downloadFormat: "PDF format for access",
