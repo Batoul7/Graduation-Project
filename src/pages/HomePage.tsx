@@ -6,37 +6,38 @@ import HeroHome from "../components/HeroHome/HeroHome";
 import imgpeople from './../assets/images/HomePage/SubContainer-1.png'
 import imgArrowHero from './../assets/images/Arrows/goArrow.png'
 import imgEyesBtn from './../assets/images/common/eye-yellow.png'
+import BookSections from "../components/BookSections/BookSections";
 interface HeroCard {
-  id:number;
-  number:string ;
-  mult:string;
-  parcard:string;
+  id: number;
+  number: string;
+  mult: string;
+  parcard: string;
 }
 
 
 export default function HomePage() {
 
   // const books = useSelector((state: RootState) => state.books.books);
-  
+
   const HeroCard: Array<HeroCard> = [
     {
       id: 1,
       number: '300',
       mult: "+",
       parcard: "Resources available"
-    } ,
+    },
     {
       id: 2,
       number: '12k',
       mult: "+",
       parcard: "Total Downloads"
-    } ,
+    },
     {
       id: 3,
       number: '10k',
       mult: "+",
       parcard: "Active Users"
-    } ,
+    },
 
   ]
 
@@ -48,6 +49,7 @@ export default function HomePage() {
     img1={imgpeople} altimg1={"people image"} subtitle={"Explore 1000+ resources"} 
     par3={"Over 1,000 articles on emerging tech trends and breakthroughs."}
     contentBtn={"Explore Resources"} imgArrowbtn={imgArrowHero} altimagebtn={"image arrow btn"} imgEyes={imgEyesBtn} />
+     <BookSections />
     <MainTitle title="Real Words from Real Readers" subtitle="What Our Readers Say" button={true} btntext='View All Testimonials'/>
     <Testimonials/>
     </div>

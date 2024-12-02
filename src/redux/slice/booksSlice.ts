@@ -12,11 +12,7 @@ const initialBooksState: BooksState = {
 const booksSlice = createSlice({
   name: "books",
   initialState: initialBooksState,
-  reducers: {
-    // setCurrentPage: (state, action: PayloadAction<string>) => {
-
-    // },
-  },
+  reducers: {},
 });
 
 export const booksReducer = booksSlice.reducer;
