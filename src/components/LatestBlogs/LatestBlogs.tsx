@@ -14,9 +14,9 @@ const LatestBlogs = () => {
   useEffect(() => {
     dispatch(last4blogs());
   }, [dispatch]);
-  
+
   return (
-    <div className="p-[8.4%] bg-[#1A1A1A]">
+    <div className="px-[8.4%] py-[5%] bg-myprimary-dark-10">
       <div className="container mx-auto justify-center items-center">
         <div className="flex mb-10 pb-10 flex-col md:flex-row items-stretch">
           <div className="w-full lg:w-1/3">
@@ -73,44 +73,47 @@ const LatestBlogs = () => {
           </div>
         </div>
 
-        <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 items-center mx-auto justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mx-auto justify-center">
           {last4Blogs.map((blog, index) =>
             index !== 0 ? (
-              <div
-                className="w-full min-h-[400px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[600px] xl:max-w-[600px] items-center mx-auto justify-center"
-                key={index}
-              >
-                <div className="">
-                  <img
-                    src={blog.cover}
-                    alt={blog.title}
-                    className="w-full h-auto object-cover rounded-md"
-                  />
-                </div>
-                <div className="py-5">
-                  <h2 className="text-base xs:text-sm md:text-sm lg:text-base text-white">
-                    {blog.title}
-                  </h2>
-                  <p className="font-inter text-sm font-light text-left text-[#98989A] mt-5">
-                    {blog?.category}
-                  </p>
-                  <div className="flex justify-between mt-8">
-              <div className="gap-2 flex">
-                <button className="text-[#98989A] justify-center items-center text-xs flex gap-1 border border-[#262626] px-3 bg-[#1A1A1A] rounded-full">
-                  <img src={like} className="w-4 h-4" alt="" />
-                  {last4Blogs[0]?.reactions}
-                </button>
-                <button className="text-[#98989A] justify-center items-center text-xs flex gap-1 border border-[#262626] px-3 bg-[#1A1A1A] rounded-full">
-                  <img src={share} className="w-4 h-4" alt="" />
-                  {last4Blogs[0]?.shares}{" "}
-                </button>
-              </div>
-              <button className="text-[#98989A] text-xs justify-center items-center rounded-lg py-2 px-3">
-                Read more
-              </button>
-            </div>
-                </div>
-              </div>
+    <div
+      className={`w-full min-h-[350px] sm:max-w-[600px] md:max-w-[450px] lg:max-w-[400px] xl:max-w-[500px] items-center mx-auto justify-center ${
+        index === 0 && "col-span-1 sm:col-span-2"
+      }`}
+      key={index}
+    >
+      <div className="">
+        <img
+          src={blog.cover}
+          alt={blog.title}
+          className="w-full h-auto object-cover rounded-md"
+        />
+      </div>
+      <div className="py-5">
+        <h2 className="text-base xs:text-sm md:text-sm lg:text-base text-white">
+          {blog.title}
+        </h2>
+        <p className="font-inter text-sm font-light text-left text-[#98989A] mt-5">
+          {blog?.category}
+        </p>
+        <div className="flex justify-between mt-8">
+          <div className="gap-2 flex">
+            <button className="text-[#98989A] justify-center items-center text-xs flex gap-1 border border-[#262626] px-3 bg-[#1A1A1A] rounded-full">
+              <img src={like} className="w-4 h-4" alt="" />
+              {blog.reactions}
+            </button>
+            <button className="text-[#98989A] justify-center items-center text-xs flex gap-1 border border-[#262626] px-3 bg-[#1A1A1A] rounded-full">
+              <img src={share} className="w-4 h-4" alt="" />
+              {blog.shares}{" "}
+            </button>
+          </div>
+          <button className="text-[#98989A] text-xs justify-center items-center rounded-lg py-2 px-3">
+            Read more
+          </button>
+        </div>
+      </div>
+    </div>
+
             ) : null
           )}
         </div>
