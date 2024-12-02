@@ -1,15 +1,17 @@
 import React from "react";
 import img1 from './../../assets/images/Arrows/goArrow.png';
+import ButtonCommon from "../ButtonCommon/ButtonCommon";
 
 interface LeftCardProps {
     title: string;
     description: string;
     icon: string;
+    btncontent: string;
     buttonText?: string;
     buttonLabel?: string;
     stars?: string[];
     host?: string;
-    pageType: "podcast" | "contact" | "default" | "book"; 
+    pageType: "podcast" | "contact" | "default" | "book";
 }
 
 const LeftCard: React.FC<LeftCardProps> = ({
@@ -21,14 +23,15 @@ const LeftCard: React.FC<LeftCardProps> = ({
     stars = [],
     host,
     pageType,
+    btncontent,
 }) => {
     return (
-        <div className="bg-myprimary-dark-08 text-white w-[519px] rounded-lg">
+        <div className="bg-myprimary-dark-08 text-white md:w-[413px] 2xl:w-[519px]  rounded-lg">
             <div className="mb-8">
                 <img src={icon} alt="Icon" className="w-16 h-16" />
             </div>
             <div className={pageType === "podcast" ? "flex items-center justify-between" : ""}>
-                <h2 className="text-[40px] font-semibold font-kumbhSans">
+                <h2 className="2xl:text-[40px] md:text-[30px] text-2xl font-semibold font-kumbhSans">
                     {title}
                 </h2>
                 {pageType === "podcast" && (
@@ -59,29 +62,21 @@ const LeftCard: React.FC<LeftCardProps> = ({
                     </div>
                 </div>
             ) : pageType === "book" ? (
-                <div className="mt-[30px]">
+                <div className="2xl:mt-[30px] mt-2.5 ">
                     {description && (
-                        <p className="text-lg font-normal text-myprimary-gray-60 mb-[50px]">
+                        <p className="2xl:text-lg md:text-base text-sm font-normal text-myprimary-gray-60 mb-[50px]">
                             {description}
                         </p>
                     )}
-                    {buttonText && (
-                        <button className="w-full bg-myprimary-dark-10 px-6 py-[18px] text-lg font-normal text-myprimary-gray-60 rounded-md flex items-center justify-center gap-2.5 ">
-                            {buttonText}
-                            <img src={img1} alt="icon" className="w-6 h-6" />   
-                        </button>
-                    )}
+                    <ButtonCommon contentBtn={btncontent} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} EbookHome='EbookHome' />
                 </div>
             ) : (
-                <p className="text-lg font-normal text-myprimary-gray-60">{description}</p>
+                <p className="2xl:text-lg md:text-base text-sm 2xl:mt-4 md:mt-2.5 mt-1.5 font-normal text-myprimary-gray-60">{description}</p>
             )}
 
             {pageType === "contact" && buttonText && (
                 <div className="mt-[50px]">
-                    <button className="flex items-center gap-2.5 bg-myprimary-dark-10 px-6 py-[18px] text-lg font-normal text-myprimary-gray-60 rounded-md">
-                        {buttonText}
-                        <img src={img1} alt="icon" className="w-6 h-6" />
-                    </button>
+                    <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'contact@ai-podcasts.com'} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} ContactRadius='ContactRadius' />
                 </div>
             )}
         </div>
