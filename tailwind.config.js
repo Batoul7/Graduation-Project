@@ -34,6 +34,7 @@ export default {
                 '0.5' : '2px' ,
                 '2.5' : '10px' ,
                 '4.5' : '18px' ,
+                '7.5' : '30px' ,
             },
             padding: {
               'mainpaddinglarge':'162px',
