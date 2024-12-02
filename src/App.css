@@ -616,11 +616,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -653,6 +648,10 @@ video {
   margin-bottom: 50px;
 }
 
+.mt-1\.5 {
+  margin-top: 0.375rem;
+}
+
 .mt-2\.5 {
   margin-top: 10px;
 }
@@ -675,10 +674,6 @@ video {
 
 .mt-\[50px\] {
   margin-top: 50px;
-}
-
-.mt-1\.5 {
-  margin-top: 0.375rem;
 }
 
 .inline {
@@ -753,20 +748,12 @@ video {
   min-height: 160px;
 }
 
-.min-h-\[450px\] {
-  min-height: 450px;
+.min-h-\[350px\] {
+  min-height: 350px;
 }
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-\[400px\] {
-  min-height: 400px;
-}
-
-.min-h-\[350px\] {
-  min-height: 350px;
 }
 
 .w-16 {
@@ -789,6 +776,10 @@ video {
   width: 106px;
 }
 
+.w-\[149px\] {
+  width: 149px;
+}
+
 .w-\[151\.83px\] {
   width: 151.83px;
 }
@@ -801,25 +792,12 @@ video {
   width: 174px;
 }
 
-.w-\[193px\] {
-  width: 193px;
-}
-
 .w-\[363\.5px\] {
   width: 363.5px;
 }
 
 .w-\[470\.67px\] {
   width: 470.67px;
-}
-
-
-.w-\[519px\] {
-  width: 519px;
-
-.w-\[718px\] {
-  width: 718px;
-
 }
 
 .w-fit {
@@ -834,18 +812,6 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[90\%\] {
-  width: 90%;
-}
-
-.w-\[149px\] {
-  width: 149px;
 }
 
 .max-w-\[310px\] {
@@ -932,33 +898,16 @@ video {
   gap: 1.25rem;
 }
 
-.gap-\[50px\] {
-  gap: 50px;
-}
-
-.gap-\[7px\] {
-  gap: 7px;
-}
-
-
 .gap-8 {
   gap: 2rem;
 }
 
-.gap-0 {
-  gap: 0px;
-  }
-.gap-4 {
-  gap: 1rem;
-}
-
-.gap-\[\] {
-  gap: ;
-}
-
 .gap-\[30px\] {
   gap: 30px;
+}
 
+.gap-\[7px\] {
+  gap: 7px;
 }
 
 .gap-x-\[100px\] {
@@ -1152,11 +1101,6 @@ video {
   padding-right: 8.4%;
 }
 
-.px-mainpaddingsmall {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
@@ -1187,11 +1131,6 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1212,19 +1151,14 @@ video {
   padding-bottom: 32.5px;
 }
 
-.py-\[60px\] {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
 .py-\[5\%\] {
   padding-top: 5%;
   padding-bottom: 5%;
 }
 
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.py-\[60px\] {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .pb-0\.5 {
@@ -1283,10 +1217,6 @@ video {
   padding-top: 189px;
 }
 
-.pt-\[5\%\] {
-  padding-top: 5%;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1319,10 +1249,6 @@ video {
 
 .text-\[28px\] {
   font-size: 28px;
-}
-
-.text-\[40px\] {
-  font-size: 40px;
 }
 
 .text-base {
@@ -1473,14 +1399,6 @@ body {
     max-width: 600px;
   }
 
-  .sm\:max-w-\[400px\] {
-    max-width: 400px;
-  }
-
-  .sm\:max-w-\[350px\] {
-    max-width: 350px;
-  }
-
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1541,20 +1459,16 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
   .md\:mt-2\.5 {
     margin-top: 10px;
   }
 
-  .md\:w-\[413px\] {
-    width: 413px;
-  }
-
   .md\:w-\[193px\] {
     width: 193px;
+  }
+
+  .md\:w-\[413px\] {
+    width: 413px;
   }
 
   .md\:max-w-\[450px\] {
@@ -1563,10 +1477,6 @@ body {
 
   .md\:max-w-\[500px\] {
     max-width: 500px;
-  }
-
-  .md\:max-w-\[400px\] {
-    max-width: 400px;
   }
 
   .md\:grid-cols-2 {
@@ -1619,14 +1529,14 @@ body {
     left: 260px;
   }
 
-  .lg\:my-\[60px\] {
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-
   .lg\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  .lg\:my-\[60px\] {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 
   .lg\:mb-0 {
@@ -1649,6 +1559,9 @@ body {
     width: 66.666667%;
   }
 
+  .lg\:w-\[51\%\] {
+    width: 51%;
+  }
 
   .lg\:max-w-\[400px\] {
     max-width: 400px;
@@ -1658,20 +1571,8 @@ body {
     max-width: 550px;
   }
 
-  .lg\:max-w-\[500px\] {
-    max-width: 500px;
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .lg\:w-\[51\%\] {
-    width: 51%;
-  }
-
-  .lg\:max-w-\[600px\] {
-    max-width: 600px;
-
   }
 
   .lg\:grid-cols-3 {
@@ -1686,12 +1587,12 @@ body {
     align-items: center;
   }
 
-  .lg\:gap-\[60px\] {
-    gap: 60px;
-  }
-
   .lg\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .lg\:gap-\[60px\] {
+    gap: 60px;
   }
 
   .lg\:py-0 {
@@ -1702,6 +1603,11 @@ body {
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .lg\:text-base {
@@ -1769,46 +1675,29 @@ body {
     max-width: 413px;
   }
 
+  .xl\:max-w-\[500px\] {
+    max-width: 500px;
+  }
+
   .xl\:max-w-\[700px\] {
     max-width: 700px;
-  }
-
-
-  .xl\:max-w-\[800px\] {
-    max-width: 800px;
-  }
-
-  .xl\:max-w-\[850px\] {
-    max-width: 850px;
   }
 
   .xl\:max-w-\[718px\] {
     max-width: 718px;
   }
 
-  .xl\:max-w-\[750px\] {
-    max-width: 750px;
-  }
-
-  .xl\:max-w-\[500px\] {
-    max-width: 500px;
-  }
-
-  .xl\:max-w-\[400px\] {
-    max-width: 400px;
-  }
   .xl\:flex-row {
     flex-direction: row;
   }
 
   .xl\:gap-\[120px\] {
     gap: 120px;
-
   }
 
-  .xl\:px-mainpaddingmedium {
-    padding-left: 80px;
-    padding-right: 80px;
+  .xl\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .xl\:pb-1 {
@@ -1913,16 +1802,16 @@ body {
     margin-inline-start: 80px;
   }
 
+  .\32xl\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .\32xl\:mt-\[30px\] {
     margin-top: 30px;
   }
 
   .\32xl\:mt-\[60px\] {
     margin-top: 60px;
-  }
-
-  .\32xl\:mt-4 {
-    margin-top: 1rem;
   }
 
   .\32xl\:h-\[63px\] {
@@ -1963,10 +1852,6 @@ body {
 
   .\32xl\:w-full {
     width: 100%;
-  }
-
-  .\32xl\:max-w-\[1000px\] {
-    max-width: 1000px;
   }
 
   .\32xl\:max-w-\[1694px\] {
@@ -2079,6 +1964,10 @@ body {
     font-size: 17px;
   }
 
+  .\32xl\:text-\[40px\] {
+    font-size: 40px;
+  }
+
   .\32xl\:text-\[58px\] {
     font-size: 58px;
   }
@@ -2099,10 +1988,6 @@ body {
   .\32xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .\32xl\:text-\[40px\] {
-    font-size: 40px;
   }
 
   .\32xl\:leading-7 {

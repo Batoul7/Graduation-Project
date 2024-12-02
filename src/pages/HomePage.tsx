@@ -44,14 +44,14 @@ export default function HomePage() {
 
   return (
     <div>
-    <HeroHome HeroCard={HeroCard} par1={"Your Journey to Tomorrow Begins Here"} 
-    title={"Explore the Frontiers of Artificial Intelligence"} par2={"Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI."} 
-    img1={imgpeople} altimg1={"people image"} subtitle={"Explore 1000+ resources"} 
-    par3={"Over 1,000 articles on emerging tech trends and breakthroughs."}
-    contentBtn={"Explore Resources"} imgArrowbtn={imgArrowHero} altimagebtn={"image arrow btn"} imgEyes={imgEyesBtn} />
-     <BookSections />
-    <MainTitle title="Real Words from Real Readers" subtitle="What Our Readers Say" button={true} btntext='View All Testimonials'/>
-    <Testimonials/>
+      <HeroHome HeroCard={HeroCard} par1={"Your Journey to Tomorrow Begins Here"} 
+      title={"Explore the Frontiers of Artificial Intelligence"} par2={"Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI."} 
+      img1={imgpeople} altimg1={"people image"} subtitle={"Explore 1000+ resources"} 
+      par3={"Over 1,000 articles on emerging tech trends and breakthroughs."}
+      contentBtn={"Explore Resources"} imgArrowbtn={imgArrowHero} altimagebtn={"image arrow btn"} imgEyes={imgEyesBtn} />
+      <BookSections />
+      <MainTitle title="Real Words from Real Readers" subtitle="What Our Readers Say" button={true} btntext='View All Testimonials'/>
+      <Testimonials/>
     </div>
   );
 };
