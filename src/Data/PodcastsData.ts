@@ -1,5 +1,3 @@
-
-
 import podcastimg1 from '/src/assets/images/PodcastsPage/podcast-1.png';
 import podcastimg2 from '/src/assets/images/PodcastsPage/podcast-2.png';
 import podcastimg3 from '/src/assets/images/PodcastsPage/podcast-3.png';
