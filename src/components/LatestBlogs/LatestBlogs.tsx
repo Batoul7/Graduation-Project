@@ -16,7 +16,7 @@ const LatestBlogs = () => {
   }, [dispatch]);
 
   return (
-    <div className="px-[8.4%] pt-[5%] bg-myprimary-dark-10">
+    <div className="px-[8.4%] py-[5%] bg-myprimary-dark-10">
       <div className="container mx-auto justify-center items-center">
         <div className="flex mb-10 pb-10 flex-col md:flex-row items-stretch">
           <div className="w-full lg:w-1/3">
@@ -77,7 +77,7 @@ const LatestBlogs = () => {
           {last4Blogs.map((blog, index) =>
             index !== 0 ? (
     <div
-      className={`w-full min-h-[450px] sm:max-w-[600px] md:max-w-[450px] lg:max-w-[400px] xl:max-w-[500px] items-center mx-auto justify-center ${
+      className={`w-full min-h-[350px] sm:max-w-[600px] md:max-w-[450px] lg:max-w-[400px] xl:max-w-[500px] items-center mx-auto justify-center ${
         index === 0 && "col-span-1 sm:col-span-2"
       }`}
       key={index}

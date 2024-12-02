@@ -48,8 +48,8 @@ export default function HomePage() {
     img1={imgpeople} altimg1={"people image"} subtitle={"Explore 1000+ resources"} 
     par3={"Over 1,000 articles on emerging tech trends and breakthroughs."}
     contentBtn={"Explore Resources"} imgArrowbtn={imgArrowHero} altimagebtn={"image arrow btn"} imgEyes={imgEyesBtn} />
-     <MainTitle title="FutureTech Features" subtitle="Unlock the Power of"/>
-      <Testimonials/>
+    <MainTitle title="Real Words from Real Readers" subtitle="What Our Readers Say" button={true} btntext='View All Testimonials'/>
+    <Testimonials/>
     </div>
   );
 };
