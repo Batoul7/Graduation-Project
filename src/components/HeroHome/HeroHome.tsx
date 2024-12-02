@@ -33,7 +33,7 @@ interface HeroProps {
 export default function HeroHome({ HeroCard , par1 , title , par2 , img1 , altimg1 , subtitle , par3 , contentBtn , imgArrowbtn, altimagebtn ,imgEyes } :HeroProps ) {
 
   return (
-    <div className="px-mainpaddingsmall xl:px-mainpaddingmedium 2xl:px-mainpaddinglarge bg-myprimary-dark-08 flex flex-wrap  sm:h-screen ">
+    <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 flex flex-wrap  sm:h-screen ">
         <div className="flex flex-col justify-between sm:w-[59.09%] pt-10 sm:pt-[100px] 2xl:pt-[150px] ">
             <div className="flex flex-col justify-center items-start border-neutral-800 " >
                 <p className="font-medium font-kumbhSans text-mysecondary-dark-40  text-lg xl:text-1.5xl 2xl:text-3xl leading-[21.6px] xl:leading-[26.4px] 2xl:leading-9 pb-4 xl:pb-5 2xl:pb-7.5 ">{par1}</p>

@@ -37,8 +37,6 @@ export default {
             },
             padding: {
               'mainpaddinglarge':'162px',
-              'mainpaddingmedium':'80px',
-              'mainpaddingsmall':'16px',
             },
             borderRadius: {
                 "rad-10" : "10px",

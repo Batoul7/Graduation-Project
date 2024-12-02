@@ -602,6 +602,10 @@ video {
   left: 0px;
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -744,8 +748,12 @@ video {
   min-height: 160px;
 }
 
-.min-h-\[400px\] {
-  min-height: 400px;
+.min-h-\[350px\] {
+  min-height: 350px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-16 {
@@ -790,10 +798,6 @@ video {
 
 .w-\[470\.67px\] {
   width: 470.67px;
-}
-
-.w-\[718px\] {
-  width: 718px;
 }
 
 .w-fit {
@@ -892,6 +896,10 @@ video {
 
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-\[30px\] {
@@ -995,11 +1003,6 @@ video {
   background-color: rgb(26 26 26 / var(--tw-bg-opacity, 1));
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-}
-
 .bg-myborder-dark-color {
   --tw-bg-opacity: 1;
   background-color: rgb(38 38 38 / var(--tw-bg-opacity, 1));
@@ -1063,10 +1066,6 @@ video {
   padding: 30px;
 }
 
-.p-\[8\.4\%\] {
-  padding: 8.4%;
-}
-
 .px-2\.5 {
   padding-left: 10px;
   padding-right: 10px;
@@ -1097,9 +1096,9 @@ video {
   padding-right: 14px;
 }
 
-.px-mainpaddingsmall {
-  padding-left: 16px;
-  padding-right: 16px;
+.px-\[8\.4\%\] {
+  padding-left: 8.4%;
+  padding-right: 8.4%;
 }
 
 .py-1\.5 {
@@ -1120,11 +1119,6 @@ video {
 .py-2\.5 {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .py-3 {
@@ -1155,6 +1149,11 @@ video {
 .py-\[32\.5px\] {
   padding-top: 32.5px;
   padding-bottom: 32.5px;
+}
+
+.py-\[5\%\] {
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .py-\[60px\] {
@@ -1372,6 +1371,10 @@ body {
     top: 90px;
   }
 
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .sm\:h-screen {
     height: 100vh;
   }
@@ -1388,8 +1391,12 @@ body {
     width: 59.09%;
   }
 
-  .sm\:max-w-\[350px\] {
-    max-width: 350px;
+  .sm\:max-w-\[450px\] {
+    max-width: 450px;
+  }
+
+  .sm\:max-w-\[600px\] {
+    max-width: 600px;
   }
 
   .sm\:grid-cols-2 {
@@ -1466,6 +1473,14 @@ body {
 
   .md\:max-w-\[450px\] {
     max-width: 450px;
+  }
+
+  .md\:max-w-\[500px\] {
+    max-width: 500px;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:grid-cols-3 {
@@ -1548,8 +1563,16 @@ body {
     width: 51%;
   }
 
-  .lg\:max-w-\[600px\] {
-    max-width: 600px;
+  .lg\:max-w-\[400px\] {
+    max-width: 400px;
+  }
+
+  .lg\:max-w-\[550px\] {
+    max-width: 550px;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-3 {
@@ -1580,6 +1603,11 @@ body {
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .lg\:text-base {
@@ -1647,12 +1675,16 @@ body {
     max-width: 413px;
   }
 
-  .xl\:max-w-\[600px\] {
-    max-width: 600px;
+  .xl\:max-w-\[500px\] {
+    max-width: 500px;
   }
 
   .xl\:max-w-\[700px\] {
     max-width: 700px;
+  }
+
+  .xl\:max-w-\[718px\] {
+    max-width: 718px;
   }
 
   .xl\:flex-row {
@@ -1663,9 +1695,9 @@ body {
     gap: 120px;
   }
 
-  .xl\:px-mainpaddingmedium {
-    padding-left: 80px;
-    padding-right: 80px;
+  .xl\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .xl\:pb-1 {
