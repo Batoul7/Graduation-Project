@@ -16,7 +16,7 @@ const LatestBlogs = () => {
   }, [dispatch]);
 
   return (
-    <div className="px-[8.4%] py-[5%] bg-myprimary-dark-10">
+    <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge py-[5%] bg-myprimary-dark-10">
       <div className="container mx-auto justify-center items-center">
         <div className="flex mb-10 pb-10 flex-col md:flex-row items-stretch">
           <div className="w-full lg:w-1/3">
