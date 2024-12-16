@@ -25,9 +25,10 @@ export default function BCards() {
             text:"2 million monthly readers"
         },
     ]
+
   return (
-    <div className="bg-myprimary-dark-08 px-4 xl:px-20 2xl:px-mainpaddinglarge
-    flex justify-between items-center flex-wrap gap-x-[60px] lg:gap-x-[100px] 2xl:gap-x-[160px] border-y border-neutral-800">
+    <div className="bg-myprimary-dark-08 px-4 xl:px-20 2xl:px-mainpaddinglarge border-y border-neutral-800 
+       flex justify-center xl:justify-between items-center flex-wrap ">
       {
        cardData.map((item,index) => {
         return (
