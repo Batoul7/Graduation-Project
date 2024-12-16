@@ -48,6 +48,7 @@ export default {
               },
               screens: {
                 'lghero': {'min': '1540px', 'max': '1905px'}, 
+                "3xl": "1700px"
               },
               fontSize: {
                 "6.5xl" : "70px" ,

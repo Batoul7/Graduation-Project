@@ -594,6 +594,12 @@ video {
   }
 }
 
+@media (min-width: 1700px) {
+  .container {
+    max-width: 1700px;
+  }
+}
+
 .fixed {
   position: fixed;
 }
@@ -987,11 +993,6 @@ video {
 .gap-x-\[100px\] {
   -moz-column-gap: 100px;
        column-gap: 100px;
-}
-
-.gap-x-\[60px\] {
-  -moz-column-gap: 60px;
-       column-gap: 60px;
 }
 
 .whitespace-nowrap {
@@ -1607,6 +1608,10 @@ body {
     width: 40.91%;
   }
 
+  .sm\:w-\[500px\] {
+    width: 500px;
+  }
+
   .sm\:w-\[59\.09\%\] {
     width: 59.09%;
   }
@@ -1617,6 +1622,10 @@ body {
 
   .sm\:max-w-\[600px\] {
     max-width: 600px;
+  }
+
+  .sm\:max-w-\[700px\] {
+    max-width: 700px;
   }
 
   .sm\:grid-cols-2 {
@@ -1869,10 +1878,6 @@ body {
     width: 1.5rem;
   }
 
-  .lg\:w-\[360px\] {
-    width: 360px;
-  }
-
   .lg\:w-\[505\.33px\] {
     width: 505.33px;
   }
@@ -1923,11 +1928,6 @@ body {
 
   .lg\:gap-\[60px\] {
     gap: 60px;
-  }
-
-  .lg\:gap-x-\[100px\] {
-    -moz-column-gap: 100px;
-         column-gap: 100px;
   }
 
   .lg\:rounded-xl {
@@ -2027,6 +2027,10 @@ body {
     width: 201.67px;
   }
 
+  .xl\:w-\[360px\] {
+    width: 360px;
+  }
+
   .xl\:w-\[60\%\] {
     width: 60%;
   }
@@ -2057,6 +2061,10 @@ body {
 
   .xl\:flex-row {
     flex-direction: row;
+  }
+
+  .xl\:justify-between {
+    justify-content: space-between;
   }
 
   .xl\:gap-\[120px\] {
@@ -2234,10 +2242,6 @@ body {
     width: 218px;
   }
 
-  .\32xl\:w-\[22\.15\%\] {
-    width: 22.15%;
-  }
-
   .\32xl\:w-\[225\.33px\] {
     width: 225.33px;
   }
@@ -2260,10 +2264,6 @@ body {
 
   .\32xl\:w-full {
     width: 100%;
-  }
-
-  .\32xl\:w-\[425\.33px\] {
-    width: 425.33px;
   }
 
   .\32xl\:max-w-\[1694px\] {
@@ -2296,11 +2296,6 @@ body {
 
   .\32xl\:gap-\[50px\] {
     gap: 50px;
-  }
-
-  .\32xl\:gap-x-\[160px\] {
-    -moz-column-gap: 160px;
-         column-gap: 160px;
   }
 
   .\32xl\:border-none {
@@ -2469,6 +2464,12 @@ body {
 
   .lghero\:text-\[60px\] {
     font-size: 60px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .\33xl\:w-\[425\.33px\] {
+    width: 425.33px;
   }
 }
 
