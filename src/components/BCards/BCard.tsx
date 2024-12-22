@@ -1,6 +1,6 @@
 import buttonArrow from '../../assets/images/Arrows/Button.png'
 
-interface BCardProps {
+export interface BCardProps {
     icon:string;
     title: string;
     subtitle: string;
