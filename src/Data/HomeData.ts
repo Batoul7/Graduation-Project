@@ -1,9 +1,6 @@
-
 import icon1 from './../assets/images/HomePage/icon-1.png'
 import icon2 from './../assets/images/HomePage/icon-2.png'
 import icon3 from './../assets/images/HomePage/icon-3.png'
-
-
 
 interface HeroCard {
     id?:number;
@@ -11,18 +8,11 @@ interface HeroCard {
     mult:string;
     parcard:string;
   }
-
-
   interface CardData {
     title:string;
     description:string;
   }
 
-
-
-
-
-  
 export const CounterCard: Array<HeroCard> = [
     {
         id: 1,

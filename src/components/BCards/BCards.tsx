@@ -1,7 +1,4 @@
-
-
 import BCard from './BCard'
-
 
 interface BCardProps {
   icon:string;
@@ -9,11 +6,9 @@ interface BCardProps {
   subtitle: string;
   text: string;
 }
-
 interface BcardData {
   cardData: BCardProps[];
 }
-
 
 export default function BCards({cardData} : BcardData ) {
 
