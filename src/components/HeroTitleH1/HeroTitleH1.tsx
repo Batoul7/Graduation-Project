@@ -1,11 +1,11 @@
 
 
 interface HeroTitleProps {
-  title:string ;
-  mainhero:string;
-  newcommonhero:string;
-  podcastcommonhero:string;
-  Resourcecommonhero:string;
+  title?:string ;
+  mainhero?:string;
+  newcommonhero?:string;
+  podcastcommonhero?:string;
+  Resourcecommonhero?:string;
 }
 
 export default function HeroTitleH1({title , mainhero , newcommonhero , podcastcommonhero , Resourcecommonhero} : HeroTitleProps ) {
