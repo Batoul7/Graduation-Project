@@ -1,6 +1,7 @@
 import React from "react";
 import img1 from './../../assets/images/Arrows/goArrow.png';
 import ButtonCommon from "../ButtonCommon/ButtonCommon";
+import Stars from "../Stars/Stars";
 
 interface LeftCardProps {
     title: string;
@@ -9,7 +10,7 @@ interface LeftCardProps {
     btncontent: string;
     buttonText?: string;
     buttonLabel?: string;
-    stars?: string[];
+    rating?: number;
     host?: string;
     pageType: "podcast" | "contact" | "default" | "book";
 }
@@ -20,7 +21,7 @@ const LeftCard: React.FC<LeftCardProps> = ({
     icon,
     buttonText,
     buttonLabel,
-    stars = [],
+    rating,
     host,
     pageType,
     btncontent,
@@ -35,16 +36,7 @@ const LeftCard: React.FC<LeftCardProps> = ({
                     {title}
                 </h2>
                 {pageType === "podcast" && (
-                    <div className="flex gap-[7px] border border-myborder-dark-color rounded-[100px] px-4 py-2.5">
-                        {stars.map((star, index) => (
-                            <img
-                                key={index}
-                                src={star}
-                                alt={`Star ${index + 1}`}
-                                className="w-6 h-6"
-                            />
-                        ))}
-                    </div>
+                    <Stars rating={rating}/>
                 )}
             </div>
 
