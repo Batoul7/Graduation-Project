@@ -1,4 +1,5 @@
 import React from "react";
+import Stars from "../Stars/Stars";
 
 interface TestimonialProps {
   name: string;
@@ -19,19 +20,9 @@ const TestimonialsCard: React.FC<TestimonialProps> = ({ name, location, image, r
         </div>
       </div>
       <div className=" rounded-xl border border-neutral-800 bg-myprimary-dark-10 pb-6 px-7.5">
-        <div className="w-fit mx-auto mt-[-22px] bg-myprimary-dark-08 
-        flex gap-[7px] items-center justify-between py-[10px] px-4 rounded-[100px] border border-neutral-800">
-          {Array.from({ length: 5 }).map((_, index) => (
-            ( index < rating) ? ( 
-              <img src="/src/assets/images/common/star-yellow.png" alt="star-yellow"/>
-            ) : (
-              <img src="/src/assets/images/common/star-stroke.png" alt="star-stroke"/>
-            )
-          ))}
-        </div>
+        <Stars rating={rating}/>
         <p className="text-base font-normal pt-4">{text}</p>
       </div>
-     
     </div>
   );
 };

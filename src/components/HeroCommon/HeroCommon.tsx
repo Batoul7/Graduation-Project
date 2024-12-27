@@ -2,14 +2,14 @@ import HeroTitleH1 from "../HeroTitleH1/HeroTitleH1";
 
 
 interface HeroCommonProps {
-    CommonHeroTitle:string ;
-    CommonHeroText:string;
-    neww:string;
-    podcast:string;
-    Resourse:string;
-    newcommonhero:string;
-    podcastcommonhero:string;
-    Resourcecommonhero:string;
+    CommonHeroTitle?:string ;
+    CommonHeroText?:string;
+    neww?:string;
+    podcast?:string;
+    Resourse?:string;
+    newcommonhero?:string;
+    podcastcommonhero?:string;
+    Resourcecommonhero?:string;
   }
   // pt-[189px]
 
@@ -17,7 +17,7 @@ export default function HeroCommon({CommonHeroTitle , CommonHeroText , neww , po
   return (
     <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 h-screen flex items-start  sm:items-center pt-[189px] sm:pt-0 ">
       <div className="relative w-full">
-          <HeroTitleH1 title={CommonHeroTitle} mainhero={''} newcommonhero={newcommonhero} podcastcommonhero={podcastcommonhero} Resourcecommonhero={Resourcecommonhero}  />
+          <HeroTitleH1 title={CommonHeroTitle} newcommonhero={newcommonhero} podcastcommonhero={podcastcommonhero} Resourcecommonhero={Resourcecommonhero}  />
           <span className={`font-normal text-myprimary-gray-60 inline relative lg:absolute text-sm sm:text-[15px] leading-[21px] sm:leading-6 2xl:leading-[27px]
 
               ${podcast ? ' xl:left-[424px] lghero:left-[600px] 2xl:left-[619px] xl:top-[70px] 2xl:top-[120px] xl:ms-[60px] 2xl:ms-[80px] 2xl:text-[17px] ' : ''}

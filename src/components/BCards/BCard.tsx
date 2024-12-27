@@ -1,6 +1,6 @@
 import buttonArrow from '../../assets/images/Arrows/Button.png'
 
-interface BCardProps {
+export interface BCardProps {
     icon:string;
     title: string;
     subtitle: string;
@@ -8,7 +8,8 @@ interface BCardProps {
 }
 export default function BCard({icon,title,subtitle,text} : BCardProps) {
   return (
-    <div className='bg-myprimary-dark-08 flex flex-col gap-7.5 py-7.5 lg:py-10 xl:py-[50px] w-full lg:w-[360px] 2xl:w-[425.33px]'>
+    <div className='bg-myprimary-dark-08 flex flex-col gap-7.5 py-7.5 lg:py-10 xl:py-[50px] 
+    w-full sm:max-w-[700px] xl:w-[360px] 3xl:w-[425.33px] '>
         <div>
         <img src={icon} alt='icon'/>
         </div>

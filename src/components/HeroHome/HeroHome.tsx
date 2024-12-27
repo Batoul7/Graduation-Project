@@ -9,7 +9,7 @@ interface HeroCard {
 }
 
 interface HeroProps {
-    HeroCard: HeroCard | any ;
+    HeroCard: HeroCard[] ;
     par1:string;
     title:string;
     par2:string;
