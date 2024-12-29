@@ -1,5 +1,5 @@
 import React from "react";
-import Stars from "../Stars/Stars";
+import Stars from "../B_Stars/Stars";
 
 interface TestimonialProps {
   name: string;
