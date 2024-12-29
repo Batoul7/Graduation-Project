@@ -1,5 +1,5 @@
 
-import { DataBePart } from "../../Data/CardBePartData"
+import { DataBePart } from "../../Data/BePartCardData"
 import CardTitle from "../CardTitle/CardTitle"
 
 const CardBePart = () => {
