@@ -5,8 +5,9 @@ interface TitleProps {
   btntext?: string,
   desc?: boolean,
   txt?: string,
-  link: string,
+  link?: string,
   btnbook?: boolean
+
 }
 import { useDispatch, useSelector } from "react-redux";
 import { setActiveTab, selectActiveTab } from "../../redux/slice/BookDataSlice";
@@ -32,7 +33,7 @@ export default function MainTitle({ title, subtitle, button, btntext, desc, txt,
         {desc && <p className="text-xs md:text-sm 2xl:text-lg font-inter text-myprimary-gray-60">{txt}</p>}
         <div >
           {button &&
-            <Link to={link}>
+            <Link to={link !== undefined ? link : ''}>
               <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={btntext}
                 imgArrowbtn={imgArrowHero} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} widthSmall='w-full' />
             </Link>

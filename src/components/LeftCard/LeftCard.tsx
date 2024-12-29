@@ -1,7 +1,7 @@
 import React from "react";
 import img1 from './../../assets/images/Arrows/goArrow.png';
 import ButtonCommon from "../ButtonCommon/ButtonCommon";
-import Stars from "../Stars/Stars";
+import Stars from "../B_Stars/Stars";
 
 interface LeftCardProps {
     title: string;

@@ -1,7 +1,7 @@
 import MainTitle from "../MainTitle/MainTitle";
 import logo from '../../assets/images/TechRevolution/Logo.png'
 import { BePartCardData } from "../../Data/BePartCardData";
-import BCard from "../BCards/BCard";
+import BCard from "../B_Cards/BCard";
 
 export default function FM_BePart() {
     return (
