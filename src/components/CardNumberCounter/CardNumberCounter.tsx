@@ -20,7 +20,7 @@ export default function CardNumberCounter({HeroCard} : CardNumberCounterProps   
                     <h3 className=" text-white " >{item.number}</h3>
                     <span className="text-myprimary-yellow-55 ">{item.mult}</span>
                 </div>
-                <p className="text-myprimary-gray-60 font-normal pb-5 2xl:pb-7.5 text-sm 2xl:text-lg leading-5 2xl:leading-7 ">{item.parcard}</p>
+                <p className="text-myprimary-gray-60 font-normal text-sm 2xl:text-lg leading-5 2xl:leading-7 ">{item.parcard}</p>
             </div>
             )
         )}

@@ -23,18 +23,8 @@ export default function ResourcesPage() {
 
   return (
     <div>
-      <HeroCommon
-        CommonHeroTitle={"Unlock a World of Knowledge "}
-        CommonHeroText={
-          "Dive deep into the AI universe with our collection of insightful podcasts. Explore the latest trends, breakthroughs, and discussions on artificial intelligence. Whether you're an enthusiast or a professional, our AI podcasts offer a gateway to knowledge and innovation."
-        }
-        neww={""}
-        podcast={""}
-        Resourse={"Resourse"}
-        newcommonhero={""}
-        podcastcommonhero={""}
-        Resourcecommonhero={"Resourcecommonhero"}
-      />
+
+      <HeroCommon CommonHeroTitle={"Unlock a World of Knowledge "} CommonHeroText={"Dive deep into the AI universe with our collection of insightful podcasts. Explore the latest trends, breakthroughs, and discussions on artificial intelligence. Whether you're an enthusiast or a professional, our AI podcasts offer a gateway to knowledge and innovation."} Resourse={"Resourse"} Resourcecommonhero={"Resourcecommonhero"} />
       <div className="flex bg-myprimary-dark-08 px-4 xl:px-20 2xl:px-mainpaddinglarge justify-between flex-wrap items-center">
         <CardNumberCounter HeroCard={countersData} />
       </div>
@@ -42,6 +32,7 @@ export default function ResourcesPage() {
         <MainTitle
           title="In-Depth Reports and Analysis"
           subtitle="Dive into the Details"
+          link=""
           button={false}
           btnbook={true}
         />

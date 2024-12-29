@@ -1,14 +1,25 @@
- export const dataNav=[
+interface nav {
+    item: string
+    link: string
+}
 
-        {item:'Home',
-        link:'/',
-        },
-        {item:'News',
-        link:'/news',}
-        ,
-        {item: 'Podcasts',
-        link:'/Podcasts',}
-        ,
-        {item:'Resources',
-        link:'/Resources',}
-    ]
+export const dataNav : nav []= [
+    {
+        item: 'Home',
+        link: '/',
+    },
+    {
+        item: 'News',
+        link: '/news',
+    }
+    ,
+    {
+        item: 'Podcasts',
+        link: '/Podcasts',
+    }
+    ,
+    {
+        item: 'Resources',
+        link: '/Resources',
+    }
+]

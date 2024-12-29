@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <div>
       {/* وزرsend بقسم form   زر الناف */}
-      <ButtonCommon navbtn={'navbtn'} contentBtn={'Contact Us'}  hiddenArrow='hiddenArrow' hiddenEyes={"hiddenEyes"}  />
+      <ButtonCommon navbtn={true} contentBtn={'Contact Us'}  hiddenArrow='hiddenArrow' hiddenEyes={"hiddenEyes"}  />
 
       {/* الزر اللي موجود بالعنوان المشترك و موجود بقسم الفلترة جوا الكارد */}
       <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'View All Blogs'} imgArrowbtn={imgArrowHero} altimagebtn={'image'} hiddenEyes={"hiddenEyes"}  />
