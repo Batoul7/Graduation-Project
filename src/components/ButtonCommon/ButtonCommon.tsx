@@ -45,7 +45,7 @@ export default function ButtonCommon({func, navbtn , navbtnScroll , EyesRadius ,
         ${ResourseDepthReports ? 'bg-myprimary-dark-10 rounded-lg text-myprimary-gray-60 h-[49px] 2xl:h-[63px] w-[106px] xl:w-[128px] 2xl:w-[197px] ' : '' }
         ${ResourseCardBookActive ? 'bg-myprimary-dark-10 rounded-lg text-myprimary-gray-60 h-[49px] 2xl:h-[63px] w-[174px] xl:w-[188.33px] 2xl:w-[225.33px] ' : '' }
         ${ResourseCardBook ? 'bg-myprimary-dark-08 rounded-xl text-myprimary-gray-60 h-[49px] 2xl:h-[63px] w-[174px] xl:w-[188.33px] 2xl:w-[225.33px] ' : '' }
-        ${ContactRadius ? 'rounded-lg bg-myprimary-dark-10 ' : '' }
+        ${ContactRadius ? 'rounded-lg bg-myprimary-dark-10 w-fit ' : '' }
         `}>
       {contentBtn}
       <img src={imgArrowbtn} alt={altimagebtn} className={`${hiddenArrow ? 'hidden' : ''} text-base`} ></img>
