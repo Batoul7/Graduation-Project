@@ -10,9 +10,9 @@ const Stars: React.FC<StarsProps> = ({rating}) => {
     flex gap-[7px] items-center justify-between py-[10px] px-4 rounded-[100px] border border-neutral-800">
       {Array.from({ length: 5 }).map((_, index) => (
         (rating !== undefined && index < rating) ? ( 
-          <img src={StarYellow} alt="star-yellow"/>
+          <img key={index} src={StarYellow} alt="star-yellow"/>
         ) : (
-          <img src={Starstroke} alt="star-stroke"/>
+          <img key={index} src={Starstroke} alt="star-stroke"/>
         )
       ))}
     </div>
