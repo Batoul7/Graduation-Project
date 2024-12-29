@@ -1,131 +1,133 @@
- import icon from './../assets/images/Footer/icon.png'
- import twitter from './../assets/images/Footer/twitter.png'
- import linkedin from './../assets/images/Footer/LinkedIn.png' 
- import arrow from './../assets/images/Arrows/goArrow.png'
- export const FooterData  = [
+import icon from './../assets/images/Footer/icon.png'
+import twitter from './../assets/images/Footer/twitter.png'
+import linkedin from './../assets/images/Footer/LinkedIn.png'
+
+interface FooterItem {
+    txt: string ;
+    new?: boolean;
+    btn?: boolean;
+}
+
+interface FooterDataType {
+    title: string;
+    txts: FooterItem[];
+}
+export const FooterData : FooterDataType [] = [
     {
         title: 'Home',
-        links  : [
+        txts: [
             {
-                new:'',
-                i:'',
-                a: 'Features'
+                txt: 'Features'
             },
             {
-                new:'',
-                i:'',
-                a: 'Blogs'
+                txt: 'Blogs'
             },
             {
-               
-                a: 'Resources',
-                new:'New'
+
+                txt: 'Resources',
+                new: true
             },
             {
-                a: 'Testimonials'
+                txt: 'Testimonials'
             },
             {
-                a: 'Contact Us'
+                txt: 'Contact Us'
             },
             {
-                a: 'Newsletter'
+                txt: 'Newsletter'
             }
         ]
     },
     {
         title: 'News',
-        links: [
-            {   
-                new:'',
-                i:'',
-                a: 'Trending Stories'
+        txts: [
+            {
+                txt: 'Trending Stories'
             },
             {
-                a: 'Featured Videos'
+                txt: 'Featured Videos'
             },
             {
-                a: 'Technology'
+                txt: 'Technology'
             },
             {
-                a: 'Health'
+                txt: 'Health'
             },
             {
-                a: 'Politics'
+                txt: 'Politics'
             },
             {
-                a:'Environment'
+                txt: 'Environment'
             }
         ]
     },
     {
         title: 'Blogs',
-        links: [
-            { new:'',
-                i:'',
-                a: 'Quantum Computing'
+        txts: [
+            {
+                txt: 'Quantum Computing'
             },
             {
-                a: 'AI Ethics'
+                txt: 'AI Ethics'
             },
             {
-                a: 'Space Exploration'
+                txt: 'Space Exploration'
             },
             {
-                a: 'Biotechnology',
-                new:'New',
+                txt: 'Biotechnology',
+                new: true,
             },
             {
-                a: 'Renewable Energy'
+                txt: 'Renewable Energy'
             },
             {
-                a:'Biohacking'
+                txt: 'Biohacking'
             }
         ]
     },
     {
         title: 'Podcasts',
-        links: [
-            { new:'',
-                i:'',
-                a: 'AI Revolution'
+        txts: [
+            {
+                txt: 'AI Revolution'
             },
             {
-                a: 'AI Revolution',
-                new:'New'
+                txt: 'AI Revolution',
+                new: true
             },
             {
-                a: 'TechTalk AI'
+                txt: 'TechTalk AI'
             },
             {
-                a: 'AI Conversations'
+                txt: 'AI Conversations'
             },
 
         ]
     },
     {
         title: 'Resources',
-        links: [
-            {  new:'',
-                a: 'Whitepapers',
-                i:arrow
+        txts: [
+            {
+                btn: true,
+                txt: 'Whitepapers'
             },
             {
-                a: 'Ebooks',
-                i:arrow
+                btn: true,
+                txt: 'Ebooks'
             },
             {
-                a: 'Reports',
-                i:arrow
+                btn: true,
+                txt: 'Reports'
             },
             {
-                a: 'Research Papers',
-                i:arrow
+                btn: true,
+                txt: 'Research Papers'
             },
 
         ]
     }
 ]
- export const icons = [
+export const icons = [
     {
         icon: twitter
     },
