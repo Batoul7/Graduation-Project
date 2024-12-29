@@ -1,6 +1,7 @@
 // import { useSelector } from "react-redux";
 // import { RootState } from "../redux/store";
 import ButtonCommon from "../components/ButtonCommon/ButtonCommon";
+import CommonQuestions from "../components/CommonQuestions/CommonQuestions";
 import imgArrowHero from './../assets/images/Arrows/goArrow.png'
 import imgEyesBtn from './../assets/images/common/eye-yellow.png'
 
@@ -48,6 +49,8 @@ export default function ContactPage() {
 
       {/* زر contact hero: */}
       <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'contact@ai-podcasts.com'}  imgArrowbtn={imgArrowHero} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} ContactRadius='ContactRadius'  />
+
+      <CommonQuestions />
     </div>
   )
 }
