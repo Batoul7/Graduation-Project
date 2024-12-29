@@ -1,7 +1,7 @@
 // import { useSelector } from "react-redux";
 // import { RootState } from "../redux/store";
 import MainTitle from "../components/MainTitle/MainTitle";
-import Testimonials from "../components/Testimonials/Testimonials";
+import Testimonials from "../components/B_Testimonials/Testimonials";
 import HeroHome from "../components/HeroHome/HeroHome";
 import imgpeople from './../assets/images/HomePage/SubContainer-1.png'
 import imgArrowHero from './../assets/images/Arrows/goArrow.png'
@@ -10,7 +10,7 @@ import FutureSection from "../components/FutureSection/FutureSection";
 import icon4 from './../assets/images/HomePage/icon-4.png';
 import icon5 from './../assets/images/HomePage/icon-5.png';
 import BookSections from "../components/BookSections/BookSections";
-import BCards from "../components/BCards/BCards";
+import BCards from "../components/B_Cards/BCards";
 import { BcardData, cardsData, cardsData2, CounterCard } from "../Data/HomeData";
 import FM_Filteration from "../components/FM_Filteration/FM_Filteration";
 import { Home_Filteration } from "../Data/BtnsFilterData";

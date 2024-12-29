@@ -23,7 +23,7 @@ const MhCard: React.FC<MhCardProps> = ({
     <div
       className={`text-white ${
         isNewsPage ? "w-full  md:max-w-[560px] xl:max-w-[718px]" 
-        : "w-full xl:w-[386.67px] 3xl:w-[470.67px] flex flex-col gap-5 lg:gap-6 2xl:gap-7.5"
+        : "w-full  md:max-w-[386.67px] 3xl:w-[470.67px] flex flex-col gap-5 lg:gap-6 2xl:gap-7.5"
       } py-10 lg:py-[60px] 2xl:py-20`}
     >
       <div className={`relative w-full ${ isNewsPage ? 'mb-5 2xl:mb-7.5' : ''} `}>
