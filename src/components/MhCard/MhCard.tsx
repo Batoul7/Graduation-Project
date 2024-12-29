@@ -21,14 +21,10 @@ const MhCard: React.FC<MhCardProps> = ({
 
   return (
     <div
-  className={`text-white ${
-    isNewsPage
-      ? "w-full sm:max-w-[650px] md:max-w-[800px] lg:max-w-[1000px] xl:max-w-[1200px]"
-      : "w-[800px]"
-  } py-5`}
->
-
-  
+      className={`text-white ${
+        isNewsPage ?  "w-full sm:max-w-[450px] md:max-w-[500px] lg:max-w-[550px] xl:max-w-[718px]" : "w-[470.67px]"
+      } py-5`}
+    >
       <div className="relative w-full mb-7.5">
         <img src={imageUrl} alt={title} className="h-full w-full" />
       </div>
