@@ -5,7 +5,7 @@ import podcastsReducer from '../slice/podcastsSlice'
 import { booksReducer } from "../slice/booksSlice";
 import { BlogsReducer } from "../slice/BlogSlice";
 import formReducer from '../slice/formSlice'
-
+import bookDataReducer from './../slice/BookDataSlice';
 const store = configureStore({
   reducer: {
     testimonials: testimonialsReducer,
@@ -14,6 +14,7 @@ const store = configureStore({
     podcasts: podcastsReducer,
     newsBlog: BlogsReducer,
     form: formReducer,
+    bookData: bookDataReducer,
   },
 });
 

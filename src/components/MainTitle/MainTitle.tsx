@@ -1,31 +1,75 @@
+interface TitleProps {
+  title: string;
+  subtitle: string;
+  button: boolean;
+  btntext?: string;
+  btnbook?: boolean
+}
+import { useDispatch, useSelector } from "react-redux";
+import { setActiveTab, selectActiveTab } from "../../redux/slice/BookDataSlice";
 import ButtonCommon from "../ButtonCommon/ButtonCommon";
 import imgArrowHero from '../../assets/images/Arrows/goArrow.png'
+export default function MainTitle({ title, subtitle, button, btntext, btnbook }: TitleProps) {
+  const dispatch = useDispatch();
+  const activeTab = useSelector(selectActiveTab);
 
-interface TitleProps {
-    title: string;
-    subtitle: string;
-    button:boolean;
-    btntext?:string
-}
+  const handleTabChange = (tab: string) => {
+    dispatch(setActiveTab(tab));
+  };
 
-export default function MainTitle({title,subtitle,button,btntext} : TitleProps) {
   return (
-    <>
-    <div className="py-[120px] px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-10 text-white font-medium
-    flex flex-col md:flex-row  md:justify-between md:items-center gap-7.5 flex-wrap">
+    <div
+      className={`py-[120px] px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-10 text-white font-medium
+        flex flex-col md:flex-row  md:justify-between md:items-center gap-7.5 flex-wrap ${
+          btnbook ? " md:flex-nowrap" : ""
+        }`}
+    >
       <div className="xl:w-[60%]">
-        <h5 className="text-sm md:text-base 2xl:text-xl py-1.5 px-2.5 bg-myprimary-dark-20 w-fit rounded-rad-4 mb-4">{subtitle}</h5>
-        <h2 className="text-[28px] md:text-[44px] 2xl:text-[58px] font-kumbhSans ">{title}</h2>
+        <h5 className="text-sm md:text-base 2xl:text-xl py-1.5 px-2.5 bg-myprimary-dark-20 w-fit rounded-rad-4 mb-4">
+          {subtitle}
+        </h5>
+        <h2 className="text-[28px] md:text-[44px] 2xl:text-[58px] font-kumbhSans">{title}</h2>
       </div>
-      <div >
-        {button &&
-        <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={btntext} 
-        imgArrowbtn={imgArrowHero} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} widthSmall='w-full' />
-        }
+      <div>
+        {button && (
+          <ButtonCommon
+            herobtnAndCommon={"herobtnAndCommon"}
+            contentBtn={btntext}
+            imgArrowbtn={imgArrowHero}
+            altimagebtn={"image"}
+            hiddenEyes={"hiddenEyes"}
+            widthSmall="w-full"
+          />
+        )}
+        {btnbook && (
+          <div className="flex flex-wrap sm:flex-nowrap gap-[10px] p-2.5 bg-myprimary-dark-08 w-fit">
+            <ButtonCommon
+              ResourseDepthReportsActive={activeTab === "Whitepapers" ? "ResourseDepthReportsActive" : ""}
+              ResourseDepthReports={activeTab !== "Whitepapers" ? "ResourseDepthReports" : ""}
+              contentBtn="Whitepapers"
+              hiddenArrow="hiddenArrow"
+              hiddenEyes="hiddenEyes"
+              onClick={() => handleTabChange("Whitepapers")}
+            />
+            <ButtonCommon
+              ResourseDepthReportsActive={activeTab === "Ebooks" ? "ResourseDepthReportsActive" : ""}
+              ResourseDepthReports={activeTab !== "Ebooks" ? "ResourseDepthReports" : ""}
+              contentBtn="Ebooks"
+              hiddenArrow="hiddenArrow"
+              hiddenEyes="hiddenEyes"
+              onClick={() => handleTabChange("Ebooks")}
+            />
+            <ButtonCommon
+              ResourseDepthReportsActive={activeTab === "Reports" ? "ResourseDepthReportsActive" : ""}
+              ResourseDepthReports={activeTab !== "Reports" ? "ResourseDepthReports" : ""}
+              contentBtn="Reports"
+              hiddenArrow="hiddenArrow"
+              hiddenEyes="hiddenEyes"
+              onClick={() => handleTabChange("Reports")}
+            />
+          </div>
+        )}
       </div>
-     
     </div>
-  
-     </>
-  )
+  );
 }

@@ -31,7 +31,7 @@ const LeftCard: React.FC<LeftCardProps> = ({
                 <img src={icon} alt="Icon" className="w-16 h-16" />
             </div>
             <div className={pageType === "podcast" ? "flex items-center justify-between" : ""}>
-                <h2 className="2xl:text-[40px] md:text-[30px] text-2xl font-semibold font-kumbhSans">
+                <h2 className="2xl:text-[40px] md:text-[30px] text-2xl font-semibold font-kumbhSans leading-[60px]">
                     {title}
                 </h2>
                 {pageType === "podcast" && (
@@ -64,14 +64,14 @@ const LeftCard: React.FC<LeftCardProps> = ({
             ) : pageType === "book" ? (
                 <div className="2xl:mt-[30px] mt-2.5 ">
                     {description && (
-                        <p className="2xl:text-lg md:text-base text-sm font-normal text-myprimary-gray-60 mb-[50px]">
+                        <p className="2xl:text-lg md:text-base text-sm font-normal text-myprimary-gray-60 mb-[50px] ">
                             {description}
                         </p>
                     )}
                     <ButtonCommon contentBtn={btncontent} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} EbookHome='EbookHome' />
                 </div>
             ) : (
-                <p className="2xl:text-lg md:text-base text-sm 2xl:mt-4 md:mt-2.5 mt-1.5 font-normal text-myprimary-gray-60">{description}</p>
+                <p className="2xl:text-lg md:text-base text-sm 2xl:mt-[30px] md:mt-2.5 mt-1.5 font-normal text-myprimary-gray-60 ">{description}</p>
             )}
 
             {pageType === "contact" && buttonText && (
