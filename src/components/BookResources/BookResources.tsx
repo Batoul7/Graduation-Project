@@ -1,7 +1,7 @@
 import React from "react";
 import { jsPDF } from "jspdf";
 import ButtonCommon from "../ButtonCommon/ButtonCommon";
-
+import img1 from './../../assets/images/Arrows/goArrow.png'
 interface BookResourcesProps {
     imageUrl: string;
     title: string;
@@ -49,12 +49,7 @@ const BookResources: React.FC<BookResourcesProps> = ({
                         {description}
                     </p>
                 </div>
-                <ButtonCommon
-                    ResourseCardBook="ResourseCardBook"
-                    contentBtn="Download PDF Now"
-                    hiddenArrow="hiddenArrow"
-                    onClick={handleDownloadPDF}
-                />
+                <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'Download PDF Now'} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} onClick={handleDownloadPDF}  />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-400">
                 <div className="2xl:p-[30px] md:p-6 p-5 bg-myborder-dark-color rounded-lg">

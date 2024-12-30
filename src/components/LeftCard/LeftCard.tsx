@@ -30,14 +30,13 @@ const LeftCard: React.FC<LeftCardProps> = ({
     btncontent,
 }) => {
     return (
-        <div className="bg-myprimary-dark-08 text-white w-[358px] md:w-[413px] 2xl:w-[519px]  rounded-lg">
+        <div className="bg-myprimary-dark-08 text-white  md:w-[413px] 2xl:w-[519px]  rounded-lg">
             <div>
                 <img src={icon} alt="Icon" className="w-[50px] xl:w-[48px] 2xl:w-16" />
             </div>
 
             <div className={pageType === "podcast" ? "flex items-center justify-center !mt-[30px] !mb-[22px] xl:!mt-[40px] xl:!mb-[24px] 2xl:mt-[50px] 2xl:mb-[30px] " : ""}>
-                <h2 className="text-xl 2xl:text-[40px] xl:text-2xl font-semibold font-kumbhSans ">
-
+                <h2 className="text-xl 2xl:text-[40px] xl:text-2xl font-semibold font-kumbhSans !leading-[60px] 2xl:mt-[50px] lg:mt-10 mt-[30px]">
                     {title}
                 </h2>
                 {pageType === "podcast" && (
