@@ -1,5 +1,3 @@
-// import { useSelector } from "react-redux";
-// import { RootState } from "../redux/store";
 import MainTitle from "../components/MainTitle/MainTitle";
 import Testimonials from "../components/B_Testimonials/Testimonials";
 import HeroHome from "../components/HeroHome/HeroHome";
@@ -14,9 +12,6 @@ import BCards from "../components/B_Cards/BCards";
 import { BcardData, cardsData, cardsData2, CounterCard } from "../Data/HomeData";
 import FM_Filteration from "../components/FM_Filteration/FM_Filteration";
 import { Home_Filteration } from "../Data/BtnsFilterData";
-
-
-
 
 export default function HomePage() {
 
