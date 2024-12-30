@@ -1,10 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { podcastsData } from '../../Data/PodcastsData';
 
+
+interface Cards {
+  id: number ;
+  title: string;
+  info: string;
+
+}
+
+
+
 interface Podcast {
+  cards: Cards[] | any;
   id: number;
   title: string;
   description: string;
+  subtitle: string;
   host: string;
   totalEpisodes: number;
   average:string;

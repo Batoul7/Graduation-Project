@@ -58,7 +58,7 @@ export default function HeroHome({ HeroCard, par1, title, par2, img1, altimg1, s
                     </p>
                 </div>
                 <div className="flex pb-2.5  border-neutral-800 border border-l-0 border-r-0 border-b-0 sm:[&>*:nth-child(2)]:w-[347px] [&>*:nth-child(1)]:border-l-0 [&>*:nth-child(1)]:ps-0 [&>*:nth-child(3)]:border-e-0  ">
-                    <CardNumberCounter HeroCard={HeroCard} />
+                <CardNumberCounter HeroCard={HeroCard} heroCount='heroCount' />
                 </div>
             </div>
             <div data-aos="fade-left" className="bg-[url('./assets/images/HomePage/HeroDesign.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-end sm:w-[40.91%] pb-5 px-5 xl:ps-[50px] 2xl:ps-20 xl:pb-[50px] 2xl:pb-20 border-neutral-800 border-l ">

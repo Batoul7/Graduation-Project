@@ -1,6 +1,6 @@
 
 interface BtnProps {
-  navbtn?:boolean ;
+  navbtn?:boolean | string ;
   navbtnScroll?:boolean ;
   herobtnAndCommon?:string;
   contentBtn?:string;
