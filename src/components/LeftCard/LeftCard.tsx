@@ -30,12 +30,13 @@ const LeftCard: React.FC<LeftCardProps> = ({
     btncontent,
 }) => {
     return (
-        <div className="bg-myprimary-dark-08 text-white w-[358px] md:w-[413px] 2xl:w-[519px]  rounded-lg">
+        <div className="bg-myprimary-dark-08 text-white  md:w-[413px] 2xl:w-[519px]  rounded-lg">
             <div>
                 <img src={icon} alt="Icon" className="w-[50px] xl:w-[48px] 2xl:w-16" />
             </div>
+
             <div className={pageType === "podcast" ? "flex items-center justify-center !mt-[30px] !mb-[22px] xl:!mt-[40px] xl:!mb-[24px] 2xl:mt-[50px] 2xl:mb-[30px] " : ""}>
-                <h2 className="text-xl 2xl:text-[40px] xl:text-2xl font-semibold font-kumbhSans ">
+                <h2 className="text-xl 2xl:text-[40px] xl:text-2xl font-semibold font-kumbhSans !leading-[60px] 2xl:mt-[50px] lg:mt-10 mt-[30px]">
                     {title}
                 </h2>
                 {pageType === "podcast" && (
@@ -60,14 +61,14 @@ const LeftCard: React.FC<LeftCardProps> = ({
             ) : pageType === "book" ? (
                 <div className="2xl:mt-[30px] mt-2.5 ">
                     {description && (
-                        <p className="2xl:text-lg md:text-base text-sm font-normal text-myprimary-gray-60 mb-[50px]">
+                        <p className="2xl:text-lg md:text-base text-sm font-normal text-myprimary-gray-60 mb-[50px] ">
                             {description}
                         </p>
                     )}
                     <ButtonCommon contentBtn={btncontent} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} EbookHome='EbookHome' />
                 </div>
             ) : (
-                <p className="2xl:text-lg md:text-base text-sm 2xl:mt-4 md:mt-2.5 mt-1.5 font-normal text-myprimary-gray-60">{description}</p>
+                <p className="2xl:text-lg md:text-base text-sm 2xl:mt-[30px] md:mt-2.5 mt-1.5 font-normal text-myprimary-gray-60 ">{description}</p>
             )}
 
             {pageType === "contact" && buttonText && (
