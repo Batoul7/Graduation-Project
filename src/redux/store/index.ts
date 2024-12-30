@@ -5,7 +5,7 @@ import podcastsReducer from '../slice/podcastsSlice'
 import { booksReducer } from "../slice/booksSlice";
 import { BlogsReducer } from "../slice/BlogSlice";
 import formReducer from '../slice/formSlice'
-import bookDataReducer from './../slice/BookDataSlice';
+import bookDataReducer from '../../Data/BookDataSlice';
 const store = configureStore({
   reducer: {
     testimonials: testimonialsReducer,

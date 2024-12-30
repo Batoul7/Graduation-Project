@@ -5,13 +5,13 @@ import LeftCard from "../components/LeftCard/LeftCard";
 import MainTitle from "../components/MainTitle/MainTitle";
 import countersData from './../Data/CounterData';
 
-
-
 import { useSelector } from "react-redux";
-import { selectBookData, selectActiveTab, BookData } from "../redux/slice/BookDataSlice";
+import { selectBookData, selectActiveTab, BookData } from "../Data/BookDataSlice";
+import BookCard from "../components/BookCard/BookCard";
+import books2 from "../Data/BookData2";
 
 export default function ResourcesPage() {
-  const bookData = useSelector(selectBookData);
+  const bookData = useSelector(selectBookData); 
   const activeTab = useSelector(selectActiveTab);
 
   const filteredData = bookData.filter((book: BookData) => {
@@ -23,8 +23,12 @@ export default function ResourcesPage() {
 
   return (
     <div>
-
-      <HeroCommon CommonHeroTitle={"Unlock a World of Knowledge "} CommonHeroText={"Dive deep into the AI universe with our collection of insightful podcasts. Explore the latest trends, breakthroughs, and discussions on artificial intelligence. Whether you're an enthusiast or a professional, our AI podcasts offer a gateway to knowledge and innovation."} Resourse={"Resourse"} Resourcecommonhero={"Resourcecommonhero"} />
+      <HeroCommon
+        CommonHeroTitle={"Unlock a World of Knowledge "}
+        CommonHeroText={"Dive deep into the AI universe with our collection of insightful podcasts. Explore the latest trends, breakthroughs, and discussions on artificial intelligence. Whether you're an enthusiast or a professional, our AI podcasts offer a gateway to knowledge and innovation."}
+        Resourse={"Resourse"}
+        Resourcecommonhero={"Resourcecommonhero"}
+      />
       <div className="flex bg-myprimary-dark-08 px-4 xl:px-20 2xl:px-mainpaddinglarge justify-between flex-wrap items-center">
         <CardNumberCounter HeroCard={countersData} />
       </div>
@@ -40,7 +44,7 @@ export default function ResourcesPage() {
       <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 py-20 flex flex-col gap-[160px]">
         {filteredData.map((book: BookData) => (
           <div key={book.title} className="flex flex-col lg:gap-[120px] 2xl:gap-[160px]">
-            <div className="flex justify-between lg:items-center lg:gap-[120px] 2xl:gap-[160px]  lg:flex-row flex-col gap-[80px] mb-[80px]">
+            <div className="flex justify-between lg:items-center lg:gap-[120px] 2xl:gap-[160px] lg:flex-row flex-col gap-[80px] mb-[80px]">
               <LeftCard
                 btncontent="Download Ebooks Now"
                 title={book.title}
@@ -57,7 +61,7 @@ export default function ResourcesPage() {
                 author={book.author}
               />
             </div>
-            <div className="flex justify-between lg:items-center lg:gap-[120px] 2xl:gap-[160px]  lg:flex-row flex-col gap-[80px]">
+            <div className="flex justify-between lg:items-center lg:gap-[120px] 2xl:gap-[160px] lg:flex-row flex-col gap-[80px]">
               <LeftCard
                 btncontent="Download Ebooks Now"
                 title={book.title2}
@@ -77,8 +81,20 @@ export default function ResourcesPage() {
           </div>
         ))}
       </div>
+      
+      <div className="bg-myprimary-dark-08 py-20 px-4 xl:px-20 2xl:px-mainpaddinglarge">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:gap-[92px] gap-[60px]">
+          {books2.slice(-3).map((book) => (
+            <BookCard
+              key={book.id}
+              title={book.title}
+              description={book.description}
+              imageUrl={book.imageUrl}
+            />
+          ))}
+        </div>
+      </div>
+
     </div>
   );
 }
-
-

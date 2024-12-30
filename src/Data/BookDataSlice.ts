@@ -1,15 +1,15 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import img1 from './../../assets/images/ResourcesPage/img-1.png'
-import img2 from './../../assets/images/ResourcesPage/img-2.png'
-import img3 from './../../assets/images/ResourcesPage/icon-1.png'
-import img4 from './../../assets/images/ResourcesPage/icon-2.png'
-import img5 from './../../assets/images/ResourcesPage/img-4.png'
-import img6 from './../../assets/images/ResourcesPage/img-5.png'
+import img1 from './../assets/images/ResourcesPage/img-1.png'
+import img2 from './../assets/images/ResourcesPage/img-2.png'
+import img3 from './../assets/images/ResourcesPage/icon-1.png'
+import img4 from './../assets/images/ResourcesPage/icon-2.png'
+import img5 from './../assets/images/ResourcesPage/img-4.png'
+import img6 from './../assets/images/ResourcesPage/img-5.png'
 export interface BookData {
   imageUrl: string;
   imageUrl2: string;
   imageUrl3: string;
-  imageUrl4: string;
+  imageUrl4: string;  
   title: string;
   title2: string;
   description: string;
