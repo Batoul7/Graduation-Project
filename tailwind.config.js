@@ -51,7 +51,9 @@ export default {
       screens: {
         'lghero': { 'min': '1540px', 'max': '1905px' },
         "3xl": "1700px",
-        'max-1200': { 'max': '1200px' }
+        'max-1200': { 'max': '1200px' },
+        'lgRes': {'min': '1221px', 'max': '1400px'}, 
+        'mdRes': {'min': '800px', 'max': '1220px'}, 
       },
       fontSize: {
         "6.5xl": "70px",
