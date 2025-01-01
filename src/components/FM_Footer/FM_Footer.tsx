@@ -5,12 +5,13 @@ import imgArrowHero from '../../assets/images/Arrows/goArrow.png'
 export default function FM_Footer() {
     return (
         <footer className="bg-myprimary-dark-08 2xl:px-mainpaddinglarge xl:px-[80px] px-4">
-            <div className="2xl:py-20 md: py-[60px] grid xl:grid-cols-5 gap-y-6 gap-20 grid-cols-2 border-b border-mysecondary-dark-40">
+            <div className="2xl:py-20 md: py-[60px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  xl:grid-cols-5 gap-y-6 gap-20 border-b border-mysecondary-dark-40
+            ">
                 {FooterData.map((e, index) => {
                     return (
-                        <div key={index} >
-                            <h3 className="text-white font-inter 2xl:text-xl md:text-lg font-medium 2xl:mb-9 text-base md:mb-6 mb-4">{e.title}</h3>
-                            <div className="flex flex-col gap-2 md:gap-3 2xl:gap-[18px]">
+                        <div key={index} className= {`${index === FooterData.length -1 ? 'col-span-2 xl:col-span-1' : ''}`}>
+                            <h3 className='text-white font-inter 2xl:text-xl md:text-lg font-medium 2xl:mb-9 text-base md:mb-6 mb-4'>{e.title}</h3>
+                            <div className={`flex  gap-2 md:gap-3 2xl:gap-[18px] ${index === FooterData.length -1 ? 'col-span-2 flex-row xl:flex-col flex-wrap' : 'flex-col'}`}>
                                 {e.txts.map((n, i) => {
                                     return (
                                         n.btn ?
