@@ -5,6 +5,7 @@ import { last4blogs } from "../../redux/slice/BlogSlice";
 import like from "../../assets/images/common/reaction-dark.png";
 import share from "../../assets/images/common/send.png";
 import ButtonCommon from "../ButtonCommon/ButtonCommon";
+import imgArrowHero from '../../assets/images/Arrows/goArrow.png'
 
 const LatestBlogs = () => {
   const dispatch = useDispatch();
@@ -70,7 +71,7 @@ const LatestBlogs = () => {
                   <p className="text-sm 2xl:text-lg ">{last4Blogs[0]?.shares}</p>
                 </button>
               </div>
-              <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'Read More'} hiddenArrow={'hiddenArrow'}  hiddenEyes={"hiddenEyes"}   />
+              <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'Read More'}  hiddenEyes={"hiddenEyes"} imgArrowbtn={imgArrowHero}   />
             </div>
           </div>
         </div>
@@ -111,7 +112,10 @@ const LatestBlogs = () => {
                         <p className="text-sm 2xl:text-lg ">{blog.shares}</p> 
                       </button>
                     </div>
-                    <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'Read More'} hiddenArrow={'hiddenArrow'}  hiddenEyes={"hiddenEyes"}   />
+                    {/* <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'Read More'} hiddenArrow={'hiddenArrow'}  hiddenEyes={"hiddenEyes"}   /> */}
+                    <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'Read More'}
+                      imgArrowbtn={imgArrowHero} altimagebtn={'image'} hiddenEyes={"hiddenEyes"}
+                      NewsCards='NewsCards' />
                   </div>
                 </div>
             ) : null

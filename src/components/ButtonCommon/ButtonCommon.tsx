@@ -19,12 +19,13 @@ interface BtnProps {
   ResourseCardBook?:string;
   ResourseCardBookActive?:string;
   EyesRadius?:string;
+  NewsCards?:string;
   ContactRadius?:string;
   widthSmall?: string;
   func?: (() => void);
 }
 
-export default function ButtonCommon({func, navbtn , navbtnScroll , EyesRadius , ContactRadius ,EbookHome, herobtnAndCommon , contentBtn , imgArrowbtn  , altimagebtn , mainsmall , filterBtn ,filterBtnActive ,hiddenArrow , imgEyes , hiddenEyes , footerBtn , ResourseDepthReportsActive ,ResourseDepthReports , ResourseCardBook ,ResourseCardBookActive, widthSmall } : BtnProps) {
+export default function ButtonCommon({func, NewsCards , navbtn , navbtnScroll , EyesRadius , ContactRadius ,EbookHome, herobtnAndCommon , contentBtn , imgArrowbtn  , altimagebtn , mainsmall , filterBtn ,filterBtnActive ,hiddenArrow , imgEyes , hiddenEyes , footerBtn , ResourseDepthReportsActive ,ResourseDepthReports , ResourseCardBook ,ResourseCardBookActive, widthSmall } : BtnProps) {
   return (
       <button 
       onClick={func}
@@ -46,6 +47,7 @@ export default function ButtonCommon({func, navbtn , navbtnScroll , EyesRadius ,
         ${ResourseCardBookActive ? 'bg-myprimary-dark-10 rounded-lg text-myprimary-gray-60 h-[49px] 2xl:h-[63px] w-[174px] xl:w-[188.33px] 2xl:w-[225.33px] ' : '' }
         ${ResourseCardBook ? 'bg-myprimary-dark-08 rounded-xl text-myprimary-gray-60 h-[49px] 2xl:h-[63px] w-[174px] xl:w-[188.33px] 2xl:w-[225.33px] ' : '' }
         ${ContactRadius ? 'rounded-lg bg-myprimary-dark-10 w-fit ' : '' }
+        ${NewsCards ? 'w-[164px] xl:w-[201.67px] h-[49px]  2xl:w-[291px] 2xl:h-[63px]' : ''}
         `}>
       {contentBtn}
       <img src={imgArrowbtn} alt={altimagebtn} className={`${hiddenArrow ? 'hidden' : ''} text-base`} ></img>
