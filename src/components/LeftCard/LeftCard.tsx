@@ -16,6 +16,7 @@ interface LeftCardProps {
     rating?: number;
     host?: string;
     pageType: "podcast" | "contact" | "default" | "book";
+    form?:boolean
 }
 
 const LeftCard: React.FC<LeftCardProps> = ({
@@ -28,15 +29,17 @@ const LeftCard: React.FC<LeftCardProps> = ({
     host,
     pageType,
     btncontent,
+    form
 }) => {
     return (
-        <div className="bg-myprimary-dark-08 text-white  md:w-[413px] 2xl:w-[519px]  rounded-lg">
+        <div className="bg-myprimary-dark-08 text-white  md:max-w-[413px] 2xl:max-w-[519px]  rounded-lg">
             <div>
-                <img src={icon} alt="Icon" className="w-[50px] xl:w-[48px] 2xl:w-16" />
+                <img src={icon} alt="Icon" className={form ? "w-[50px] lg:w-[60px] 2xl:w-20" : "w-[50px] xl:w-[48px] 2xl:w-16"} />
             </div>
-
             <div className={pageType === "podcast" ? "flex items-center justify-center !mt-[30px] !mb-[22px] xl:!mt-[40px] xl:!mb-[24px] 2xl:mt-[50px] 2xl:mb-[30px] " : ""}>
-                <h2 className="text-xl 2xl:text-[40px] xl:text-2xl font-semibold font-kumbhSans !leading-[60px] 2xl:mt-[50px] lg:mt-10 mt-[30px]">
+                <h2 className={`${form ? 'text-[28px] lg:text-[44px] 2xl:text-[58px] leading-9 lg:leading-[57.2px] 2xl:leading-[75.4px] lg:mt-7.5 mt-5 lg:-tracking-[3px] font-medium' 
+                : "text-xl 2xl:text-[40px] xl:text-2xl !leading-[60px] lg:mt-10 mt-[30px]  font-semibold "}
+                font-kumbhSans 2xl:mt-[50px] `}>
                     {title}
                 </h2>
                 {pageType === "podcast" && (
@@ -51,10 +54,6 @@ const LeftCard: React.FC<LeftCardProps> = ({
                         <p className="text-sm xl:text-base 2xl:text-lg font-medium">{host}</p>
                     </div>
                     <div>
-                        {/* <button className="flex items-center gap-2.5 bg-myprimary-dark-08 px-6 py-3 text-sm font-medium text-myprimary-gray-60 rounded-lg">
-                            {buttonLabel}
-                            <img src={img1} alt="arrow-icon" className="w-5 h-5" />
-                        </button> */}
                         <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={buttonLabel} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"}  />
                     </div>
                 </div>

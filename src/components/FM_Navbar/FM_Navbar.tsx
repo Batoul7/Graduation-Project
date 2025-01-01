@@ -43,7 +43,7 @@ export default function FM_Navbar() {
                                     onClick={() => setShow(false)}
                                     to={e.link}
                                     className={({ isActive }) =>
-                                        `${header ? '' : 'text-myprimary-gray-50'} ${isActive ? 'text-white bg-myprimary-dark-08 rounded-[10px] border-[1px] border-myprimary-dark-20 py-3.5 px-6' : ''} `}
+                                        `${header ? '' : 'text-myprimary-gray-50'} ${isActive ? 'text-white bg-myprimary-dark-08 rounded-[10px] border border-myprimary-dark-20 py-3.5 px-6' : ''} `}
                                 >
                                     {e.item}
                                 </NavLink>

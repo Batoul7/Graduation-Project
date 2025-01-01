@@ -10,12 +10,11 @@ export default function LatestPodcasts() {
         (state: RootState) => state.podcasts.latestPodcasts
       );
     
-//  flex flex-wrap justify-between items-center
   return (
     <>
      <MainTitle title="Latest Podcast Episodes" subtitle="Stay Informed with Fresh Content" button={false}/>
     <section className='bg-myprimary-dark-08 px-4 xl:px-20 2xl:px-mainpaddinglarge border-y border-neutral-800 
-  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-cols-fr  '>
+    grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-[60px] 3xl:gap-x-[92px]'>
       {latestPodcasts.map((item,_) => {
         return (
             <MhCard key={item.id} pageType="podcast" imageUrl={item.img} title={item.title} description={item.description} buttonText='Listen Podcast'/>

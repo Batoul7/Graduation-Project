@@ -159,7 +159,7 @@ const handleCountryChange = (code: string) => {
                 </select>
                 <div className="pointer-events-none">
                     <svg  viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className='w-5 h-5 sm:w-[25px] sm:h-[25px]'>
-                      <path d="M6.5 9.5L12.5 15.5L18.5 9.5" stroke="white" stroke-width="2" stroke-linecap="round" strokeLinejoin="round"/>
+                      <path d="M6.5 9.5L12.5 15.5L18.5 9.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </div>
               </div>
