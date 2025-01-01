@@ -7,15 +7,26 @@ import podcastimg6 from '/src/assets/images/PodcastsPage/podcast-6.png';
 import podcastimg7 from '/src/assets/images/PodcastsPage/podcast-7.png';
 import podcastimg8 from '/src/assets/images/PodcastsPage/podcast-8.png';
 
+
+interface Cards {
+  id: number ;
+  title: string;
+  info: string;
+
+}
+
+
 interface Podcast {
   id: number;
   title: string;
   subtitle: string;
   description: string;
   host: string;
-  totalEpisodes: number;
-  average:string;
-  releaseFrequency: string;
+  cards: Cards[];
+
+  // totalEpisodes: number;
+  // average:string;
+  // releaseFrequency: string;
   rating: number;
   image: string;
 }
@@ -38,9 +49,23 @@ export const podcastsData: PodcastState = {
       subtitle:'Delves into the transformative impact of AI',
       description:'Join Dr. Sarah Mitchell as she delves into the transformative impact of AI on industries, featuring expert interviews and real-world case studies. Explore the possibilities of AI in healthcare, finance, and more.',
       host: 'Dr. Sarah Mitchell',
-      totalEpisodes: 50,
-      average:'30 min',
-      releaseFrequency: 'Weekly',
+        cards:[
+          {
+            id: 1 ,
+            title:'Total Episodes',
+            info:'50'
+          } , 
+          {
+            id: 2,
+            title:'Average Episode Length',
+            info:'30 min'
+          } , 
+          {
+            id: 3 ,
+            title:'Release Frequency',
+            info:'Weekly'
+          } , 
+        ],
       rating: 5,
       image: podcastimg1,
     },
@@ -50,9 +75,23 @@ export const podcastsData: PodcastState = {
       subtitle:'Engage in thought-provoking conversations with leading experts.',
       description: "Mark discusses the future of AI, the impact on society, and how it's shaping industries worldwide. Engage in thought-provoking conversations with leading experts.",
       host: 'Mark Andersen',
-      totalEpisodes: 40,
-      average:'40 min',
-      releaseFrequency: 'Monthly',
+      cards:[
+        {
+          id: 1 ,
+          title:'Total Episodes',
+          info:'40'
+        } , 
+        {
+          id: 2,
+          title:'Average Episode Length',
+          info:'40 min'
+        } , 
+        {
+          id: 3 ,
+          title:'Release Frequency',
+          info:'Monthly'
+        } , 
+      ],
       rating: 4,
       image: podcastimg2,
     },
