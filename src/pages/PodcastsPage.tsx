@@ -1,9 +1,9 @@
 
 import HeroCommon from "../components/HeroCommon/HeroCommon";
 import KGPodcastSection from "../components/KGPodcastSection/KGPodcastSection";
-
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
+import LatestPodcasts from "../components/LatestPodcasts/LatestPodcasts";
 
 export default function PodcastsPage() {
 
@@ -18,6 +18,7 @@ export default function PodcastsPage() {
       <HeroCommon CommonHeroTitle={"Unlock the World of Artificial Intelligence through Podcasts "} CommonHeroText={"Dive deep into the AI universe with our collection of insightful podcasts. Explore the latest trends, breakthroughs, and discussions on artificial intelligence. Whether you're an enthusiast or a professional, our AI podcasts offer a gateway to knowledge and innovation."} podcast={"podcast"} podcastcommonhero={"podcastcommonhero"}  /> 
       <KGPodcastSection title={firstPodcast.title} description={firstPodcast.description} host={firstPodcast.host} rating={3} first={true} />
       <KGPodcastSection title={secondPodcast.title} description={secondPodcast.description} host={secondPodcast.host} rating={2} first={false} />
+      <LatestPodcasts/>
     </div>
   )
 }
