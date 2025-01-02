@@ -24,7 +24,6 @@ export default function ResourcesPage() {
   return (
     <div>
       <HeroCommon CommonHeroTitle={"Unlock a World of Knowledge "} CommonHeroText={"Dive deep into the AI universe with our collection of insightful podcasts. Explore the latest trends, breakthroughs, and discussions on artificial intelligence. Whether you're an enthusiast or a professional, our AI podcasts offer a gateway to knowledge and innovation."} Resourse={"Resourse"} Resourcecommonhero={"Resourcecommonhero"} />
-
       <div className="  px-4 xl:px-20 2xl:px-mainpaddinglarge flex flex-wrap justify-center items-center sm:flex-nowrap bg-myprimary-dark-08 border-neutral-800 border [&>*:nth-child(2)]:sm:!w-[439px] [&>*:nth-child(3)]:sm:!w-[439px] [&>*:nth-child(1)]:!border-l-0 [&>*:nth-child(1)]:border-b [&>*:nth-child(2)]:border-b [&>*:nth-child(3)]:sm:border-l [&>*:nth-child(3)]:border-l-0 ">
           <CardNumberCounter HeroCard={CounterCard2} resourseCount={"resourseCount"} />
       </div>
@@ -37,10 +36,10 @@ export default function ResourcesPage() {
           btnbook={true}
         />
       </div>
-      <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 py-20 flex flex-col gap-[160px]">
+      <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08  flex flex-col gap-[160px]">
         {filteredData.map((book: BookData) => (
-          <div key={book.title} className="flex flex-col lg:gap-[120px] 2xl:gap-[160px]">
-            <div className="flex justify-between lg:items-center lg:gap-[120px] 2xl:gap-[160px] lg:flex-row flex-col gap-[80px] mb-[80px]">
+          <div key={book.title} className="flex flex-col">
+            <div className="flex justify-between lg:items-center lg:gap-[120px] 2xl:gap-[160px] lg:flex-row flex-col gap-[80px] border-b border-neutral-800 py-10 lg:py-[60px] 2xl:py-20">
               <LeftCard
                 btncontent="Download Ebooks Now"
                 title={book.title}
@@ -57,7 +56,7 @@ export default function ResourcesPage() {
                 author={book.author}
               />
             </div>
-            <div className="flex justify-between lg:items-center lg:gap-[120px] 2xl:gap-[160px] lg:flex-row flex-col gap-[80px]">
+            <div className="flex justify-between lg:items-center lg:gap-[120px] 2xl:gap-[160px] lg:flex-row flex-col gap-[80px] py-10 lg:py-[60px] 2xl:py-20">
               <LeftCard
                 btncontent="Download Ebooks Now"
                 title={book.title2}
