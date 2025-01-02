@@ -32,7 +32,7 @@ const LeftCard: React.FC<LeftCardProps> = ({
     form
 }) => {
     return (
-        <div className="bg-myprimary-dark-08 text-white  md:max-w-[413px] 2xl:max-w-[519px]  rounded-lg">
+        <div className="bg-myprimary-dark-08 text-white max-w-[413px] 2xl:max-w-[519px]  rounded-lg">
             <div>
                 <img src={icon} alt="Icon" className={form ? "w-[50px] lg:w-[60px] 2xl:w-20" : "w-[50px] xl:w-[48px] 2xl:w-16"} />
             </div>

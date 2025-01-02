@@ -11,7 +11,7 @@ export default function FM_Footer() {
                     return (
                         <div key={index} className= {`${index === FooterData.length -1 ? 'col-span-2 xl:col-span-1' : ''}`}>
                             <h3 className='text-white font-inter 2xl:text-xl md:text-lg font-medium 2xl:mb-9 text-base md:mb-6 mb-4'>{e.title}</h3>
-                            <div className={`flex  gap-2 md:gap-3 2xl:gap-[18px] ${index === FooterData.length -1 ? 'col-span-2 flex-row xl:flex-col flex-wrap' : 'flex-col'}`}>
+                            <div className={`[&>*:nth-child(1)]:w-[130px] xl:[&>*:nth-child(1)]:w-[165px] [&>*:nth-child(2)]:w-[97px] sm:[&>*:nth-child(2)]:w-[122px]  flex  gap-2 md:gap-3 2xl:gap-[18px] ${index === FooterData.length -1 ? 'col-span-2 flex-row xl:flex-col flex-wrap' : 'flex-col'}`}>
                                 {e.txts.map((n, i) => {
                                     return (
                                         n.btn ?

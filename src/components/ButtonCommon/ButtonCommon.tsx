@@ -42,7 +42,7 @@ export default function ButtonCommon({ func, NewsCards , navbtn, navbtnScroll, E
         ${EyesRadius ? 'rounded-[10px]' : ''}
         ${filterBtnActive ? 'bg-myborder-dark-color !rounded-lg w-[201.67px] 2xl:w-[249.33px] text-white h-[57px] xl:h-[69px] 2xl:h-[87px] ' : ''}
         ${filterBtn ? 'bg-myprimary-dark-08 !text-myprimary-gray-60 !rounded-lg w-[201.67px] 2xl:w-[249.33px] h-[57px] xl:h-[69px] 2xl:h-[87px] ' : ''}
-        ${footerBtn ? ' py-2 px-3.5 2xl:py-2.5 2xl:px-4 rounded-lg  bg-myprimary-dark-08  flex gap-2.5 justify-center items-center w-max ' : ''}
+        ${footerBtn ? ' py-2 px-3.5 2xl:py-2.5 2xl:px-4 rounded-lg  bg-myprimary-dark-08  flex gap-[4px] justify-center items-center w-max ' : ''}
         ${EbookHome ? 'h-[63px] w-full max-w-[358px] xl:w-full xl:max-w-[413px] 2xl:w-full 2xl:max-w-[519px]  bg-myprimary-dark-08  flex gap-2.5 justify-center items-center  ' : ''}
         ${ResourseDepthReportsActive ? 'bg-myborder-dark-color rounded-[10px] text-white h-[49px] 2xl:h-[63px] w-[106px] xl:w-[128px] 2xl:w-[197px] ' : ''}
         ${ResourseDepthReports ? 'bg-myprimary-dark-10 rounded-lg text-myprimary-gray-60 h-[49px] 2xl:h-[63px] w-[106px] xl:w-[128px] 2xl:w-[197px] ' : ''}
