@@ -7,8 +7,6 @@ const CommonQuestions = () => {
 
   const faqs = useSelector((state: any) => state.faq);
 
-  console.log(faqs);
-
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // Toggle accordion visibility

@@ -21,6 +21,7 @@ const MhCard: React.FC<MhCardProps> = ({
 
   return (
     <div data-aos="fade-up"
+     data-aos-duration="2000"
       className={`text-white ${
         isNewsPage ? "w-full  md:max-w-[560px] xl:max-w-[718px]" 
         : "w-full lg:max-w-[386.67px] 3xl:max-w-[470.67px] flex flex-col gap-5 lg:gap-6 2xl:gap-7.5"

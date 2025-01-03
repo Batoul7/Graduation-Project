@@ -1083,10 +1083,6 @@ video {
   gap: 10px;
 }
 
-.gap-20 {
-  gap: 5rem;
-}
-
 .gap-3 {
   gap: 0.75rem;
 }
@@ -2099,6 +2095,11 @@ video {
     padding: 1.5rem;
   }
 
+  .sm\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
   .sm\:pb-0 {
     padding-bottom: 0px;
   }
@@ -2333,6 +2334,11 @@ video {
   .md\:py-\[80px\] {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .md\:text-3xl {
