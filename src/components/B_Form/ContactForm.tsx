@@ -29,11 +29,14 @@ const ContactForm: React.FC = () => {
     const fetchCountries = async () => {
       try {
         const response = await fetch('https://restcountries.com/v3.1/all');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const data = await response.json();
         
         const countryList: Country[] = data.map((country: any) => ({
           name: country.name.common,
-          code: country.idd?.root ? `${country.idd.root}${country.idd.suffixes?.[0] || ''}` : '',
+          code: country.idd && country.idd.root ? `${country.idd.root}${country.idd.suffixes?.[0] || ''}` : '',
           flag: country.flags.svg,
         })).filter((country: Country) => country.code); 
 
@@ -91,13 +94,13 @@ const handleCountryChange = (code: string) => {
   };
 
   return (
-    <div>
+    <div  >
       <form onSubmit={handleSubmit} className=" text-white 2sm:px-5 py-10 lg:py-[60px] 2xl:py-20  flex flex-col gap-5 lg:gap-7.5 2xl:gap-[50px] 
       border-t border-t-neutral-800 lg:border-t-0 lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-[50px]">
           <div>
             <label className="block text-base lg:text-lg font-medium mb-3 lg:mb-4">First Name</label>
-            <input
+            <input  data-aos="flip-down"
               type="text"
               name="firstName"
               value={formData.firstName}
@@ -109,7 +112,7 @@ const handleCountryChange = (code: string) => {
           </div>
           <div>
             <label className="block  text-base lg:text-lg font-medium mb-3 lg:mb-4">Last Name</label>
-            <input
+            <input  data-aos="flip-down"
               type="text"
               name="lastName"
               value={formData.lastName}
@@ -124,7 +127,7 @@ const handleCountryChange = (code: string) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-[50px]">
           <div>
             <label className="block  text-base lg:text-lg font-medium mb-3 lg:mb-4">Email</label>
-            <input
+            <input  data-aos="flip-down"
               type="email"
               name="email"
               value={formData.email}
@@ -136,7 +139,7 @@ const handleCountryChange = (code: string) => {
           </div>
           <div>
             <label className="block text-base lg:text-lg font-medium mb-3 lg:mb-4">Phone Number</label>
-            <div className="flex gap-3 2xl:gap-4 ">  
+            <div className="flex gap-3 2xl:gap-4 "  data-aos="flip-down">  
               <div className="relative flex items-center justify-between w-1/4  bg-myprimary-dark-10 rounded-lg  
                             px-1 2sm:px-3 2sm:py-[11.5px] xl:px-3 xl:py-[11.5px] 2xl:px-[18px] 2xl:py-[16.5px] border border-neutral-800 hover:shadow-inputShadow  "> 
                 <div className="w-7.5 h-7.5 2xl:w-[34px] 2xl:h-[34px]  rounded-full  overflow-hidden">
@@ -151,11 +154,14 @@ const handleCountryChange = (code: string) => {
                   onChange={(e) => handleCountryChange(e.target.value)}
                   className="appearance-none absolute inset-0 opacity-0 cursor-pointer"
                 >
-                  {countries.map((country) => (
-                    <option key={country.code} value={country.code}>
-                      {country.name} ({country.code})
-                    </option>
-                  ))}
+                  {countries.filter((country, index, self) => 
+                      country.code &&  country.name &&
+                      self.findIndex(c => c.code === country.code) === index)
+                    .map((country) => (
+                      <option key={country.code} value={country.code}>
+                        {country.name} ({country.code})
+                      </option>
+                    ))}
                 </select>
                 <div className="pointer-events-none">
                     <svg  viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className='w-5 h-5 sm:w-[25px] sm:h-[25px]'>
@@ -163,7 +169,7 @@ const handleCountryChange = (code: string) => {
                     </svg>
                 </div>
               </div>
-              <input
+              <input 
                 type="text"
                 name="phoneNumber"
                 value={formData.phoneNumber}
@@ -178,7 +184,7 @@ const handleCountryChange = (code: string) => {
 
         <div>
           <label className="block text-base lg:text-lg font-medium mb-4">Message</label>
-          <textarea
+          <textarea  data-aos="flip-down"
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -188,7 +194,7 @@ const handleCountryChange = (code: string) => {
           />
         </div>
 
-        <div className="flex items-center justify-between flex-wrap gap-5">
+        <div className="flex items-center justify-between flex-wrap gap-5"  data-aos="flip-down">
           <div className='flex items-center'>
             <input
               type="checkbox"

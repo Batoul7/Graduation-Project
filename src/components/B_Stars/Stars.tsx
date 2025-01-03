@@ -14,9 +14,9 @@ const Stars: React.FC<StarsProps> = ({rating , leftcardPod}) => {
     ${leftcardPod ? 'mt-auto' : ''}`}>
       {Array.from({ length: 5 }).map((_, index) => (
         (rating !== undefined && index < rating) ? ( 
-          <img src={StarYellow} alt="star-yellow"/>
+          <img key={index} src={StarYellow} alt="star-yellow"/>
         ) : (
-          <img src={Starstroke} alt="star-stroke"/>
+          <img key={index} src={Starstroke} alt="star-stroke"/>
         )
       ))}
     </div>

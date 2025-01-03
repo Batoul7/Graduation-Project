@@ -14,7 +14,7 @@ interface PropsRight {
 
 
 const PodcastItem: React.FC<{ podcast: any }> = ({ podcast }) => (
-  <div key={podcast.id} className='p-5 lg:p-0 w-full max-w-[700px] mdRes:w-full mdRes:max-w-[600px] md:w-full 
+  <div key={podcast.id} data-aos="fade-up"  className='p-5 lg:p-0 w-full max-w-[700px] mdRes:w-full mdRes:max-w-[600px] md:w-full 
   lg:max-w-[747px] lghero:w-full lghero:max-w-[650px] 
   2xl:w-full 2xl:max-w-[917px]'>
     <img src={podcast.image} alt={podcast.title} className="w-full" />

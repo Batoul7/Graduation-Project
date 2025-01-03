@@ -21,7 +21,7 @@ export default function HomePage() {
   BcardData
 
   return (
-    <div>
+    <div >
       <HeroHome HeroCard={CounterCard} par1={"Your Journey to Tomorrow Begins Here"} 
       title={"Explore the Frontiers of Artificial Intelligence"} 
       par2={"Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI."} 
