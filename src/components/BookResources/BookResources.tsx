@@ -32,12 +32,12 @@ const BookResources: React.FC<BookResourcesProps> = ({
     };
 
     return (
-        <div className="text-white lg:w-[57.45%] ">
+        <div className="text-white lg:w-[57.45%]">
             <div className="h-[303px] 2xl:mb-[30px] md:mb-6 mb-5">
                 <img
                     src={imageUrl}
                     alt={title}
-                    className="w-full h-full rounded-[12px]"
+                    className="w-full h-full rounded-[12px] object-cover"
                 />
             </div>
             <div className="flex items-center justify-between gap-[30px] 2xl:mb-[50px] md:mb-10 mb-[30px] flex-wrap lg:flex-nowrap ">
@@ -49,7 +49,7 @@ const BookResources: React.FC<BookResourcesProps> = ({
                         {description}
                     </p>
                 </div>
-                <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'Download PDF Now'} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} onClick={handleDownloadPDF}  />
+                <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'Download PDF Now'} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} onClick={handleDownloadPDF} widthSmall="w-full sm:w-fit"  />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-400">
                 <div className="2xl:p-[30px] md:p-6 p-5 bg-myborder-dark-color rounded-lg">

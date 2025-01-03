@@ -690,10 +690,6 @@ video {
   margin-bottom: 6px;
 }
 
-.mb-\[80px\] {
-  margin-bottom: 80px;
-}
-
 .me-2 {
   margin-inline-end: 0.5rem;
 }
@@ -1699,8 +1695,13 @@ video {
   padding-top: 189px;
 }
 
+
 .pt-\[80px\] {
   padding-top: 80px;
+
+.pl-20 {
+  padding-left: 5rem;
+
 }
 
 .text-left {
@@ -2066,6 +2067,11 @@ video {
 
   .sm\:w-\[59\.09\%\] {
     width: 59.09%;
+  }
+
+  .sm\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .sm\:max-w-\[406\.67px\] {
