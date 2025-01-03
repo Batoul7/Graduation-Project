@@ -32,9 +32,9 @@ const LeftCard: React.FC<LeftCardProps> = ({
     form
 }) => {
     return (
-        <div className="bg-myprimary-dark-08 text-white w-full sm:w-[413px]  2xl:w-[519px]   rounded-lg">
+        <div className={`bg-myprimary-dark-08 text-white ${pageType === "contact" ? 'w-full':''} sm:w-[413px]  2xl:w-[519px]   rounded-lg`}>
             <div>
-                <img src={icon} alt="Icon" className={form ? "w-[50px] lg:w-[60px] 2xl:w-20" : "w-[50px] xl:w-[48px] 2xl:w-16"} />
+                <img src={icon} alt="Icon" className={pageType === "contact" ? "w-[50px] lg:w-[60px] 2xl:w-20" : "w-[50px] xl:w-[48px] 2xl:w-16"} />
             </div>
             <div className={pageType === "podcast" ? "flex items-center justify-center !mt-[30px] !mb-[22px] xl:!mt-[40px] xl:!mb-[24px] 2xl:mt-[50px] 2xl:mb-[30px] " : ""}>
                 <h2 className={`${form ? 'text-[28px] lg:text-[44px] 2xl:text-[58px] leading-9 lg:leading-[57.2px] 2xl:leading-[75.4px] lg:mt-7.5 mt-5 lg:-tracking-[3px] font-medium' 

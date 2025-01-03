@@ -26,12 +26,12 @@ export default function B_HeroContact() {
       ]
     }
   ];
-//  flex flex-col sm:flex-row justify-between flex-wrap
+
   return (
     <div className='2xl:h-2xl-hero h-md-hero 2xl:mt-[105px] mt-[93px] px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 text-white h- items-center
             grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-5 lg:gap-x-0 xl:flex-nowrap divide-y md:divide-y-0 divide-neutral-800 border-t border-neutral-800'>
       {data.map((item, index) => (
-          <div key={index} className={`md:flex-1 w-full lg:max-w-[275px] 2xl:max-w-[374px]
+          <div key={index}  data-aos="zoom-in"className={`md:flex-1 w-full lg:max-w-[275px] 2xl:max-w-[374px]
                                         ${(index === 0) ? 'mx-0 lg:mr-7.5 3xl:mr-[50px]' : ''}
                                         ${(index === 1 || index === 2) ? 'lg:mx-7.5 3xl:mx-[50px]' : ''}
                                         ${(index === 3) ? 'mx-0 lg:ml-7.5 3xl:ml-[50px]' : ''}  `}>

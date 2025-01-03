@@ -11,7 +11,7 @@ interface TestimonialProps {
 
 const TestimonialsCard: React.FC<TestimonialProps> = ({ name, location, image, rating, text }) => {
   return (
-    <div className=" text-white py-10 lg:py-20 flex flex-col items-center text-center gap-10 min-h-[160px]">
+    <div data-aos="fade-up" className=" text-white py-10 lg:py-20 flex flex-col items-center text-center gap-10 min-h-[160px]">
       <div className="flex gap-3">
         <img src={image} alt={name}/>
         <div>

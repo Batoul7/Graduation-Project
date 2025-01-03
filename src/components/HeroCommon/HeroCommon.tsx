@@ -11,7 +11,6 @@ interface HeroCommonProps {
   podcastcommonhero?: string;
   Resourcecommonhero?: string;
 }
-// pt-[189px]
 
 export default function HeroCommon({ CommonHeroTitle, CommonHeroText, neww, podcast, Resourse, newcommonhero, podcastcommonhero, Resourcecommonhero }: HeroCommonProps) {
   return (
