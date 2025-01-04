@@ -158,7 +158,7 @@ const handleCountryChange = (code: string) => {
                       country.code &&  country.name &&
                       self.findIndex(c => c.code === country.code) === index)
                     .map((country) => (
-                      <option key={country.code} value={country.code}>
+                      <option key={country.code} value={country.code} className='text-myprimary-dark-08'>
                         {country.name} ({country.code})
                       </option>
                     ))}
