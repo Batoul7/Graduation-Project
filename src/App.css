@@ -1788,6 +1788,11 @@ video {
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
 
+.text-myprimary-dark-08 {
+  --tw-text-opacity: 1;
+  color: rgb(20 20 20 / var(--tw-text-opacity, 1));
+}
+
 .text-myprimary-gray-50 {
   --tw-text-opacity: 1;
   color: rgb(126 126 129 / var(--tw-text-opacity, 1));
