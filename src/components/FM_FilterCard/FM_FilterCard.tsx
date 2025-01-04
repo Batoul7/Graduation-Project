@@ -59,7 +59,6 @@ export default function FM_FilterCard({ link, blogId }: FM_CardType) {
                             <img src={send} className="w-4 h-4" alt="send" />
                             <span>{blog && blog.shares}</span>
                         </button>
-
                     </div>
                 </div>
                 <Link to={link} className='md:block hidden'>
