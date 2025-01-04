@@ -13,7 +13,7 @@ const CommonQuestions = () => {
 
   return (
     <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 flex items-start justify-between flex-col lg:flex-row border-y border-neutral-800">
-      <div className="w-full lg:w-2/6 xl:w-[519px] pr-5 py-[60px] self-start">
+      <div className="pr-5 py-[60px]">
         <LeftCard
           title="Asked Questions"
           description="If the question is not available in our FAQ section, feel free to contact us personally, and we will resolve your doubts."
@@ -23,9 +23,9 @@ const CommonQuestions = () => {
           btncontent="Ask Question"
         />
       </div>
-  
-      <div className="w-full lg:w-4/6 xl:w-[1020px] py-[60px] lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20">
-        <div>
+
+      <div className="w-full py-[60px] lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20">
+      <div className="mx-auto md:max-w-[800px] lg:max-w-[880px] 2xl:w-[920px]">
           {faqs.map(
             (faq: { question: string; answer: string }, index: number) => (
               <div
@@ -42,7 +42,7 @@ const CommonQuestions = () => {
                       {faq.question}
                     </span>
                     <span
-                      className={`text-lg font-bold ${
+                      className={`text-[20px] font-bold ${
                         openIndex === index
                           ? "text-gray-500"
                           : "text-yellow-500"
@@ -66,7 +66,6 @@ const CommonQuestions = () => {
       </div>
     </div>
   );
-  
 };
 
 export default CommonQuestions;
