@@ -46,6 +46,7 @@ export default function ResourcesPage() {
                 icon={book.imageUrl3}
                 description={book.description2}
                 pageType="default"
+                ResourseBook='ResourseBook'
               />
               <BookResources
                 imageUrl={book.imageUrl}

@@ -15,8 +15,12 @@ interface LeftCardProps {
     buttonLabel?: string;
     rating?: number;
     host?: string;
+    podcasth2?: string;
+    bookhomebtnp?: string;
+    homefeaturemargin?: string;
+    ResourseBook?: string;
     pageType: "podcast" | "contact" | "default" | "book";
-    form?:boolean
+    form?:boolean 
 }
 
 const LeftCard: React.FC<LeftCardProps> = ({
@@ -29,17 +33,24 @@ const LeftCard: React.FC<LeftCardProps> = ({
     host,
     pageType,
     btncontent,
-    form
+    form ,
+    bookhomebtnp ,
+    homefeaturemargin,
+    podcasth2,
+    ResourseBook,
 }) => {
     return (
-        <div className={`bg-myprimary-dark-08 text-white ${pageType === "contact" ? 'w-full':''} sm:w-[413px]  2xl:w-[519px]   rounded-lg`}>
+            <div className={`bg-myprimary-dark-08 text-white 
+                ${pageType === "contact" ? 'w-full':''} w-full max-w-[400px] 
+                sm:max-w-[413px]  2xl:max-w-[519px]    rounded-lg`}>
             <div>
-                <img src={icon} alt="Icon" className={pageType === "contact" ? "w-[50px] lg:w-[60px] 2xl:w-20" : "w-[50px] xl:w-[48px] 2xl:w-16"} />
+                <img src={icon} alt="Icon" className="w-[50px] xl:w-[60px] 2xl:w-20" />
             </div>
-            <div className={pageType === "podcast" ? "flex items-center justify-center !mt-[30px] !mb-[22px] xl:!mt-[40px] xl:!mb-[24px] 2xl:mt-[50px] 2xl:mb-[30px] " : ""}>
+            <div className={pageType === "podcast" ? "flex items-center justify-center  !mb-5 xl:!mb-[24px] 2xl:!mb-[30px] " : ""}>
                 <h2 className={`${form ? 'text-[28px] lg:text-[44px] 2xl:text-[58px] leading-9 lg:leading-[57.2px] 2xl:leading-[75.4px] lg:mt-7.5 mt-5 lg:-tracking-[3px] font-medium' 
-                : "text-xl 2xl:text-[40px] xl:text-2xl !leading-[60px] lg:mt-10 mt-[30px]  font-semibold "}
-                font-kumbhSans 2xl:mt-[50px] `}>
+                : "text-2xl xl:text-3xl 2xl:text-[40px] !leading-[60px] xl:mt-10 mt-[20px]  font-semibold "}
+                ${podcasth2 ? 'text-xl xl:text-3xl 2xl:text-[40px] xl:mt-10 !mt-[30px] ' : ''}
+                font-kumbhSans 2xl:mt-[50px]`  }>
                     {title}
                 </h2>
                 {pageType === "podcast" && (
@@ -58,7 +69,7 @@ const LeftCard: React.FC<LeftCardProps> = ({
                     </div>
                 </div>
             ) : pageType === "book" ? (
-                <div className="2xl:mt-[30px] mt-2.5 ">
+                <div className="mt-[6px] xl:!mt-2.5 2xl:!mt-4 ">
                     {description && (
                         <p className="2xl:text-lg md:text-base text-sm font-normal text-myprimary-gray-60 mb-[50px] ">
                             {description}
@@ -67,12 +78,15 @@ const LeftCard: React.FC<LeftCardProps> = ({
                     <ButtonCommon contentBtn={btncontent} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} EbookHome='EbookHome' />
                 </div>
             ) : (
-                <p className="2xl:text-lg md:text-base text-sm 2xl:mt-[30px] md:mt-2.5 mt-1.5 font-normal text-myprimary-gray-60 ">{description}</p>
+                <p className={`2xl:text-lg md:text-base text-sm 2xl:mt-[30px] xl:mt-2.5 mt-1.5 font-normal text-myprimary-gray-60
+                   ${homefeaturemargin ? 'mt-[6px] xl:!mt-2.5 2xl:!mt-4' : ''}
+                    ${bookhomebtnp ? 'mb-6 xl:mb-[30px] 2xl:mb-[50px]' : ''}
+                    ${ResourseBook ? '2xl:!mt-[30px] xl:!mt-6 mt-5' : ''} `}>{description}</p>
             )}
 
             {pageType === "contact" && buttonText && (
                 <div className="mt-[50px]">
-                    <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'contact@ai-podcasts.com'} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} ContactRadius='ContactRadius' />
+                    <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'Ask Qustion'} imgArrowbtn={img1} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} ContactRadius='ContactRadius' />
                 </div>
             )}
         </div>

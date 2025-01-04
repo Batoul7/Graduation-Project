@@ -21,7 +21,8 @@ export default function FutureSection({ cardsData , title , description , icon  
                     title={title}
                     description={description}
                     icon={icon}
-                    pageType={"default"} btncontent={""}                />
+                    pageType={"default"}  
+                    homefeaturemargin ='homefeaturemargin'             />
             </div>
                 <FutureCards cardsData={cardsData} />
         </div>
