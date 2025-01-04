@@ -6,8 +6,6 @@ import icon2 from "./../../assets/images/ContactPage/icon-2.png";
 const CommonQuestions = () => {
   const faqs = useSelector((state: any) => state.faq);
 
-  console.log(faqs);
-
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
 

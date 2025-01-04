@@ -6,7 +6,7 @@ import CommonQuestions from "../components/CommonQuestions/CommonQuestions";
 export default function ContactPage() {
 
   return (
-        <div>
+        <div >
             <B_HeroContact/>
             <FormSection/>
             {/* <DisplayFormData/> */}

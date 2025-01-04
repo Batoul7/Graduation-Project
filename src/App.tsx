@@ -18,13 +18,13 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div className="4xl:container 4xl:mx-auto">
     <FM_TopBanner/>
     <FM_Navbar />
     <Outlet/>
     <FM_BePart />
     <FM_Footer />
-    </>
+    </div>
   )
 }
 

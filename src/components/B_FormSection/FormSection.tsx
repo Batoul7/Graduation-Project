@@ -10,7 +10,7 @@ export default function FormSection() {
                 title='Get in Touch with AI Podcasts'
                 description={""}
                 icon={icon}
-                pageType={"default"} 
+                pageType={"contact"} 
                 form={true} />
         </div>
     
