@@ -53,9 +53,8 @@ export default {
         "3xl": "1700px",
         "4xl": "1921px",
         'max-1200': { 'max': '1200px' },
-        // 'lgRes': {'min': '1221px', 'max': '1200px'}, 
-        'mdRes': {'min': '800px', 'max': '1220px'}, 
-        'max-389':{'max' : '389px'}
+        'max-389':{'max' : '389px'} ,
+        'min-760':{'min' : '762px'} ,
       },
       fontSize: {
         "6.5xl": "70px",
