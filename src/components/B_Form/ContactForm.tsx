@@ -94,7 +94,7 @@ const handleCountryChange = (code: string) => {
   };
 
   return (
-    <div  >
+    <div  className='flex-1'>
       <form onSubmit={handleSubmit} className=" text-white 2sm:px-5 py-10 lg:py-[60px] 2xl:py-20  flex flex-col gap-5 lg:gap-7.5 2xl:gap-[50px] 
       border-t border-t-neutral-800 lg:border-t-0 lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-[50px]">
