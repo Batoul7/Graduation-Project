@@ -36,7 +36,7 @@ export default {
         '4.5': '18px',
         '7.5': '30px',
         '2xl-hero': 'calc(100vh - 173px)',
-        'md-hero': 'calc(100vh - 161px)',
+        'md-hero': 'calc(100vh - 153px)',
       },
       padding: {
         'mainpaddinglarge': '162px',

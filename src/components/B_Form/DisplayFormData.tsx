@@ -24,7 +24,7 @@ const DisplayFormData: React.FC = () => {
   };
 
   return (
-    <div className="bg-myprimary-dark-08 text-white p-4">
+    <div className="bg-myprimary-dark-08 text-white p-4" data-aos="fade-down">
       <h2 className="text-myprimary-yellow-55 text-2xl font-semibold mb-4">Submitted Forms</h2>
       {formEntries.length > 0 ? (
         formEntries.map((entry, index) => (
