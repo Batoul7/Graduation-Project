@@ -13,6 +13,7 @@ const FutureCards: React.FC<FutureCardsProps> = ({ cardsData }) => {
     lg:grid sm:grid-cols-2 gap-[10px] lg:w-[65%]
     lg:gap-5 2xl:gap-[30px] py-[30px] xl:py-[60px]
     2xl:py-20 ps-4 pe-4 xl:pe-0 2xl:pe-0 xl:ps-[60px] 2xl:ps-20
+    w-full
     ">
       {cardsData.map((card, index) => (
         <FutureCard key={index} title={card.title} description={card.description} />

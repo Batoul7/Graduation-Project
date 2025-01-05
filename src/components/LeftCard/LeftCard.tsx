@@ -40,9 +40,9 @@ const LeftCard: React.FC<LeftCardProps> = ({
     ResourseBook,
 }) => {
     return (
-            <div className={`bg-myprimary-dark-08 text-white 
+         <div className={`bg-myprimary-dark-08 text-white 
                 ${pageType === "contact" ? 'w-full':''} w-full max-w-[400px] 
-                sm:max-w-[413px]  2xl:max-w-[519px]    rounded-lg`}>
+                sm:w-[413px]  2xl:w-[519px]    rounded-lg`}>
             <div>
                 <img src={icon} alt="Icon" className="w-[50px] xl:w-[60px] 2xl:w-20" />
             </div>
