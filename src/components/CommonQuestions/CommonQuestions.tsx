@@ -27,10 +27,11 @@ const CommonQuestions = () => {
       </div>
 
       <div className="py-[60px] lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20 w-full max-w-[415px] sm:w-full min-760:max-w-[690px] lg:w-full lg:!max-w-[829px] 2xl:w-full 2xl:!max-w-[941px]">
-      <div className="mx-auto w-full">
+      <div  className="mx-auto w-full">
           {faqs.map(
             (faq: { question: string; answer: string }, index: number) => (
               <div
+              data-aos="flip-down"
                 key={index}
                 className="bg-[#1A1A1A] dark:border-gray-700 rounded-xl mb-5 xl:mb-6 2xl:mb-[30px]"
               >
