@@ -42,7 +42,7 @@ const LeftCard: React.FC<LeftCardProps> = ({
     return (
          <div data-aos="fade-down" className={`bg-myprimary-dark-08 text-white 
                 ${pageType === "contact" ? 'w-full':''} w-full max-w-[400px] 
-                sm:w-[413px]  2xl:w-[519px]    rounded-lg`}>
+                sm:max-w-[413px]  2xl:max-w-[519px]    rounded-lg`}>
             <div>
                 <img src={icon} alt="Icon" className="w-[50px] xl:w-[60px] 2xl:w-20" />
             </div>

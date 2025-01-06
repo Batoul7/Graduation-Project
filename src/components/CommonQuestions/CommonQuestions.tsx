@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import LeftCard from "../LeftCard/LeftCard";
 import icon2 from "./../../assets/images/ContactPage/icon-2.png";
+import PlusImg from '../../assets/images/ContactPage/plus.png'
+import MinusImg from '../../assets/images/ContactPage/minus.png'
+
 
 const CommonQuestions = () => {
   const faqs = useSelector((state: any) => state.faq);
@@ -12,10 +15,9 @@ const CommonQuestions = () => {
   };
 
   return (
-    <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 flex 
-    items-center xl:items-start justify-center xl:justify-between flex-col lg:flex-row border-y border-neutral-800
+    <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 flex items-center flex-col lg:flex-row border-y border-neutral-800 
      ">
-      <div className="pr-5 py-[60px]">
+      <div className="pr-5 py-10">
         <LeftCard
           title="Asked Questions"
           description="If the question is not available in our FAQ section, feel free to contact us personally, and we will resolve your doubts."
@@ -25,20 +27,17 @@ const CommonQuestions = () => {
           btncontent="Ask Question"
         />
       </div>
-
-      <div className="py-[60px] lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20 w-full max-w-[415px] sm:w-full min-760:max-w-[690px] lg:w-full lg:!max-w-[829px] 2xl:w-full 2xl:!max-w-[941px]">
-      <div  className="mx-auto w-full">
+      <div className="w-fit xl:w-[748px] 3xl:w-[917px] flex flex-1 flex-col gap-5 lg:gap-6 2xl:gap-7.5 py-10 lg:py-[60px] 2xl:py-20  border-t border-t-neutral-800 lg:border-t-0 lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20">
           {faqs.map(
             (faq: { question: string; answer: string }, index: number) => (
-              <div
-              data-aos="flip-down"
+              <div data-aos="fade-up"
                 key={index}
-                className="bg-[#1A1A1A] dark:border-gray-700 rounded-xl mb-5 xl:mb-6 2xl:mb-[30px]"
+                className="bg-myprimary-dark-10 rounded-xl"
               >
-                <h2>
-                  <button
+                <h2 >
+                  <button 
                     type="button"
-                    className="flex items-center justify-between w-full p-6 2xl:p-[34px] text-white dark:text-gray-400 text-base xl:text-[18px] 2xl:text-[20px]"
+                    className="w-full flex items-center justify-between p-6 2xl:p-[34px] text-white text-base xl:text-[18px] 2xl:text-[20px]"
                     onClick={() => toggleAccordion(index)}
                   >
                     <span className="flex items-center gap-3 !text-start">
@@ -51,13 +50,16 @@ const CommonQuestions = () => {
                           : "text-yellow-500"
                       }`}
                     >
-                      {openIndex === index ? "-" : "+"}
+                      {openIndex === index ? 
+                      <img src={MinusImg} alt="minus" className="2xl:w-6" />
+                       : 
+                      <img src={PlusImg} alt="plus"  className="2xl:w-6"/> }
                     </span>
                   </button>
                 </h2>
                 {openIndex === index && (
-                  <div className="p-5 border-t border-[#262626] dark:border-gray-700">
-                    <p className="text-[#7E7E81] dark:text-gray-400 text-sm xl:text-[16px] 2xl:text-[18px]">
+                  <div className=" p-6 2xl:p-[34px] border-t border-neutral-800">
+                    <p className="text-myprimary-gray-50 text-sm xl:text-[16px] 2xl:text-[18px]">
                       {faq.answer}
                     </p>
                   </div>
@@ -67,7 +69,7 @@ const CommonQuestions = () => {
           )}
         </div>
       </div>
-    </div>
+  
   );
 };
 
