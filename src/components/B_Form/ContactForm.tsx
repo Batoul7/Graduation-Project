@@ -152,7 +152,7 @@ const handleCountryChange = (code: string) => {
               const country = countries.find((c) => c.code === entry.countryCode)?.name || "Unknown Country";
               return (
                 <div key={index} className="mb-6 text-left text-lg">
-                  <h3 className="text-xl font-semibold text-myprimary-yellow-60 mb-5">Form Entry number {index + 1}</h3>
+                  <h3 className="text-xl font-semibold text-myprimary-yellow-60 mb-5">Form Entry {index + 1}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
                     {Object.entries(fields).map(([key, label]) => (
                       <div key={key} className="flex items-center">
