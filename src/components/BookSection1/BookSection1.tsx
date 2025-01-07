@@ -18,14 +18,14 @@ function BookSection1() {
                     bookhomebtnp='bookhomebtnp'
                 />
 
-                <div className="mt-5 lg:mt-10 2xl:mt-[60px] mb-10 lg:mb-0 ">
+                <div  data-aos="fade-up"  className="mt-5 lg:mt-10 2xl:mt-[60px] mb-10 lg:mb-0 ">
                     <BoxDownloadedBook
                         spriteImage={img1}
                         downloads="10k+ Users"
                     />
                 </div>
             </div>
-            <div>
+            <div  data-aos="fade-up">
                 <HomeBook bookIndex={0} />
             </div>
         </div>

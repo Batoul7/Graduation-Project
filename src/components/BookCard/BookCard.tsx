@@ -29,7 +29,7 @@ const BookCard: React.FC<BookCardProps> = ({ title, description, imageUrl }) => 
   };
 
   return (
-    <div className="text-white rounded-lg shadow-md flex flex-col">
+    <div data-aos="fade-up" className="text-white rounded-lg shadow-md flex flex-col">
       <img
         src={imageUrl}
         alt={title}
