@@ -32,7 +32,7 @@ const BookResources: React.FC<BookResourcesProps> = ({
     };
 
     return (
-        <div className="text-white lg:w-[57.45%]">
+        <div data-aos="fade-up" className="text-white lg:w-[57.45%]">
             <div className="h-[303px] 2xl:mb-[30px] md:mb-6 mb-5">
                 <img
                     src={imageUrl}
