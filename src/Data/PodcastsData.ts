@@ -23,10 +23,6 @@ interface Podcast {
   description: string;
   host: string;
   cards: Cards[];
-
-  // totalEpisodes: number;
-  // average:string;
-  // releaseFrequency: string;
   rating: number;
   image: string;
 }

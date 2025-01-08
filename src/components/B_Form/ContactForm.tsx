@@ -1,17 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { AppDispatch } from '../../redux/store';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch ,RootState} from '../../redux/store';
 import { updateForm } from '../../redux/slice/formSlice';
 import ButtonCommon from '../ButtonCommon/ButtonCommon';
+
 
 interface Country {
   name: string;
   code: string;
   flag: string;
 }
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  message: string;
+  agreeToTerms: boolean;
+  countryCode: string; 
+}
 
 const ContactForm: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
+  const formEntries = useSelector((state: RootState) => state.form.formEntries) as FormData[];
 
   const [formData, setFormData] = React.useState({
     firstName: '',
@@ -23,7 +34,31 @@ const ContactForm: React.FC = () => {
     agreeToTerms: false,
   });
 
+  const fields: { [key in keyof FormData]: string } = {
+    firstName: 'First Name',
+    lastName: 'Last Name',
+    email: 'Email',
+    phoneNumber: 'Phone Number',
+    countryCode: 'Country Code',
+    message: 'Message',
+    agreeToTerms: 'Agreed to Terms'
+    
+  };
   const [countries, setCountries] = useState<Country[]>([]);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const isValid = !!(
+      formData.firstName &&
+      formData.lastName &&
+      formData.email &&
+      formData.phoneNumber &&
+      formData.message &&
+      formData.agreeToTerms
+    );
+    setIsFormValid(isValid);
+  }, [formData]);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -48,13 +83,15 @@ const ContactForm: React.FC = () => {
     fetchCountries();
   }, []);
 
-  const isFormValid =
-    formData.firstName &&
-    formData.lastName &&
-    formData.email &&
-    formData.phoneNumber &&
-    formData.message &&
-    formData.agreeToTerms;
+   // Memoizing the filtered countries list
+   const memoizedCountries = useMemo(() => {
+    return countries.filter(
+      (country, index, self) =>
+        country.code &&
+        country.name &&
+        self.findIndex((c) => c.code === country.code) === index
+    );
+  }, [countries]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -72,13 +109,16 @@ const handleCountryChange = (code: string) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!isFormValid) {
-      alert('Please fill in all required fields and agree to the terms.');
-      return;
+      if (isFormValid) {
+        dispatch(updateForm(formData));
+        setIsModalVisible(true);
+      } else {
+        setIsModalVisible(true);
     }
-    
-    dispatch(updateForm(formData));
+
+  };
+
+  const handleModalClose = () => {
     setFormData({
       firstName: '',
       lastName: '',
@@ -88,13 +128,59 @@ const handleCountryChange = (code: string) => {
       message: '',
       agreeToTerms: false,
     });
-
-    alert('Thank you! Your information has been saved.');
-
+    setIsModalVisible(false);
   };
-
+  
   return (
-    <div  >
+    <div  className='flex-1'>
+      {isModalVisible && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+        <div className="bg-myprimary-dark-08 rounded-2xl p-8 w-full max-w-2xl text-center shadow-inner shadow-myprimary-yellow-55">
+          <div className="mb-6">
+            <h2 className={`text-4xl font-bold mb-2 ${isFormValid ? 'text-myprimary-yellow-55' : 'text-red-500' }`}>
+            {isFormValid ? 'Success!' : 'Error!'}
+            </h2>
+            <p className="text-xl font-medium text-white">
+            {isFormValid
+            ? 'Your form has been submitted successfully!'
+            : 'Please fill in all required fields and agree to the terms.'}
+            </p>
+          </div>
+          {isFormValid &&
+          (<div className="bg-myprimary-dark-10 shadow-inner shadow-myprimary-yellow-55 rounded-lg p-6  overflow-y-auto max-h-80">
+            {formEntries.map((entry, index) => {
+              const country = countries.find((c) => c.code === entry.countryCode)?.name || "Unknown Country";
+              return (
+                <div key={index} className="mb-6 text-left text-lg">
+                  <h3 className="text-xl font-semibold text-myprimary-yellow-60 mb-5">Form Entry number {index + 1}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                    {Object.entries(fields).map(([key, label]) => (
+                      <div key={key} className="flex items-center">
+                        <h4 className="font-medium text-white mr-3 ">{label}:</h4>
+                        <p className="text-myprimary-yellow-80 text-base">
+                          {key === 'agreeToTerms' ? (entry[key] ? 'Yes' : 'No') : entry[key as keyof FormData]}
+                        </p>
+                      </div>
+                    ))}
+                    <div className="flex items-center">
+                      <h4 className="font-medium text-white w-1/3">Country:</h4>
+                      <p className="text-myprimary-yellow-80 text-base">{country}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>)}
+          <button
+            onClick={handleModalClose}
+            className="mt-6 px-6 py-3 text-lg bg-myprimary-yellow-60 text-myprimary-dark-08 font-bold rounded-lg shadow-md hover:bg-myprimary-yellow-55 transition-all" >
+            OK
+          </button>
+        </div>
+      </div>
+      
+      )}
+
       <form onSubmit={handleSubmit} className=" text-white 2sm:px-5 py-10 lg:py-[60px] 2xl:py-20  flex flex-col gap-5 lg:gap-7.5 2xl:gap-[50px] 
       border-t border-t-neutral-800 lg:border-t-0 lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-[50px]">
@@ -154,14 +240,12 @@ const handleCountryChange = (code: string) => {
                   onChange={(e) => handleCountryChange(e.target.value)}
                   className="appearance-none absolute inset-0 opacity-0 cursor-pointer"
                 >
-                  {countries.filter((country, index, self) => 
-                      country.code &&  country.name &&
-                      self.findIndex(c => c.code === country.code) === index)
-                    .map((country) => (
-                      <option key={country.code} value={country.code}>
-                        {country.name} ({country.code})
-                      </option>
-                    ))}
+                  {memoizedCountries.map((country) => (
+                  <option key={country.code} value={country.code}  className='text-myprimary-dark-08'>
+                    {country.name} ({country.code})
+                  </option>
+                ))}
+                   
                 </select>
                 <div className="pointer-events-none">
                     <svg  viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className='w-5 h-5 sm:w-[25px] sm:h-[25px]'>
