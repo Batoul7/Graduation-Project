@@ -4,51 +4,52 @@ import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import NewsPage from './pages/NewsPage'
-import BlogOpenPage from './pages/BlogOpenPage'
 import PodcastsPage from './pages/PodcastsPage'
 import ResourcesPage from './pages/ResourcesPage'
 import ContactPage from './pages/ContactPage'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import App from './App'
+import BlogPage from './pages/BlogPage'
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: "/",
-        element: <HomePage/>,
+        element: <HomePage />,
       },
       {
         path: "/news",
-        element: <NewsPage/>
+        element: <NewsPage />
       },
       {
-        path: "/blog",
-        element: <BlogOpenPage/>
+        path: "/blog/:id",
+        element: <BlogPage />
       },
       {
         path: "/podcasts",
-        element: <PodcastsPage/>
+        element: <PodcastsPage />
       },
       {
         path: "/resources",
-        element: <ResourcesPage/>
+        element: <ResourcesPage />
       },
       {
         path: "/contact",
-        element: <ContactPage/>
+        element: <ContactPage />
       },
     ]
   },
-  
-])
+], {
+  basename: '/Graduation-Project'
+})
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-     <Provider store={store}>
-     <RouterProvider router={routes}/>
-     </Provider>
+    <Provider store={store}>
+      <RouterProvider router={routes} />
+    </Provider>
   </StrictMode>,
 )

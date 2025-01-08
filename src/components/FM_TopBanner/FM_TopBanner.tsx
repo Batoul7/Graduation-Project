@@ -23,7 +23,7 @@ export default function FM_TopBanner() {
 
     return (
         <Link to={'contact'}
-            className="flex gap-2.5 py-5 text-xs px-4 md:text-sm 2xl:text-lg w-full justify-center items-center font-inter bg-myprimary-dark-08 text-myprimary-gray-60">
+            className="2xl:px-mainpaddinglarge xl:px-[80px] px-4 flex gap-2.5 py-5 text-xs md:text-sm 2xl:text-lg w-full justify-center items-center font-inter bg-myprimary-dark-08 text-myprimary-gray-60">
                 <span>
                     {
                         screen ? 'Subscribe to our Newsletter For Blogs and Resources'

@@ -45,7 +45,7 @@ export default function HeroHome({ HeroCard, par1, title, par2, img1, altimg1, s
     }, [screen])
 
     return (
-        <div className="2xl:h-2xl-hero h-md-hero 2xl:mt-[105px] mt-[93px] px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 flex flex-wrap overflow-hidden">
+        <div className="2xl:h-2xl-hero min-h-md-hero 2xl:mt-[105px] mt-[93px] px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 flex flex-wrap overflow-hidden">
             <div data-aos="fade-right" className="flex flex-col justify-between sm:w-[59.09%]">
                 <div className="flex flex-col justify-center items-start border-neutral-800 my-auto 2xl:mr-[50px] md:mr-10" >
                     <p className="font-medium font-kumbhSans text-mysecondary-dark-40  text-lg xl:text-1.5xl 2xl:text-3xl pb-4 xl:pb-5 2xl:pb-7.5 ">{par1}</p>
