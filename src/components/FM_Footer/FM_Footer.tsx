@@ -5,8 +5,7 @@ import imgArrowHero from '../../assets/images/Arrows/goArrow.png'
 export default function FM_Footer() {
     return (
         <footer className="bg-myprimary-dark-08 2xl:px-mainpaddinglarge xl:px-[80px] px-4">
-            <div className="2xl:py-20 md: py-[60px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  xl:grid-cols-5 gap-y-6 gap-5 sm:gap-20 border-b border-mysecondary-dark-40
-            ">
+            <div className="2xl:py-20 md: py-[60px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  xl:grid-cols-5 gap-y-6 gap-5 sm:gap-20 border-b border-mysecondary-dark-40">
                 {FooterData.map((e, index) => {
                     return (
                         <div key={index} className= {`${index === FooterData.length -1 ? 'col-span-2 md:col-span-3 xl:col-span-1' : ''}`}>

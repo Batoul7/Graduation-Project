@@ -12,7 +12,7 @@ export default function NewsPage() {
       <HeroCommon CommonHeroTitle={"Today's Headlines: Stay Informed "} CommonHeroText={"Explore the latest news from around the world. We bring you up-to-the-minute updates on the most significant events, trends, and stories. Discover the world through our news coverage."} neww={"neww"}  newcommonhero={"newcommonhero"} />
       <LatestBlogs />
       <MainTitle title="Discover the World of Headlines" subtitle="Welcome to Our News Hub" button={true} btntext='View All Blogs'/>
-      <FM_Filteration btns={News_Filteration}/>
+      <FM_Filteration btns={News_Filteration} btn="Read More"/>
       <MainTitle title="Visual Insights for the Modern Viewer" subtitle="Featured Videos" button={true} btntext='View All'/>
       <FeaturedVideos />
     </div>

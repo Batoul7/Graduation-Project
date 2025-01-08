@@ -135,7 +135,7 @@ const handleCountryChange = (code: string) => {
     <div  className='flex-1'>
       {isModalVisible && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
-        <div className="bg-myprimary-dark-08 rounded-2xl p-8 w-full max-w-2xl text-center shadow-inner shadow-myprimary-yellow-55">
+        <div data-aos="zoom-in-down" className="bg-myprimary-dark-08 rounded-2xl p-8 w-full max-w-2xl text-center shadow-inner shadow-myprimary-yellow-55">
           <div className="mb-6">
             <h2 className={`text-4xl font-bold mb-2 ${isFormValid ? 'text-myprimary-yellow-55' : 'text-red-500' }`}>
             {isFormValid ? 'Success!' : 'Error!'}

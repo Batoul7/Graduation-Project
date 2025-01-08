@@ -1,6 +1,10 @@
 import ButtonCommon from '../ButtonCommon/ButtonCommon';
 import imgArrowHero from '../../assets/images/Arrows/goArrow.png';
 import { Link } from 'react-router-dom';
+import iconTwitter from '/src/assets/images/Footer/twitter.png'
+import iconYoutube from '/src/assets/images/Footer/icon.png'
+import iconlinkedin from '/src/assets/images/Footer/LinkedIn.png'
+
 
 export default function B_HeroContact() {
   const data = [
@@ -20,9 +24,9 @@ export default function B_HeroContact() {
     {
       title: "Connect with Us",
       buttons: [
-        { icon: "/src/assets/images/Footer/twitter.png", link: "https://twitter.com" },
-        { icon: "/src/assets/images/Footer/icon.png", link: "https://youtube.com" },
-        { icon: "/src/assets/images/Footer/LinkedIn.png", link: "https://linkedin.com" }
+        { icon: iconTwitter, link: "https://twitter.com" },
+        { icon: iconYoutube, link: "https://youtube.com" },
+        { icon: iconlinkedin, link: "https://linkedin.com" }
       ]
     }
   ];

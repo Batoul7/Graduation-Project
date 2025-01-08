@@ -40,8 +40,8 @@ export default function ButtonCommon({ func, NewsCards , navbtn, navbtnScroll, E
         ${herobtnAndCommon ? (`${widthSmall} px-5 py-3.5 2xl:py-4.5 2xl:px-6 bg-myprimary-dark-08 flex gap-2.5 justify-center items-center md:w-max `) : ''}
         ${mainsmall ? ' max-w-[310px] xl:max-w-[180px] 2xl:max-w-[231px] ' : ''}
         ${EyesRadius ? 'rounded-[10px]' : ''}
-        ${filterBtnActive ? 'bg-myborder-dark-color !rounded-lg w-[201.67px] 2xl:w-[249.33px] text-white h-[57px] xl:h-[69px] 2xl:h-[87px] ' : ''}
-        ${filterBtn ? 'bg-myprimary-dark-08 !text-myprimary-gray-60 !rounded-lg w-[201.67px] 2xl:w-[249.33px] h-[57px] xl:h-[69px] 2xl:h-[87px] ' : ''}
+        ${filterBtnActive ? 'flex justify-center items-center flex-shrink-0 min-992:flex-shrink bg-myborder-dark-color !rounded-lg w-[201.67px] 2xl:w-[249.33px] text-white h-[57px] xl:h-[69px] 2xl:h-[87px] ' : ''}
+        ${filterBtn ? 'flex justify-center items-center flex-shrink-0 min-992:flex-shrink bg-myprimary-dark-08 !text-myprimary-gray-60 !rounded-lg w-[201.67px] 2xl:w-[249.33px] h-[57px] xl:h-[69px] 2xl:h-[87px] ' : ''}
         ${footerBtn ? ' py-2 px-3.5 2xl:py-2.5 2xl:px-4 rounded-lg  bg-myprimary-dark-08  flex gap-[4px] justify-center items-center w-max ' : ''}
         ${EbookHome ? 'h-[63px] w-full max-w-[358px] xl:w-full xl:max-w-[413px] 2xl:w-full 2xl:max-w-[519px]  bg-myprimary-dark-08  flex gap-2.5 justify-center items-center  ' : ''}
         ${ResourseDepthReportsActive ? 'bg-myborder-dark-color rounded-[10px] text-white h-[49px] 2xl:h-[63px] w-[106px] xl:w-[128px] 2xl:w-[197px] ' : ''}

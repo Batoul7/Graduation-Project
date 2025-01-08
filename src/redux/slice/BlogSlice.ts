@@ -5,6 +5,7 @@ const initialState = {
     blogs: BlogsData as Blogs[],
     filteredBlogs: [] as Blogs[],
     last4Blogs: [] as Blogs[],
+    similerblogs: [] as Blogs[],
 }
 
 const blogSlice = createSlice({
@@ -12,13 +13,13 @@ const blogSlice = createSlice({
     initialState,
     reducers: {
         filterByCategory: (state, action) => {
-            const category = action.payload;
+            const category = action.payload
             if (category === 'All') {
-                state.filteredBlogs = [...state.blogs];
+                state.filteredBlogs = [...state.blogs]
             } else {
                 state.filteredBlogs = state.blogs.filter(
                     (blog) => blog.category.toLowerCase().includes(category.toLowerCase())
-                );
+                )
             }
         },
         toggleReaction: (state, action) => {
@@ -36,10 +37,19 @@ const blogSlice = createSlice({
             }
         },
         last4blogs: (state) => {
-            state.last4Blogs = state.blogs.slice(-4).reverse();
+            state.last4Blogs = state.blogs.slice(-4).reverse()
+        },
+        similerblogs: (state, action) => {
+            const { index, category} = action.payload
+            state.filteredBlogs = state.blogs.filter(
+                (blog) => 
+                    blog.id !== index &&
+                    blog.category.toLowerCase().includes(category.toLowerCase())
+            )
+            state.similerblogs = state.filteredBlogs.slice(0,3)
         },
     }
 })
 
 export const BlogsReducer = blogSlice.reducer
-export const { filterByCategory, last4blogs, toggleReaction } = blogSlice.actions
+export const { filterByCategory, last4blogs, toggleReaction, similerblogs } = blogSlice.actions

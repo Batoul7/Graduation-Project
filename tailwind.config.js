@@ -53,8 +53,10 @@ export default {
         "3xl": "1700px",
         "4xl": "1921px",
         'max-1200': { 'max': '1200px' },
-        'max-389':{'max' : '389px'} ,
-        'min-760':{'min' : '762px'} ,
+        'min-992': '992px',
+        // 'lgRes': {'min': '1221px', 'max': '1200px'}, 
+        'mdRes': {'min': '800px', 'max': '1220px'}, 
+        'max-389':{'max' : '389px'}
       },
       fontSize: {
         "6.5xl": "70px",
@@ -65,6 +67,9 @@ export default {
       fontFamily: {
         "inter": "var(--inter-font)",
         "kumbhSans": "var(--kumbh-font)",
+      },
+      backgroundImage: {
+        'FM-linear-gradient': "linear-gradient(180deg, rgba(20, 20, 20, 0) -19.6%, #141414 62.86%)",
       },
       keyframes: {
         move: {
