@@ -1,6 +1,6 @@
 import BookResources from "../components/BookResources/BookResources";
 import LeftCard from "../components/LeftCard/LeftCard";
-import MainTitle from "../components/MainTitle/MainTitle";
+import MainTitle from "../components/B_MainTitle/MainTitle";
 import CardNumberCounter from "../components/CardNumberCounter/CardNumberCounter";
 import HeroCommon from "../components/HeroCommon/HeroCommon";
 import { CounterCard2 } from "../Data/HomeData";

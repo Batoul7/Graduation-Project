@@ -1,4 +1,4 @@
-import MainTitle from "../components/MainTitle/MainTitle";
+import MainTitle from "../components/B_MainTitle/MainTitle";
 import Testimonials from "../components/B_Testimonials/Testimonials";
 import HeroHome from "../components/HeroHome/HeroHome";
 import imgpeople from './../assets/images/HomePage/SubContainer-1.png'

@@ -3,7 +3,7 @@ import HeroCommon from "../components/HeroCommon/HeroCommon";
 import KGPodcastSection from "../components/KGPodcastSection/KGPodcastSection";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import LatestPodcasts from "../components/LatestPodcasts/LatestPodcasts";
+import LatestPodcasts from "../components/B_LatestPodcasts/LatestPodcasts";
 
 export default function PodcastsPage() {
 
