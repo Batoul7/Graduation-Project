@@ -34,8 +34,8 @@ export default function ButtonCommon({ func, NewsCards , navbtn, navbtnScroll, E
       className=
 
       {` whitespace-nowrap text-myprimary-gray-60 font-normal rounded-xl border border-solid border-neutral-800  text-sm 2xl:text-lg font-inter leading-5 2xl:leading-[27px]
-        hover:!bg-myprimary-dark-08 hover:!text-white transition-all
-        ${navbtn ? (`${widthSmall} !text-myprimary-dark-08   px-[14px] py-[10px] 2xl:px-5 2xl:py-3.5 bg-myprimary-yellow-55 !rounded-rad-10  !border-0 !font-medium  `) : ''}
+        hover:!bg-myprimary-dark-08 hover:!text-white transition-all hover:border-myprimary-yellow-55
+        ${navbtn ? (`${widthSmall} border border-transparent !text-myprimary-dark-08   px-[14px] py-[10px] 2xl:px-5 2xl:py-3.5 bg-myprimary-yellow-55 !rounded-rad-10 !font-medium  `) : ''}
         ${navbtnScroll ? 'text-white bg-myprimary-dark-08 px-[14px] py-[10px] 2xl:px-5 2xl:py-3.5 !rounded-rad-10  !border-0 !font-medium' : ''}
         ${herobtnAndCommon ? (`${widthSmall} px-5 py-3.5 2xl:py-4.5 2xl:px-6 bg-myprimary-dark-08 flex gap-2.5 justify-center items-center md:w-max `) : ''}
         ${mainsmall ? ' max-w-[310px] xl:max-w-[180px] 2xl:max-w-[231px] ' : ''}
