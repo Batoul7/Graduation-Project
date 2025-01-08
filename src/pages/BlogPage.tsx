@@ -51,7 +51,7 @@ export default function BlogPage() {
                 author={blog?.author}
                 category={blog?.category}
             />
-            <FM_SimilerBlogs blogId={blog?.id} data={similerblog}/>
+            <FM_SimilerBlogs data={similerblog}/>
         </>
     )
 }
