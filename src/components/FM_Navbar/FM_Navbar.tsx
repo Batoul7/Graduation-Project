@@ -30,20 +30,28 @@ export default function FM_Navbar() {
         }
     }, [header])
 
+    function handleScrollToTop() {
+        setShow(false)
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
     return (
-        <nav className={`4xl:container 4xl:mx-auto fixed z-10 flex justify-between items-center ${header ? 'bg-myprimary-yellow-70 top-0 shadow-md' : 'bg-myprimary-dark-10 border-y border-myprimary-dark-20'} w-screen py-5 2xl:py-6 2xl:px-mainpaddinglarge xl:px-[80px] px-4`}>
+        <nav className={`4xl:container 4xl:mx-auto fixed z-20 flex justify-between items-center ${header ? 'bg-myprimary-yellow-60 top-0 shadow-md' : 'bg-myprimary-dark-10 border-y border-myprimary-dark-20'} w-screen py-5 2xl:py-6 2xl:px-mainpaddinglarge xl:px-[80px] px-4`}>
             <img src={header ? LogoScroll : logo} alt="logo" />
-            <div className={`flex gap-[23.05vw] justify-between items-center max-1200:w-screen max-1200:flex-col max-1200:fixed max-1200:top-0 max-1200:left-0 max-1200:h-screen transition-all duration-300 ease-in-out max-1200:justify-evenly max-1200:gap-0 ${header ? 'bg-myprimary-yellow-70' : 'bg-myprimary-dark-10'} ${show ? 'translate-y-0' : 'max-1200:-translate-y-full'}`}>
+            <div className={`flex w-[65%] justify-between items-center max-1200:w-screen max-1200:flex-col max-1200:fixed max-1200:top-0 max-1200:left-0 max-1200:h-screen transition-all duration-300 ease-in-out max-1200:justify-evenly max-1200:gap-0 ${header ? 'bg-myprimary-yellow-60' : 'bg-myprimary-dark-10'} ${show ? 'translate-y-0' : 'max-1200:-translate-y-full'}`}>
                 <img src={header ? LogoScroll : logo} className='hidden max-1200:block' alt="logo" />
-                <ul className='flex gap-6 2xl:gap-10 max-1200:flex-col max-1200:justify-evenly max-1200:items-center max-1200:gap-10'>
+                <ul className='flex gap-6 2xl:gap-4 max-1200:flex-col max-1200:justify-evenly max-1200:items-center max-1200:gap-10'>
                     {dataNav.map((e, index) => {
                         return (
                             <li key={index}>
                                 <NavLink
-                                    onClick={() => setShow(false)}
+                                    onClick={handleScrollToTop}
                                     to={e.link}
                                     className={({ isActive }) =>
-                                        `${header ? '' : 'text-myprimary-gray-50'} ${isActive ? 'text-white bg-myprimary-dark-08 rounded-[10px] border border-myprimary-dark-20 py-3.5 px-6' : ''} `}
+                                        `py-2.5 2xl:py-3.5 px-5 ${header ? '' : 'text-myprimary-gray-50'} ${isActive ? 'text-white bg-myprimary-dark-08 rounded-[10px] border border-myprimary-dark-20' : 'border-transparent'} `}
                                 >
                                     {e.item}
                                 </NavLink>
@@ -51,7 +59,7 @@ export default function FM_Navbar() {
                         )
                     })}
                 </ul>
-                <NavLink to={'contact'} onClick={() => setShow(false)}>
+                <NavLink to={'/contact'} onClick={handleScrollToTop}>
                     <ButtonCommon navbtn={header ? false : true} navbtnScroll={header ? true : false} contentBtn={'Contact Us'} hiddenArrow='hiddenArrow' hiddenEyes={"hiddenEyes"} />
                 </NavLink>
                 <img onClick={() => setShow(!show)} src={header ? xCloseScroll : xClose} className='hidden max-1200:block' alt="close" />

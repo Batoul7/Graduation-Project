@@ -13,12 +13,12 @@ interface FM_Reader {
 export default function FM_Reader({show , image , name , category , link} : FM_Reader ) {
 
     return (
-        <div className="flex justify-between items-center max-1200:w-full w-[384px]">
+        <div className="flex flex-wrap gap-x-1 gap-y-3 justify-between items-center max-1200:w-full w-[384px]">
             <div className="flex items-center gap-3">
                 <img className='w-[60px] 2xl:w-20' src={image} alt='img' />
                 <div>
-                    <h3 className="text-xl font-medium text-white mb-2 w-max">{name}</h3>
-                    <p className="text-mysecondary-dark-40 text-lg w-max">{category}</p>
+                    <h3 className="text-base md:text-lg 2xl:text-xl font-medium text-white mb-2 w-max">{name}</h3>
+                    <p className="text-mysecondary-dark-40 text-sm md:text-base 2xl:text-lg w-max">{category}</p>
                 </div>
             </div>
             <Link to={link} className={`${show ? 'block md:hidden' : 'hidden'}`}>
