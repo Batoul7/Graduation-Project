@@ -18,12 +18,13 @@ export default function FM_BePart() {
                     button={false}
                     desc={true}
                     txt="Immerse yourself in the world of future technology. Explore our comprehensive resources, connect with fellow tech enthusiasts, and drive innovation in the industry. Join a dynamic community of forward-thinkers."
+                    mobileTxt='Immerse yourself in the world of future technology. Explore our comprehensive resources.'
                 />
             </div>
             <div className="flex flex-wrap gap-y-[10px] 2xl:gap-y-5 justify-between bg-myprimary-dark-08 p-[10px] 2xl:p-5 rounded-[10px] border-[1px] border-myprimary-dark-20">
                 {BePartCardData.map((item, index) => {
                     return (
-                        <BCard key={index} title={item.title} text={item.desc} BePart={true} />
+                        <BCard key={index} title={item.title} text={item.desc} BePart={true} delay={index*150} />
                     )
                 })}
             </div>

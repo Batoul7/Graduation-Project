@@ -5,12 +5,14 @@ export interface BCardProps {
   title: string;
   subtitle?: string;
   text: string;
-  BePart: boolean
+  BePart: boolean;
+  delay?: number
 }
-export default function BCard({ icon, title, subtitle, text, BePart }: BCardProps) {
+export default function BCard({ icon, title, subtitle, text, BePart, delay }: BCardProps) {
   return (
     <div
       data-aos="fade-up"
+      data-aos-delay={delay}
       className={`flex flex-col gap-7.5 md:w-[32.5%] 
         ${BePart ? 'w-full bg-myprimary-dark-10 rounded-xl border-[1px] border-myprimary-dark-20 2xl:p-10 md:p-[30px] p-6 justify-between'
         : 'bg-myprimary-dark-08 py-7.5 lg:py-10 xl:py-[50px] w-full sm:max-w-[700px] xl:w-[360px] 3xl:w-[425.33px]'}`}>

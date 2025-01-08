@@ -13,7 +13,9 @@
     font-family: var(--inter-font);
 
 }
-
+.FM-Filter::-webkit-scrollbar {
+    display: none;
+}
 ::-webkit-scrollbar {
     width: 12px;
 }

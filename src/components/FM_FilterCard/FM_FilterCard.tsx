@@ -14,15 +14,19 @@ import { toggleReaction } from "../../redux/slice/BlogSlice"
 
 interface FM_CardType {
     image?: string,
+    btn: string,
     name?: string,
     desc?: string,
     link: string,
-    blogId: number
+    blogId: string,
 }
 
-export default function FM_FilterCard({ link, blogId }: FM_CardType) {
+export default function FM_FilterCard({ link, blogId, btn }: FM_CardType) {
 
     const blog = useSelector((state: RootState) => state.newsBlog.blogs).find(b => b.id === blogId)
+    
+    const imgs = [message, send]
+    const spans = [blog && blog.comments, blog && blog.shares]
 
     const dispatch = useDispatch()
 
@@ -45,24 +49,25 @@ export default function FM_FilterCard({ link, blogId }: FM_CardType) {
                     <div className="gap-[10px] flex">
                         <button
                             onClick={() => dispatch(toggleReaction(blogId))}
-                            className="bg-myprimary-dark-10 text-myprimary-gray-60 px-4 !py-[9.5px] justify-center items-center text-xs flex gap-1 !border-[1px] !border-myprimary-dark-20 rounded-full">
+                            className="w-[70px] bg-myprimary-dark-10 text-myprimary-gray-60 px-4 !py-[9.5px] justify-center items-center text-xs flex gap-1 !border !border-myprimary-dark-20 rounded-full">
                             <img src={blog && blog.isReact ? reaction_red : reaction_dark} className="w-4 h-4" alt="reaction-dark" />
                             <span>{blog && blog.reactions}</span>
                         </button>
-                        <button
-                            className="bg-myprimary-dark-10 text-myprimary-gray-60 px-4 !py-[9.5px] justify-center items-center text-xs flex gap-1 !border-[1px] !border-myprimary-dark-20 rounded-full">
-                            <img src={message} className="w-4 h-4" alt="message" />
-                            <span>{blog && blog.comments}</span>
-                        </button>
-                        <button
-                            className="bg-myprimary-dark-10 text-myprimary-gray-60 px-4 !py-[9.5px] justify-center items-center text-xs flex gap-1 !border-[1px] !border-myprimary-dark-20 rounded-full">
-                            <img src={send} className="w-4 h-4" alt="send" />
-                            <span>{blog && blog.shares}</span>
-                        </button>
+                        {
+                            Array.from({ length: 2 }).map((_, index) => {
+                                return (
+                                    <button key={index}
+                                        className="bg-myprimary-dark-10 text-myprimary-gray-60 px-4 !py-[9.5px] justify-center items-center text-xs flex gap-1 !border !border-myprimary-dark-20 rounded-full">
+                                        <img src={imgs[index]} className="w-4 h-4" alt='img'/>
+                                        <span>{spans[index]}</span>
+                                    </button>
+                                )
+                            })
+                        }
                     </div>
                 </div>
                 <Link to={link} className='md:block hidden'>
-                    <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={'View Blog'} imgArrowbtn={imgArrowHero} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} />
+                    <ButtonCommon herobtnAndCommon={'herobtnAndCommon'} contentBtn={btn} imgArrowbtn={imgArrowHero} altimagebtn={'image'} hiddenEyes={"hiddenEyes"} />
                 </Link>
             </div>
         </div>

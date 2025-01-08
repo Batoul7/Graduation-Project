@@ -36,7 +36,7 @@ export default function HomePage() {
       <FutureSection cardsData={cardsData} title={"Future Technology Blog"} description={"Stay informed with our blog section dedicated to future technology."} icon={icon4} />
       <FutureSection cardsData={cardsData2} title={"Research Insights Blogs"} description={"Dive deep into future technology concepts with our research section."} icon={icon5} />
       <MainTitle link="" title="Explore FutureTech's In-Depth Blog Posts" subtitle="A Knowledge Treasure Trove" button={true} btntext='View All Blogs'/>
-      <FM_Filteration btns={Home_Filteration}/>
+      <FM_Filteration btns={Home_Filteration} btn='View Blog'/>
       <MainTitle link="" title="Unlock Valuable Knowledge with FutureTech's Resources" subtitle="Your Gateway to In-Depth Information" button={true} btntext='View All Resources'/>
       <BookSections/>
       <MainTitle link="" title="Real Words from Real Readers" subtitle="What Our Readers Say" button={true} btntext='View All Testimonials'/>
