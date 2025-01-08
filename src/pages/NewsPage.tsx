@@ -1,7 +1,7 @@
 import LatestBlogs from "../components/LatestBlogs/LatestBlogs";
 import HeroCommon from "../components/HeroCommon/HeroCommon";
 import FeaturedVideos from "../components/FeaturedVideos/FeaturedVideos";
-import MainTitle from "../components/MainTitle/MainTitle";
+import MainTitle from "../components/B_MainTitle/MainTitle";
 import FM_Filteration from "../components/FM_Filteration/FM_Filteration";
 import { News_Filteration } from "../Data/BtnsFilterData";
 

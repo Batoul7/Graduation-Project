@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import MhCard from '../MhCard/MhCard';
-import MainTitle from '../MainTitle/MainTitle';
+import MainTitle from '../B_MainTitle/MainTitle';
 
 
 export default function LatestPodcasts() {
