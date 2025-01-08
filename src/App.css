@@ -2343,6 +2343,10 @@ video {
     border-bottom-width: 0px;
   }
 
+  .sm\:border-t-0 {
+    border-top-width: 0px;
+  }
+
   .sm\:p-5 {
     padding: 1.25rem;
   }
@@ -2570,6 +2574,10 @@ video {
     --tw-divide-y-reverse: 0;
     border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
+  }
+
+  .md\:border-t-0 {
+    border-top-width: 0px;
   }
 
   .md\:p-6 {
