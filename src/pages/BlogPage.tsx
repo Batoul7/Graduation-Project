@@ -32,7 +32,7 @@ export default function BlogPage() {
                 }
             ))
         }
-    }, [dispatch])
+    }, [id])
 
     return (
         <>

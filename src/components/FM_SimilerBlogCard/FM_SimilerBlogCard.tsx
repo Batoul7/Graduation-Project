@@ -38,19 +38,19 @@ export default function FM_SimilerBlogCard({ blogId, delay}: FM_CardType) {
             data-aos-easing="ease-in-back"
             data-aos-delay={delay}
             data-aos-offset="0">
-            <img src={blog?.cover} className="w-full mb-4 2xl:mb-5" alt="blog" />
+            <img src={blog?.cover} className="2xl:h-[222px] h-[185px] w-full mb-4 2xl:mb-5 object-cover rounded-lg" alt="blog" />
             <h3 className="text-base 2xl:text-xl font-inter text-white font-semibold 2xl:mb-2.5 mb-1">{blog?.title}</h3>
             <p className="text-base 2xl:text-xl font-inter text-myprimary-gray-60 font-normal mb-4 2xl:mb-5">{blog?.category}</p>
-            <div className="flex flex-wrap gap-6 md:gap-[50px] justify-between items-center">
+            <div className="flex gap-3 justify-between items-center">
                 <div className="flex gap-2 2xl:gap-2.5">
                     <button
                         onClick={() => dispatch(toggleReaction(blogId))}
-                        className="w-[80px] bg-myprimary-dark-10 text-myprimary-gray-60 px-4 !py-[9.5px] justify-center items-center text-sm 2xl:text-lg flex gap-1 !border !border-myprimary-dark-20 rounded-full">
+                        className="xl:w-[70px] 2xl:w-[80px] bg-myprimary-dark-10 text-myprimary-gray-60 px-4 !py-[9.5px] justify-center items-center text-sm 2xl:text-lg flex gap-1 !border !border-myprimary-dark-20 rounded-full">
                         <img src={blog?.isReact ? reaction_red : reaction_dark} className="w-6" alt="reaction-dark" />
                         <span>{blog?.reactions}</span>
                     </button>
                     <button
-                        className="w-[90px] bg-myprimary-dark-10 text-myprimary-gray-60 px-4 !py-[9.5px] justify-center items-center text-sm 2xl:text-lg flex gap-1 !border !border-myprimary-dark-20 rounded-full">
+                        className="w-[85px] bg-myprimary-dark-10 text-myprimary-gray-60 px-4 !py-[9.5px] justify-center items-center text-sm 2xl:text-lg flex gap-1 !border !border-myprimary-dark-20 rounded-full">
                         <img src={sendimg} className="w-6" alt="reaction-dark" />
                         <span>{blog?.shares}</span>
                     </button>
