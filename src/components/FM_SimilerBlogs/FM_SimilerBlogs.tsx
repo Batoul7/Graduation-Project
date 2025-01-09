@@ -21,9 +21,13 @@ export default function FM_SimilerBlogs({ data }: FM_SimilerBlog) {
 
     const navigate = useNavigate()
 
+
     function Blog7() {
         navigate('/blog/:id7')
-        scroll()
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
     }
 
     return (
