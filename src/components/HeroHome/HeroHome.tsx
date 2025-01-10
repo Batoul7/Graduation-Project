@@ -50,7 +50,7 @@ export default function HeroHome({ HeroCard, par1, title, par2, img1, altimg1, s
                 <div className="flex flex-col justify-center items-start border-neutral-800 my-auto 2xl:mr-[50px] md:mr-10" >
                     <p className="font-medium font-kumbhSans text-mysecondary-dark-40  text-lg xl:text-1.5xl 2xl:text-3xl pb-4 xl:pb-5 2xl:pb-7.5 ">{par1}</p>
                     <HeroTitleH1 title={title} mainhero='mainhero' />
-                    <p className="font-normal text-myprimary-gray-50 text-[13px] md:text-[15px] 2xl:text-[17px] ">
+                    <p className="font-normal text-myprimary-gray-50 text-[13px] md:text-[15px] 2xl:text-[17px] pb-[30px] md:pb-[100px] ">
                         {
                             screen ? parResponsive
                                 : par2
@@ -61,10 +61,10 @@ export default function HeroHome({ HeroCard, par1, title, par2, img1, altimg1, s
                 <CardNumberCounter HeroCard={HeroCard} heroCount='heroCount' />
                 </div>
             </div>
-            <div data-aos="fade-left" className="bg-[url('./assets/images/HomePage/HeroDesign.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-end sm:w-[40.91%] pb-5 sm:ps-[20px] xl:ps-[50px] 2xl:ps-20 xl:pb-[50px] 2xl:pb-20 border-neutral-800 border-l ">
+            <div data-aos="fade-left" className="bg-[url('./assets/images/HomePage/HeroDesign.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-end sm:w-[40.91%] pb-5 ps-[40px] sm:ps-[20px]  xl:ps-[50px] 2xl:ps-20 xl:pb-[50px] 2xl:pb-20 border-neutral-800 border-l pt-[100px] sm:pt-0 ">
                 <img src={img1} alt={altimg1} className=" w-[174px] 2xl:w-[218px] pb-5 2xl:pb-7.5" ></img>
                 <h5 className="font-medium text-lg xl:text-xl 2xl:text-2xl text-white pb-0.5 xl:pb-1 2xl:pb-3.5 leading-[27px] xl:leading-[30px] 2xl:leading-9 ">{subtitle}</h5>
-                <p className="w-full font-medium text-[13px] md:text-[15px] 2xl:text-[17px]  text-myprimary-gray-60 pb-5 2xl:pb-7.5 leading-5 xl:leading-[24px] 2xl:leading-[27px] ">{par3}</p>
+                <p className="w-full font-medium text-[13px] md:text-[15px] 2xl:text-[17px]  text-myprimary-gray-60 pb-5 2xl:pb-7.5 leading-5 xl:leading-[24px] 2xl:leading-[27px]  ">{par3}</p>
                 <ButtonCommon herobtnAndCommon={'herobtn'} contentBtn={contentBtn} imgArrowbtn={imgArrowbtn} altimagebtn={altimagebtn} mainsmall={"mainsmall"} imgEyes={imgEyes} hiddenEyes={"hiddenEyes"} />
             </div>
         </div>
