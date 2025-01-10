@@ -14,9 +14,7 @@ export default {
         "mysecondary-yellow-99": "#FBFBFE",
         "myprimary-dark-08": "#141414",
         "myprimary-dark-10": "#1A1A1A",
-        //    "myprimary-dark-15":"#262626", neutral-800
         "myprimary-dark-20": "#333333",
-        //    "mysecondary-dark-25" : "#404040", neutral-700
         "mysecondary-dark-30": "#4D4D4D",
         "mysecondary-dark-35": "#595959",
         "mysecondary-dark-40": "#666666",
@@ -54,7 +52,6 @@ export default {
         "4xl": "1921px",
         'max-1200': { 'max': '1200px' },
         'min-992': '992px',
-        // 'lgRes': {'min': '1221px', 'max': '1200px'}, 
         'mdRes': {'min': '800px', 'max': '1220px'}, 
         'max-389':{'max' : '389px'}
       },

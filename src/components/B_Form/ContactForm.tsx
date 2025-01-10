@@ -4,6 +4,7 @@ import { AppDispatch ,RootState} from '../../redux/store';
 import { updateForm } from '../../redux/slice/formSlice';
 import ButtonCommon from '../ButtonCommon/ButtonCommon';
 
+import countriesData from '../../Data/countries.json';
 
 interface Country {
   name: string;
@@ -61,26 +62,17 @@ const ContactForm: React.FC = () => {
   }, [formData]);
 
   useEffect(() => {
-    const fetchCountries = async () => {
-      try {
-        const response = await fetch('https://restcountries.com/v3.1/all');
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        
-        const countryList: Country[] = data.map((country: any) => ({
-          name: country.name.common,
-          code: country.idd && country.idd.root ? `${country.idd.root}${country.idd.suffixes?.[0] || ''}` : '',
-          flag: country.flags.svg,
-        })).filter((country: Country) => country.code); 
+    const processCountries = () => {
+      const countryList: Country[] = countriesData.map((country: any) => ({
+        name: country.name.common,
+        code: country.idd && country.idd.root ? `${country.idd.root}${country.idd.suffixes?.[0] || ''}` : '',
+        flag: country.flags.svg,
+      })).filter((country: Country) => country.code);
 
-        setCountries(countryList);
-      } catch (error) {
-        console.error('Error fetching countries:', error);
-      }
+      setCountries(countryList);
     };
-    fetchCountries();
+
+    processCountries();
   }, []);
 
    // Memoizing the filtered countries list
