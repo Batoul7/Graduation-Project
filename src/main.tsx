@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './App.css'
-import { createHashRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import NewsPage from './pages/NewsPage'
 import PodcastsPage from './pages/PodcastsPage'
@@ -12,7 +12,7 @@ import store from './redux/store'
 import App from './App'
 import BlogPage from './pages/BlogPage'
 
-const routes = createHashRouter([
+const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
