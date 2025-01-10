@@ -29,9 +29,7 @@ export default function HomePage() {
       img1={imgpeople} altimg1={"people image"} subtitle={"Explore 1000+ resources"} 
       par3={"Over 1,000 articles on emerging tech trends and breakthroughs."}
       contentBtn={"Explore Resources"} imgArrowbtn={imgArrowHero} altimagebtn={"image arrow btn"} imgEyes={imgEyesBtn} />
-      
       <BCards cardData={BcardData} />
-
       <MainTitle link="" title="FutureTech Features" subtitle="Unlock the Power of" button={false}/>
       <FutureSection cardsData={cardsData} title={"Future Technology Blog"} description={"Stay informed with our blog section dedicated to future technology."} icon={icon4} />
       <FutureSection cardsData={cardsData2} title={"Research Insights Blogs"} description={"Dive deep into future technology concepts with our research section."} icon={icon5} />
