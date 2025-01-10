@@ -40,7 +40,7 @@ export default function FM_FilterCard({ link, blogId, btn }: FM_CardType) {
         <div className='2xl:px-mainpaddinglarge xl:px-[80px] px-4 py-10 md:py-[60px] 2xl:py-20 border-y border-myprimary-dark-20 flex flex-row max-1200:flex-col gap-y-[30px] md:!gap-[10px] 2xl:!gap-[150px]'
             data-aos="zoom-out"
         >
-            <FM_Reader show={true} image={blog?.readerIMG} name={blog?.author} category={blog?.category} link="" />
+            <FM_Reader show={true} image={blog?.readerIMG} name={blog?.author} category={blog?.category} link={link} />
             <div className='flex w-full items-center justify-between gap-5'>
                 <div>
                     <h5 className='font-inter text-myprimary-gray-60 font-semibold text-base md:text-lg 2xl::text-xl 2xl:mb-[30px] md:mb-6 mb-5'>{blog?.date}</h5>
