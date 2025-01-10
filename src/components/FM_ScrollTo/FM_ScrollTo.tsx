@@ -33,7 +33,7 @@ export default function FM_ScrollTo() {
                 src={scrollToTop}
                 alt="Scroll to top"
                 onClick={handleScrollToTop}
-                className={`${showScrollTo ? "translate-x-0" : "translate-x-40"} w-10 2xl:w-14 cursor-pointer rounded-full transition-all duration-300 ease-in-out fixed bottom-6 right-6 z-50 bg-myprimary-yellow-55 flex justify-center items-center`}
+                className={`${showScrollTo ? "translate-x-0" : "translate-x-40"} w-10 2xl:w-14 cursor-pointer rounded-full transition-all duration-300 ease-in-out fixed bottom-6 right-6 z-40 bg-myprimary-yellow-55 flex justify-center items-center`}
             />
     )
 }
