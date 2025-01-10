@@ -14,7 +14,7 @@ interface HeroCommonProps {
 
 export default function HeroCommon({ CommonHeroTitle, CommonHeroText, neww, podcast, Resourse, newcommonhero, podcastcommonhero, Resourcecommonhero }: HeroCommonProps) {
   return (
-    <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 2xl:h-2xl-hero h-md-hero 2xl:mt-[105px] mt-[93px] flex items-start  sm:items-center pt-[189px] sm:pt-0 ">
+    <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 2xl:h-2xl-hero h-md-hero 2xl:mt-[105px] mt-[93px] flex items-start  sm:items-center pt-10 xl:pt-20 2xl:pt-[130px] sm:pt-0 ">
       <div className="relative w-full" data-aos="zoom-in">
         <HeroTitleH1 title={CommonHeroTitle} newcommonhero={newcommonhero} podcastcommonhero={podcastcommonhero} Resourcecommonhero={Resourcecommonhero} />
         <span className={`font-normal text-myprimary-gray-60 inline relative lg:absolute text-sm sm:text-[15px] leading-[21px] sm:leading-6 2xl:leading-[27px]
