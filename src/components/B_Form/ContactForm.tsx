@@ -124,7 +124,7 @@ const handleCountryChange = (code: string) => {
   };
   
   return (
-    <div  className='flex-1 w-full'>
+    <div  className='flex-1 w-full lg:w-fit'>
       {isModalVisible && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
         <div data-aos="zoom-in-down" className="bg-myprimary-dark-08 rounded-2xl p-8 w-full max-w-2xl text-center shadow-inner shadow-myprimary-yellow-55">
@@ -219,7 +219,7 @@ const handleCountryChange = (code: string) => {
             <label className="block text-base lg:text-lg font-medium mb-3 lg:mb-4">Phone Number</label>
             <div className="flex gap-3 2xl:gap-4 "  data-aos="flip-down">  
               <div className="relative flex items-center justify-between w-1/4  bg-myprimary-dark-10 rounded-lg  
-                            px-1 2sm:px-3 2sm:py-[11.5px] xl:px-3 xl:py-[11.5px] 2xl:px-[18px] 2xl:py-[16.5px] border border-neutral-800 hover:shadow-inputShadow  "> 
+                            px-1 2sm:px-3 2sm:py-[11.5px] xl:px-3 xl:py-[11.5px] 3xl:px-[18px] 3xl:py-[16.5px] border border-neutral-800 hover:shadow-inputShadow  "> 
                 <div className="w-7.5 h-7.5 2xl:w-[34px] 2xl:h-[34px]  rounded-full  overflow-hidden">
                   <img
                     src={countries.find(c => c.code === formData.countryCode)?.flag}

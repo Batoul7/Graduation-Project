@@ -2289,10 +2289,6 @@ video {
     height: 25px;
   }
 
-  .sm\:h-md-hero {
-    height: calc(100vh - 137px);
-  }
-
   .sm\:w-\[25px\] {
     width: 25px;
   }
@@ -2330,10 +2326,6 @@ video {
     max-width: 700px;
   }
 
-  .sm\:max-w-full {
-    max-width: 100%;
-  }
-
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2348,10 +2340,6 @@ video {
 
   .sm\:flex-nowrap {
     flex-wrap: nowrap;
-  }
-
-  .sm\:items-start {
-    align-items: flex-start;
   }
 
   .sm\:items-center {
@@ -2448,11 +2436,6 @@ video {
     grid-column: span 3 / span 3;
   }
 
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .md\:mb-10 {
     margin-bottom: 2.5rem;
   }
@@ -2491,6 +2474,10 @@ video {
 
   .md\:h-\[40px\] {
     height: 40px;
+  }
+
+  .md\:h-md-hero {
+    height: calc(100vh - 137px);
   }
 
   .md\:w-96 {
@@ -2764,6 +2751,11 @@ video {
 
   .lg\:w-\[84px\] {
     width: 84px;
+  }
+
+  .lg\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .lg\:w-full {
@@ -3638,11 +3630,6 @@ video {
     padding-right: 30px;
   }
 
-  .\32xl\:px-\[18px\] {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
   .\32xl\:px-mainpaddinglarge {
     padding-left: 162px;
     padding-right: 162px;
@@ -3686,11 +3673,6 @@ video {
   .\32xl\:py-\[155px\] {
     padding-top: 155px;
     padding-bottom: 155px;
-  }
-
-  .\32xl\:py-\[16\.5px\] {
-    padding-top: 16.5px;
-    padding-bottom: 16.5px;
   }
 
   .\32xl\:py-\[32\.5px\] {
@@ -3923,6 +3905,16 @@ video {
     white-space: nowrap;
   }
 
+  .\33xl\:px-\[18px\] {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .\33xl\:py-\[16\.5px\] {
+    padding-top: 16.5px;
+    padding-bottom: 16.5px;
+  }
+
   .\33xl\:text-\[70px\] {
     font-size: 70px;
   }
@@ -4093,26 +4085,5 @@ video {
 
   .\[\&\>\*\:nth-child\(3\)\]\:sm\:border-l>*:nth-child(3) {
     border-left-width: 1px;
-  }
-}
-
-.\[\&\>\*\:nth-child\(5\)\]\:m-0>*:nth-child(5) {
-  margin: 0px;
-}
-
-.\[\&\>\*\:nth-child\(5\)\]\:mx-0>*:nth-child(5) {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.\[\&\>\*\:nth-child\(5\)\]\:\!mx-0>*:nth-child(5) {
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-
-@media (min-width: 640px) {
-  .sm\:\[\&\>\*\:nth-child\(5\)\]\:\!mx-0>*:nth-child(5) {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
   }
 }
