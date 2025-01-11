@@ -27,7 +27,7 @@ const CommonQuestions = () => {
           btncontent="Ask Question"
         />
       </div>
-      <div className="w-fit xl:w-[748px] 3xl:w-[917px] flex flex-1 flex-col gap-5 lg:gap-6 2xl:gap-7.5 py-10 lg:py-[60px] 2xl:py-20  border-t border-t-neutral-800 lg:border-t-0 lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20">
+      <div className="w-full xl:w-[748px] 3xl:w-[917px] flex flex-1 flex-col gap-5 lg:gap-6 2xl:gap-7.5 py-10 lg:py-[60px] 2xl:py-20  border-t border-t-neutral-800 lg:border-t-0 lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20">
           {faqs.map(
             (faq: { question: string; answer: string }, index: number) => (
               <div data-aos="fade-up"
