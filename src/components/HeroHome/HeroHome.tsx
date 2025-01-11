@@ -50,7 +50,7 @@ export default function HeroHome({ HeroCard, par1, title, par2, img1, altimg1, s
                 <div className="flex flex-col justify-center items-start border-neutral-800 my-auto 2xl:mr-[50px] md:mr-10" >
                     <p className="font-medium font-kumbhSans text-mysecondary-dark-40  text-lg xl:text-1.5xl 2xl:text-3xl pb-4 xl:pb-5 2xl:pb-7.5 ">{par1}</p>
                     <HeroTitleH1 title={title} mainhero='mainhero' />
-                    <p className="font-normal text-myprimary-gray-50 text-[13px] md:text-[15px] 2xl:text-[17px] pb-[30px] md:pb-[100px] ">
+                    <p className="font-normal text-myprimary-gray-50 text-[13px] md:text-[15px] 2xl:text-[17px] pb-[30px] md:pb-[20px] ">
                         {
                             screen ? parResponsive
                                 : par2

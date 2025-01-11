@@ -57,7 +57,7 @@ export const CounterCard2: Array<HeroCard> = [
         id: 4,
         number: '100k',
         mult: "+",
-        parcard: "Countries Accesses Our Content "
+        parcard: "Countries Accesses "
     } ,
 
 ]
