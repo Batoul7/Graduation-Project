@@ -53,7 +53,8 @@ export default {
         'max-1200': { 'max': '1200px' },
         'min-992': '992px',
         'mdRes': {'min': '800px', 'max': '1220px'}, 
-        'max-389':{'max' : '389px'}
+        'max-389':{'max' : '389px'},
+        'max-391':{'max' : '391px'}
       },
       fontSize: {
         "6.5xl": "70px",

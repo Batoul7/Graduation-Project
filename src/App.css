@@ -1198,6 +1198,10 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -1821,16 +1825,8 @@ video {
   padding-inline-end: 0px;
 }
 
-.pe-4 {
-  padding-inline-end: 1rem;
-}
-
 .pr-5 {
   padding-right: 1.25rem;
-}
-
-.ps-4 {
-  padding-inline-start: 1rem;
 }
 
 .ps-5 {
@@ -2430,10 +2426,6 @@ video {
     line-height: 1.5rem;
   }
 
-  .sm\:leading-\[66px\] {
-    line-height: 66px;
-  }
-
   .sm\:leading-\[71\.5px\] {
     line-height: 71.5px;
   }
@@ -2909,6 +2901,10 @@ video {
     line-height: 2rem;
   }
 
+  .lg\:text-5\.5xl {
+    font-size: 55px;
+  }
+
   .lg\:text-\[44px\] {
     font-size: 44px;
   }
@@ -2930,6 +2926,10 @@ video {
 
   .lg\:leading-\[57\.2px\] {
     line-height: 57.2px;
+  }
+
+  .lg\:leading-\[66px\] {
+    line-height: 66px;
   }
 
   .lg\:-tracking-\[3px\] {
@@ -3835,10 +3835,6 @@ video {
     font-size: 64px;
   }
 
-  .\32xl\:text-\[70px\] {
-    font-size: 70px;
-  }
-
   .\32xl\:text-\[80px\] {
     font-size: 80px;
   }
@@ -3884,10 +3880,6 @@ video {
   .\32xl\:leading-\[75\.4px\] {
     line-height: 75.4px;
   }
-
-  .\32xl\:leading-\[84px\] {
-    line-height: 84px;
-  }
 }
 
 @media (min-width: 1540px) and (max-width: 1905px) {
@@ -3929,6 +3921,14 @@ video {
 
   .\33xl\:whitespace-nowrap {
     white-space: nowrap;
+  }
+
+  .\33xl\:text-\[70px\] {
+    font-size: 70px;
+  }
+
+  .\33xl\:leading-\[84px\] {
+    line-height: 84px;
   }
 }
 
@@ -4016,6 +4016,20 @@ video {
   }
 }
 
+@media (max-width: 391px) {
+  .max-391\:p-5 {
+    padding: 1.25rem;
+  }
+
+  .max-391\:pe-4 {
+    padding-inline-end: 1rem;
+  }
+
+  .max-391\:ps-4 {
+    padding-inline-start: 1rem;
+  }
+}
+
 .\[\&\>\*\:nth-child\(1\)\]\:w-\[130px\]>*:nth-child(1) {
   width: 130px;
 }
@@ -4079,5 +4093,26 @@ video {
 
   .\[\&\>\*\:nth-child\(3\)\]\:sm\:border-l>*:nth-child(3) {
     border-left-width: 1px;
+  }
+}
+
+.\[\&\>\*\:nth-child\(5\)\]\:m-0>*:nth-child(5) {
+  margin: 0px;
+}
+
+.\[\&\>\*\:nth-child\(5\)\]\:mx-0>*:nth-child(5) {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.\[\&\>\*\:nth-child\(5\)\]\:\!mx-0>*:nth-child(5) {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+@media (min-width: 640px) {
+  .sm\:\[\&\>\*\:nth-child\(5\)\]\:\!mx-0>*:nth-child(5) {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 }
