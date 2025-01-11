@@ -32,7 +32,7 @@ export default function B_HeroContact() {
   ];
 
   return (
-    <div className='h-auto 2xl:h-2xl-hero sm:h-md-hero 2xl:mt-[105px] mt-[93px] px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 text-white h- items-center
+    <div className='h-auto 2xl:h-2xl-hero sm:h-md-hero 2xl:mt-[107px] mt-[77px] px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 text-white h- items-center
             grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-5 lg:gap-x-7.5 2xl:gap-[50px] xl:flex-nowrap divide-y md:divide-y-0 divide-neutral-800 border-t border-neutral-800'>
       {data.map((item, index) => (
           <div key={index}  

@@ -124,7 +124,7 @@ const handleCountryChange = (code: string) => {
   };
   
   return (
-    <div  className='flex-1'>
+    <div  className='flex-1 w-full'>
       {isModalVisible && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
         <div data-aos="zoom-in-down" className="bg-myprimary-dark-08 rounded-2xl p-8 w-full max-w-2xl text-center shadow-inner shadow-myprimary-yellow-55">
@@ -174,7 +174,7 @@ const handleCountryChange = (code: string) => {
       )}
 
       <form onSubmit={handleSubmit} className=" text-white 2sm:px-5 py-10 lg:py-[60px] 2xl:py-20  flex flex-col gap-5 lg:gap-7.5 2xl:gap-[50px] 
-      border-t border-t-neutral-800 lg:border-t-0 lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20">
+      border-t border-t-neutral-800 lg:border-t-0 lg:border-l border-l-neutral-800 lg:pl-[60px] 2xl:pl-20 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-[50px]">
           <div>
             <label className="block text-base lg:text-lg font-medium mb-3 lg:mb-4">First Name</label>
