@@ -2764,6 +2764,11 @@ video {
     width: 84px;
   }
 
+  .lg\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
   .lg\:w-full {
     width: 100%;
   }
@@ -3628,11 +3633,6 @@ video {
     padding-right: 30px;
   }
 
-  .\32xl\:px-\[18px\] {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
   .\32xl\:px-mainpaddinglarge {
     padding-left: 162px;
     padding-right: 162px;
@@ -3676,11 +3676,6 @@ video {
   .\32xl\:py-\[155px\] {
     padding-top: 155px;
     padding-bottom: 155px;
-  }
-
-  .\32xl\:py-\[16\.5px\] {
-    padding-top: 16.5px;
-    padding-bottom: 16.5px;
   }
 
   .\32xl\:py-\[32\.5px\] {
@@ -3919,6 +3914,16 @@ video {
 
   .\33xl\:whitespace-nowrap {
     white-space: nowrap;
+  }
+
+  .\33xl\:px-\[18px\] {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .\33xl\:py-\[16\.5px\] {
+    padding-top: 16.5px;
+    padding-bottom: 16.5px;
   }
 }
 
