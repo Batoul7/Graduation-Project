@@ -1,4 +1,4 @@
-import  { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 interface HeroCard {
     number: string;
@@ -13,7 +13,7 @@ interface CardNumberCounterProps {
 }
 
 export default function CardNumberCounter({ HeroCard, resourseCount, heroCount }: CardNumberCounterProps) {
-    const [counts, setCounts] = useState<number[]>([]);
+    const [counts, setCounts] = useState<number[]>(HeroCard.map(() => 0)); // تعيين الأرقام الأولية إلى صفر
     const ref = useRef<HTMLDivElement | null>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -36,10 +36,6 @@ export default function CardNumberCounter({ HeroCard, resourseCount, heroCount }
 
     useEffect(() => {
         if (isVisible) {
-
-            const initialCounts = HeroCard.map(() => 0);
-            setCounts(initialCounts);
-
             const intervals = HeroCard.map((item, index) => {
                 const targetNumber = parseInt(item.number);
                 let currentNumber = 0;
@@ -53,7 +49,7 @@ export default function CardNumberCounter({ HeroCard, resourseCount, heroCount }
                             return newCounts;
                         });
                     } else {
-                        clearInterval(intervals[index])
+                        clearInterval(intervals[index]);
                     }
                 }, 10);
             });

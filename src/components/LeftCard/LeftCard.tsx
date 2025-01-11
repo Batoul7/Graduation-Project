@@ -40,13 +40,13 @@ const LeftCard: React.FC<LeftCardProps> = ({
     ResourseBook,
 }) => {
     return (
-         <div data-aos="fade-down" className={`bg-myprimary-dark-08 text-white 
-                ${pageType === "contact" ? 'w-full':''} w-full max-w-[400px] 
-                sm:max-w-[413px]  2xl:max-w-[519px]    rounded-lg`}>
+         <div data-aos="fade-down" className={`bg-myprimary-dark-08 text-white
+                ${pageType === "contact" ? 'w-full':''} w-full max-w-[500px] 
+                sm:max-w-[413px]  2xl:max-w-[519px]   rounded-lg`}>
             <div>
                 <img src={icon} alt="Icon" className="w-[50px] xl:w-[60px] 2xl:w-20" />
             </div>
-            <div className={pageType === "podcast" ? "flex items-center justify-center  !mb-5 xl:!mb-[24px] 2xl:!mb-[30px] " : ""}>
+            <div className={pageType === "podcast" ? "flex items-center justify-between gap-3  !mb-5 xl:!mb-[24px] 2xl:!mb-[30px] " : ""}>
                 <h2 className={`${form ? 'text-[28px] lg:text-[44px] 2xl:text-[58px] leading-9 lg:leading-[57.2px] 2xl:leading-[75.4px] lg:mt-7.5 mt-5 lg:-tracking-[3px] font-medium' 
                 : "text-2xl xl:text-3xl 2xl:text-[40px] !leading-[60px] xl:mt-10 mt-[20px]  font-semibold "}
                 ${podcasth2 ? 'text-xl xl:text-3xl 2xl:text-[40px] xl:mt-10 !mt-[30px] ' : ''}

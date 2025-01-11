@@ -59,7 +59,7 @@ const LatestBlogs = () => {
                 </p>
               </div>
             </div>
-            <div className="flex justify-between items-center sm:items-start">
+            <div className="flex justify-between items-center">
               <div className="flex gap-2 2xl:gap-2.5 h-[33px] 2xl:h-11 ">
                 <button className="w-[73px] 2xl:w-[87px] p-[6px] 2xl:p-2 text-myprimary-gray-60 flex justify-center items-center  gap-1
                   border border-neutral-800 bg-myprimary-dark-10 rounded-full">

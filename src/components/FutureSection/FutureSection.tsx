@@ -15,7 +15,7 @@ interface FutureCardsProps {
 export default function FutureSection({ cardsData , title , description , icon   }: FutureCardsProps): JSX.Element {
     return (
         <div className="bg-myprimary-dark-08 border-neutral-800 border-y px-4 xl:px-20 2xl:px-mainpaddinglarge
-         flex flex-wrap justify-center items-center lg:flex-nowrap ">
+         flex flex-wrap justify-start items-start lg:flex-nowrap ">
             <div className="py-[50px] xl:py-[122.5px] 2xl:py-[155px] pe-0 xl:pe-[60px] 2xl:pe-20 border-neutral-800 lg:border-r">
                 <LeftCard
                     title={title}
