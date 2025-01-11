@@ -40,9 +40,9 @@ export default function FM_Navbar() {
 
     return (
         <nav className={`4xl:container 4xl:mx-auto fixed z-50 flex justify-between items-center ${header ? 'bg-myprimary-yellow-60 top-0 shadow-md' : 'bg-myprimary-dark-10 border-y border-myprimary-dark-20'} w-screen py-5 2xl:py-6 2xl:px-mainpaddinglarge xl:px-[80px] px-4`}>
-            <img src={header ? LogoScroll : logo} alt="logo" />
+            <img src={header ? LogoScroll : logo} alt="logo" className='h-[35px] md:h-[40px] 2xl:h-[50px]' />
             <div className={`flex w-[65%] justify-between items-center max-1200:w-screen max-1200:flex-col max-1200:fixed max-1200:top-0 max-1200:left-0 max-1200:h-screen transition-all duration-300 ease-in-out max-1200:justify-evenly max-1200:gap-0 ${header ? 'bg-myprimary-yellow-60' : 'bg-myprimary-dark-10'} ${show ? 'translate-y-0' : 'max-1200:-translate-y-full'}`}>
-                <img src={header ? LogoScroll : logo} className='hidden max-1200:block' alt="logo" />
+                <img src={header ? LogoScroll : logo} className='h-[35px] md:h-[40px] 2xl:h-[50px] hidden max-1200:block' alt="logo" />
                 <ul className='flex gap-6 2xl:gap-4 max-1200:flex-col max-1200:justify-evenly max-1200:items-center max-1200:gap-10'>
                     {dataNav.map((e, index) => {
                         return (
