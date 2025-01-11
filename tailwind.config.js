@@ -33,7 +33,7 @@ export default {
         '2.5': '10px',
         '4.5': '18px',
         '7.5': '30px',
-        '2xl-hero': 'calc(100vh - 173px)',
+        '2xl-hero': 'calc(100vh - 175px)',
         'md-hero': 'calc(100vh - 153px)',
       },
       padding: {
