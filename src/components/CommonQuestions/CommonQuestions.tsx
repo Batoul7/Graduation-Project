@@ -15,7 +15,7 @@ const CommonQuestions = () => {
   };
 
   return (
-    <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 flex items-center flex-col lg:flex-row border-y border-neutral-800 
+    <div className="px-4 xl:px-20 2xl:px-mainpaddinglarge bg-myprimary-dark-08 flex items-start flex-col lg:flex-row border-y border-neutral-800 
      ">
       <div className="pr-5 py-10">
         <LeftCard
