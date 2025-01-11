@@ -13,8 +13,15 @@ function App() {
 
   const [showPreloader, setShowPreloader] = useState(true)
   
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, [])
 
   useEffect(() => {
+
     AOS.init({
       duration: 800,
       easing: 'ease-in-out',
@@ -27,7 +34,6 @@ function App() {
     }, 3000)
 
     return () => clearTimeout(timer)
-    
 
   }, [])
 
